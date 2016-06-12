@@ -1,0 +1,154 @@
+html,
+body {
+  height: 100%;
+}
+
+.body {
+  background: url('/assets/img/background-night.jpg') no-repeat #193832;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 0 auto;
+}
+
+/************************header************************/
+
+.header {
+  position: relative;
+  width: 100%;
+  background-color: #9c0033;
+}
+
+.header .log-in-button {
+  position: absolute;
+  right: 0;
+  padding: 15px 28px;
+  margin: 25px 20px 0 0;
+  border: 2px solid #fff;
+}
+
+.header .log-in-button__link {
+  text-decoration: none;
+  font: 16pt 'robotomedium';
+  color: #fff;
+}
+
+/*************************main*************************/
+
+.welcome-box {
+  //margin: auto;
+  width: 380px;
+  background-color: rgba(28, 31, 41, .5);
+}
+
+.welcome-box__photo_round {
+  height: 143px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+.welcome-box__img {
+  position: absolute;
+  width: 300px;
+  left: -30px;
+  top: -80px;
+}
+
+.welcome-box__item {
+  margin: auto;
+  width: 143px;
+  padding-top: 40px;
+}
+
+.welcome-box__name,
+.welcome-box {
+  text-align: center;
+  color: #fff;
+  line-height: 1;
+  margin: 20px 0 0 0;
+}
+
+.welcome-box__name {
+  font: 28pt 'robotomedium';
+}
+
+.welcome-box__site {
+  margin-top: 0;
+  font: 16pt 'robotolight';
+}
+
+.socials__item {
+  display:inline-block;
+  list-style: none;
+  width: 35px;
+  margin-left: 30px;
+}
+
+.socials__item:first-child {
+  margin-left: 0;
+}
+
+.socials__link {
+  display: block;
+  height: 100%;
+  width: 100%;
+  text-indent: -99999px;
+  background: url('./assets/img/sprite.png') no-repeat;
+}
+/*************************bottom_welcome***************************/
+
+.welcome-box__navigation {
+}
+
+.welcome-box__list {
+  padding: 0;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+.list .list__item {
+  flex: 1;
+  padding: 15px 0;
+  text-align: center;
+  border-left: 2px solid #7195d2;
+  cursor: pointer;
+
+  background-color: #0447bd;
+  //text-align: center;
+  &:hover{
+    background-color: #093c96;
+  }
+}
+
+.list .list__item:first-child {
+  border: none;
+}
+
+.list .list__link {
+  text-decoration: none;
+  color: #fff;
+}
+
+/***********************footer***************************/
+
+.footer {
+  color: #fff;
+  flex: 0 1 auto;
+  padding: 30px 0;
+  font: 16pt 'robotolight';
+}
+
+
+
