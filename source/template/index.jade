@@ -2,36 +2,24 @@ doctype html
 html
   include common/_head
   body.body
+    include common/mixins
     <!--[if lt IE 7]>
     <p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите его</a></p>
     <![endif]-->
     header.header
       .log-in-button
         a.log-in-button__link(href="#") Авторизоваться
-    .wrapper
-        //.welcome-box__container
-        .welcome-box
+    .wrapper.flip-container
+      .welcome-box__flipper.flipper
+        .welcome-box.front
           .welcome-box__item
             .welcome-box__photo_round
               img.welcome-box__img(src="/assets/img/welcome-face.jpg", alt="Фото Гущиной Марии")
           h3.welcome-box__name Мария Гущина
           h4.welcome-box__site Личный сайт веб разработчика
-          ul.welcome-box__socials.socials
-            .fa.fa-vk
-            li.socials__item
-              a.socials__link.icon-vk(href="http://new.vk.com/ridetheskies", target="_blank") vk.com
-            li.socials__item
-              a.socials__link.icon-github(href="https://github.com/glowlh", target="_blank") github.com
-            li.socials__item
-              a.socials__link.icon-in(href="https://www.linkedin.com/in/мария-гущина-84093a122", target="_blank") linkedin.com
-          nav.welcome-box__navigation
-            ul.welcome-box__list.list
-              li.list__item
-                a.list__link(href="works.html") Мои работы
-              li.list__item
-                a.list__link(href="personality.html") Обо мне
-              li.list__item
-                a.list__link(href="blog.html") Блог
-        //.welcome-box_back
-          form.log-in-form I'm be BACK
+          .welcome-box__socials
+            include common/socials
+          - var items = [["Мои работы", "pages/works.html"], ["Обо мне", "pages/personality.html"], ["Блог", "pages/blog.html"]]
+          + list(items, "welcome-box-menu")
+        include common/logIn
     footer.footer © Мария Гущина | создано с любовью в LoftSchool | 2016

@@ -1,0 +1,26 @@
+$big-width: 1800px;
+$normal-width: 1200px;
+$iPad-width: 786px;
+$iPhone-width: 320px;
+
+@media screen and (min-width: $big-width) {
+  .body {
+    background: url('/assets/img/background-night-big.jpg') no-repeat #193832;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+}
+
+@media screen and (min-width: $iPhone-width) and (max-width: $iPad-width) {
+  .header .log-in-button {
+    margin: 25px 0 0 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .header .log-in-button__link {
+    padding: 0;
+  }
+}

@@ -20,12 +20,11 @@ body {
   flex: 1 0 auto;
 }
 
-/************************header************************/
+/*header*/
 
 .header {
   position: relative;
   width: 100%;
-  background-color: #9c0033;
 }
 
 .header .log-in-button {
@@ -42,7 +41,7 @@ body {
   color: #fff;
 }
 
-/*************************main*************************/
+/*main_begin*/
 
 .welcome-box {
   //margin: auto;
@@ -51,7 +50,7 @@ body {
 }
 
 .welcome-box__photo_round {
-  height: 143px;
+  min-height: 143px;
   border-radius: 50%;
   overflow: hidden;
   position: relative;
@@ -71,7 +70,7 @@ body {
 }
 
 .welcome-box__name,
-.welcome-box {
+.welcome-box__site {
   text-align: center;
   color: #fff;
   line-height: 1;
@@ -87,30 +86,17 @@ body {
   font: 16pt 'robotolight';
 }
 
-.socials__item {
-  display:inline-block;
-  list-style: none;
-  width: 35px;
-  margin-left: 30px;
+  /*welcome-box_for_socials*/
+
+.welcome-box__socials {
+  text-align: center;
+  margin-top: 0;
+  padding-top: 0;
 }
 
-.socials__item:first-child {
-  margin-left: 0;
-}
+  /*bottom_welcome*/
 
-.socials__link {
-  display: block;
-  height: 100%;
-  width: 100%;
-  text-indent: -99999px;
-  background: url('./assets/img/sprite.png') no-repeat;
-}
-/*************************bottom_welcome***************************/
-
-.welcome-box__navigation {
-}
-
-.welcome-box__list {
+.welcome-box-menu__list {
   padding: 0;
   margin-bottom: 0;
   display: flex;
@@ -118,7 +104,7 @@ body {
   list-style: none;
 }
 
-.list .list__item {
+.welcome-box-menu__list .welcome-box-menu__item {
   flex: 1;
   padding: 15px 0;
   text-align: center;
@@ -126,20 +112,21 @@ body {
   cursor: pointer;
 
   background-color: #0447bd;
-  //text-align: center;
   &:hover{
     background-color: #093c96;
   }
 }
 
-.list .list__item:first-child {
+.welcome-box-menu__list .welcome-box-menu__item:first-child {
   border: none;
 }
 
-.list .list__link {
+.welcome-box-menu__list .welcome-box-menu__link {
   text-decoration: none;
   color: #fff;
 }
+
+/*main_end*/
 
 /***********************footer***************************/
 

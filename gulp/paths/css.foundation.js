@@ -1,6 +1,5 @@
 'use strict';
 
 module.exports = [
-  './node_modules/normalize.css/normalize.css',
-  './build/assets/css/sprite.css'
+  './node_modules/normalize.css/normalize.css'
 ];

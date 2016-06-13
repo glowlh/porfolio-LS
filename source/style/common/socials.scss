@@ -1,0 +1,45 @@
+
+  /*socials*/
+
+.socials {
+  padding: 0;
+  margin: -40px;
+
+}
+
+.socials__item {
+  display:inline-block;
+  list-style: none;
+  margin-left: 27px;
+}
+
+.socials__item:first-child {
+  margin-left: 0;
+}
+
+.socials__link {
+  display: block;
+  width: 100%;
+}
+
+.socials__svg--vk {
+  width: 30px;
+}
+
+.socials__svg--github {
+  width: 26px;
+}
+
+.socials__svg--in {
+  width: 24px;
+}
+
+.socials__svg {
+  //width: 30px;
+  fill: #004cd1;
+}
+
+.socials .svg__title{
+  text-indent: -99999px;
+}
+

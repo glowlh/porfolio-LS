@@ -1,0 +1,12 @@
+//Mixin for navigation list
+
+mixin list(items, className, active)
+    nav(class="#{className}")
+        ul(class="#{className}__list")
+            each item, key in items
+                if key == active
+                    li(class="#{className})_item #{className}__item--active")
+                        a(href="#{item[1]}" class="#{className}__link")= item[0]
+                else
+                    li(class="#{className}__item")
+                        a(href="#{item[1]}" class="#{className}__link")= item[0]
