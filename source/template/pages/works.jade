@@ -1,0 +1,30 @@
+doctype html
+html
+    include ./common/_head
+    body.body
+        include ./common/mixins
+        +setHeader()
+        h1.works-title МОИ РАБОТЫ
+        include ./common/exaples-works_widget
+        .opinions
+            h1.opinions__title ЧТО ОБО МНЕ ГОВОРЯТ
+            .opinions__comments
+                .comments__dima
+                    + setRoudedImage("/assets/img/dima-face.jpg", "Фото Димы")
+                    blockquote.dima__blockquote.
+                        ТЕКСТ текст ТЕКСТ текст ТЕКСТ текст
+                        ТЕКСТ текст ТЕКСТ текст ТЕКСТ текст
+                        ТЕКСТ текст ТЕКСТ текст ТЕКСТ текст
+                        ТЕКСТ текст ТЕКСТ текст ТЕКСТ текст
+                    .dima__signature Дима, Главный
+                .comments__dima
+                    + setRoudedImage("/assets/img/dima-face.jpg", "Фото Зара")
+                    blockquote.zar__blockquote.
+                        ТЕКСТ текст ТЕКСТ текст ТЕКСТ текст
+                        ТЕКСТ текст ТЕКСТ текст ТЕКСТ текст
+                        ТЕКСТ текст ТЕКСТ текст ТЕКСТ текст
+                        ТЕКСТ текст ТЕКСТ текст ТЕКСТ текст
+                    .dima__signature Зар, Главный
+            .linked-box
+                include ./common/linked_widget
+        include ./common/footer

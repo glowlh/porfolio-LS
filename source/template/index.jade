@@ -13,13 +13,12 @@ html
       .welcome-box__flipper.flipper
         .welcome-box.front
           .welcome-box__item
-            .welcome-box__photo_round
-              img.welcome-box__img(src="/assets/img/welcome-face.jpg", alt="Фото Гущиной Марии")
-          h3.welcome-box__name Мария Гущина
+            + setRoudedImage("/assets/img/welcome-face.jpg", "Фото Гущиной Марии")
+            h3.welcome-box__name Мария Гущина
           h4.welcome-box__site Личный сайт веб разработчика
           .welcome-box__socials
-            include common/socials
+            include common/socials_widget
           - var items = [["Мои работы", "pages/works.html"], ["Обо мне", "pages/personality.html"], ["Блог", "pages/blog.html"]]
-          + list(items, "welcome-box-menu")
-        include common/logIn
-    footer.footer © Мария Гущина | создано с любовью в LoftSchool | 2016
+          + setList(items, "welcome-box-menu")
+        include common/logIn_widget
+    footer.footer-welcome © Мария Гущина | создано с любовью в LoftSchool | 2016

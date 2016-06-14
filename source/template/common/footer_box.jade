@@ -1,0 +1,8 @@
+footer.footer
+    .comment
+    .links
+        - var items = [["Мои работы", "pages/works.html"], ["Обо мне", "pages/personality.html"], ["Блог", "pages/blog.html"]]
+        + setList(items, "footer-menu")
+        include socials_widget
+    include contacts_box
+    .copyright © Мария Гущина | создано с любовью в LoftSchool | 2016

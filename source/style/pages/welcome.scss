@@ -1,0 +1,141 @@
+html,
+body {
+  height: 100%;
+}
+
+.body {
+  background: url('/assets/img/background-night.jpg') no-repeat #193832;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 0 auto;
+}
+
+/*header*/
+
+.header {
+  position: relative;
+  width: 100%;
+}
+
+.header .log-in-button {
+  position: absolute;
+  right: 0;
+  padding: 15px 28px;
+  margin: 25px 20px 0 0;
+  border: 2px solid #fff;
+}
+
+.header .log-in-button__link {
+  text-decoration: none;
+  font: 16pt 'robotomedium';
+  color: #fff;
+}
+
+/*main_begin*/
+
+.welcome-box {
+  //margin: auto;
+  width: 380px;
+  background-color: rgba(28, 31, 41, .5);
+}
+
+.welcome-box__photo_round {
+  min-height: 143px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+.welcome-box__img {
+  position: absolute;
+  width: 300px;
+  left: -30px;
+  top: -80px;
+}
+
+.welcome-box__item {
+  margin: auto;
+  width: 143px;
+  padding-top: 40px;
+}
+
+.welcome-box__name,
+.welcome-box__site {
+  text-align: center;
+  color: #fff;
+  line-height: 1;
+  margin: 20px 0 0 0;
+}
+
+.welcome-box__name {
+  font: 28pt 'robotomedium';
+}
+
+.welcome-box__site {
+  margin-top: 0;
+  font: 16pt 'robotolight';
+}
+
+  /*welcome-box_for_socials*/
+
+.welcome-box__socials {
+  text-align: center;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+  /*bottom_welcome*/
+
+.welcome-box-menu__list {
+  padding: 0;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+.welcome-box-menu__list .welcome-box-menu__item {
+  flex: 1;
+  padding: 15px 0;
+  text-align: center;
+  border-left: 2px solid #7195d2;
+  cursor: pointer;
+
+  background-color: #0447bd;
+  &:hover{
+    background-color: #093c96;
+  }
+}
+
+.welcome-box-menu__list .welcome-box-menu__item:first-child {
+  border: none;
+}
+
+.welcome-box-menu__list .welcome-box-menu__link {
+  text-decoration: none;
+  color: #fff;
+}
+
+/*main_end*/
+
+/***********************footer***************************/
+
+.footer-welcome {
+  color: #fff;
+  flex: 0 1 auto;
+  padding: 30px 0;
+  font: 16pt 'robotolight';
+}
+
+
+
