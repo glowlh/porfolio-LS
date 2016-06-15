@@ -1,0 +1,117 @@
+$footer-height: 100px;
+$button-hover-color: #083c96;
+$welcome-box-width: 380px;
+$rounded-image-wh: 143px;
+
+html,
+body {
+  height: 100%;
+}
+
+.body {
+  background: url('/assets/img/background-night.jpg') no-repeat #193832;
+  background-size: cover;
+  background-attachment: fixed;
+
+}
+
+.wrapper {
+  min-height: 100%;
+  margin-bottom: -$footer-height;
+}
+
+.wrapper:after {
+  content: '';
+  display: block;
+  height: $footer-height;
+  position: relative;
+}
+
+/*header*/
+
+.header-welcome {
+  width: 100%;
+  position: relative;
+}
+
+.header-welcome .log-in-button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: 24px;
+  margin-right: 20px;
+  border: 2px solid #fff;
+  padding: 15px 28px;
+  cursor: pointer;
+  &:hover {
+    border: none;
+    background-color: $button-hover-color;
+  }
+}
+
+.header-welcome .log-in-button__link {
+  text-decoration: none;
+  color: #fff;
+  font: 14pt 'Roboto Regular';
+}
+
+/*welcome-box*/
+
+.welcome-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: $welcome-box-width;
+}
+
+.welcome-box__item {
+  background-color: rgba(28, 31, 41, .5);
+
+}
+
+.welcome-box__image {
+  width: $rounded-image-wh;
+  margin: auto;
+  padding-top: 40px;
+}
+
+.welcome-box__name,
+.welcome-box__comment {
+  text-align: center;
+  color: #fff;
+  margin-top: 20px;
+}
+
+.welcome-box__name {
+  font: 26pt/1 'Roboto Regular';
+}
+
+.welcome-box__comment {
+  margin-top: -20px;
+  font: 14pt/.5 'Roboto Light';
+}
+
+.welcome-box__socials {
+  background-color: #9c0033;
+  display: inline;
+  text-align: center;
+}
+
+/*footer*/
+
+.footer-welcome {
+  position: relative;
+  height: $footer-height;
+}
+
+.copyrigth {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font: 16pt 'Roboto Light';
+}
+
+

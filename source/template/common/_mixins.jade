@@ -5,7 +5,7 @@ mixin setList(items, className, active)
         ul(class="#{className}__list")
             each href, name in items
                 if key == active
-                    li(class="#{className})__item #{className}__item--active")
+                    li(class="#{className}__item #{className}__item--active")
                         a(href="#{href}" class="#{className}__link")= name
                 else
                     li(class="#{className}__item")
@@ -21,5 +21,5 @@ mixin setLinedTitle(name, className)
 //Mixin fo rounded image
 
 mixin setRoudedImage(src, altName)
-    .welcome-box__photo_round
-        img.welcome-box__img(src="#{src}", alt="#{altName}")
+    .rounded-image
+        img.rounded-image__img(src="#{src}", alt="#{altName}")

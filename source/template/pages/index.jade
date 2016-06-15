@@ -7,24 +7,27 @@ html
     <p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите его</a></p>
     <![endif]-->
     .wrapper
-      header.header
+      header.header-welcome
         .log-in-button
           a.log-in-button__link(href="#") Авторизоваться
-      .welcome-box.flip-container
+      .flip-container
         .welcome-box__flipper.flipper
           .welcome-box.front
             .welcome-box__item
-              + setRoudedImage("/assets/img/welcome-face.jpg", "Фото Гущиной Марии")
+              .welcome-box__image
+                + setRoudedImage("/assets/img/welcome-face.jpg", "Фото Гущиной Марии")
               h3.welcome-box__name Мария Гущина
-              h4.welcome-box__site Личный сайт веб разработчика
+              h4.welcome-box__comment Личный сайт веб разработчика
               .welcome-box__socials
-              include ../common/socials_widget
+                include ../common/socials_widget
               -
                 var items = {
-                    "Мои работы": "pages/works.html",
-                    "Обо мне"   : "pages/about.html",
-                    "Блог"      : "pages/blog.html"
+                    "Мои работы": "works.html",
+                    "Обо мне"   : "about.html",
+                    "Блог"      : "blog.html"
                 }
-              + setList(items, "welcome-box-menu")
-              include ../common/log-in_widget
-    footer.footer-welcome © Мария Гущина | создано с любовью в LoftSchool | 2016
+              .welcome-box__menu
+                +setList(items, "footer-menu")
+              //include ../common/log-in_widget
+    footer.footer-welcome
+      p.copyrigth © Мария Гущина | создано с любовью в LoftSchool | 2016

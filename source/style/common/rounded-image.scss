@@ -1,0 +1,16 @@
+$rounded-image-wh: 143px;
+
+.rounded-image {
+  position: relative;
+  height: $rounded-image-wh;
+  width: $rounded-image-wh;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.rounded-image__img {
+  position: absolute;
+  width: 200px;
+  left: -25px;
+  top: -30px;
+}

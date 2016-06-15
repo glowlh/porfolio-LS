@@ -3,8 +3,7 @@
 
 .socials {
   padding: 0;
-  margin: -40px;
-
+  margin: -40px; //странности в svg
 }
 
 .socials__item {
@@ -15,11 +14,6 @@
 
 .socials__item:first-child {
   margin-left: 0;
-}
-
-.socials__link {
-  display: block;
-  width: 100%;
 }
 
 .socials__svg--vk {
@@ -35,7 +29,6 @@
 }
 
 .socials__svg {
-  //width: 30px;
   fill: #004cd1;
 }
 

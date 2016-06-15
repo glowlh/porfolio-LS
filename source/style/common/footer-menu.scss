@@ -1,0 +1,36 @@
+$button-hover-color: #083c96;
+$button-color: #0447bd;
+$border-left-color: #7195d2;
+
+.footer-menu {
+  //background-color: #9c0033;
+}
+
+.footer-menu__list {
+  padding: 0;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+.footer-menu__item {
+  flex: 1;
+  padding: 15px 0;
+  text-align: center;
+  border-left: 2px solid $border-left-color;
+  cursor: pointer;
+  background-color: $button-color;
+  &:hover{
+    background-color: $button-hover-color;
+  }
+}
+
+.footer-menu__list .footer-menu__item:first-child {
+  border: none;
+}
+
+.footer-menu__list .footer-menu__link {
+  text-decoration: none;
+  color: #fff;
+}
