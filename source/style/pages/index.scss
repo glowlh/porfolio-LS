@@ -9,18 +9,18 @@ body {
 }
 
 .body {
-  background: url('/assets/img/background-night.jpg') no-repeat #193832;
+  background: url('/assets/img/background-night.jpg') no-repeat #1a2c51;
   background-size: cover;
   background-attachment: fixed;
 
 }
 
-.wrapper {
+.wrapper-welcome {
   min-height: 100%;
   margin-bottom: -$footer-height;
 }
 
-.wrapper:after {
+.wrapper-welcome:after {
   content: '';
   display: block;
   height: $footer-height;

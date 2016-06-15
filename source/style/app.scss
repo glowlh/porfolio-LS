@@ -1,10 +1,16 @@
 @import '/assets/fonts/roboto.css';
+
+@import 'pages/about';
 @import 'pages/index';
-@import 'common/rounded-image';
-@import 'common/footer-menu';
-@import 'common/socials_widget';
-@import 'common/header_box';
+
 //@import 'common/flipper';
+@import 'common/footer_box';
+@import 'common/footer-menu';
+@import 'common/header_box';
 //@import 'common/log-in';
+@import 'common/menu_widget';
+@import 'common/rounded-image';
+@import 'common/socials_widget';
+
 //@import 'common/adaptive';
 //The last
