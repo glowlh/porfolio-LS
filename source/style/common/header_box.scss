@@ -1,12 +1,9 @@
-$rounded-image-wh: 143px;
 
-.body {
-  background: none;
-  background-color: #1a2c51;
-}
-
-.header {
-  position: relative;
+.header__content,
+.night {
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 .night .night__img{
@@ -15,11 +12,7 @@ $rounded-image-wh: 143px;
   left: 0;
   right: 0;
   bottom: 0;
-}
-
-.header__content,
-.night {
-  position: absolute;
+  z-index: -1;
 }
 
 .widgets__socials {
@@ -45,22 +38,20 @@ $rounded-image-wh: 143px;
   margin-top: 28px;
 }
 
-.stars__svg {
-  fill: #fff;
-  opacity: .07;
-  width: 450px;
-}
-
-.stars__svg .svg__icon {
-  width: 450px;
-}
-
 .stars__svg,
 .photo {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   top: 150px;
+}
+
+.stars__svg {
+  fill: #fff;
+  opacity: .07;
+  width: 450px;
+  height: 450px;
+  margin-top: -140px;
 }
 
 .photo {
@@ -71,7 +62,10 @@ $rounded-image-wh: 143px;
 .header__title {
   text-align: center;
   color: #fff;
-  margin-top: 300px; //отступ?
+  position: absolute;
+  top: 300px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .header__title .title__name {
@@ -88,4 +82,8 @@ $rounded-image-wh: 143px;
   clear: both;
   visibility: hidden;
   height: 0;
+}
+
+.svg__icon {
+  width: 600px;
 }

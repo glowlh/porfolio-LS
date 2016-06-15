@@ -1,11 +1,21 @@
+$footer-height-pages: 200px;
+$big-width: 1800px;
+$normal-width: 1200px;
+$iPad-width: 786px;
+$iPhone-width: 320px;
+$button-hover-color: #083c96;
+$button-color: #0447bd;
+$border-left-color: #7195d2;
+$rounded-image-wh: 143px;
+
 @import '/assets/fonts/roboto.css';
 
 @import 'pages/about';
 @import 'pages/index';
 
 //@import 'common/flipper';
-@import 'common/footer_box';
 @import 'common/footer-menu';
+@import 'common/footer_box';
 @import 'common/header_box';
 //@import 'common/log-in';
 @import 'common/menu_widget';
