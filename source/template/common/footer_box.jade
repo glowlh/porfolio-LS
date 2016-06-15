@@ -1,8 +1,23 @@
 footer.footer
     .comment
+        p.comment__text.
+            Этот сайт я сдклала в рамках обучения в Школе онлайн образования LoftSchool
     .links
-        - var items = [["Мои работы", "pages/works.html"], ["Обо мне", "pages/personality.html"], ["Блог", "pages/blog.html"]]
+        -
+            var items = {
+            "Мои работы": "works.html",
+            "Обо мне"   : "about.html",
+            "Блог"      : "blog.html"
+            }
         + setList(items, "footer-menu")
         include socials_widget
-    include contacts_box
-    .copyright © Мария Гущина | создано с любовью в LoftSchool | 2016
+    -
+        var items = {
+        "betrayal-mmm"                  : "#",
+        "m.o.gushchina@gmail.com"       : "#",
+        "+7 962 961 78 37"              : "#",
+        "Королёв, ул. Строителей, д. 17": "#"
+        }
+        + setList(items, "contacts contacts--footer")
+    .copyright
+        p.copyrigth__text © Мария Гущина | создано с любовью в LoftSchool | 2016

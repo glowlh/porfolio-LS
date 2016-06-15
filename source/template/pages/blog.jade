@@ -1,24 +1,24 @@
-doctype html
-html
-  include ./common/_head
-  body.body
-    include ./common/mixins
-    +setHeader()
-      .header__title.blog
-        .title__name БЛОГ
-        .title__content Статьи, которые я написала
-    nav.articles
-      ul.articles__list
-        li.articles_item.articles_item--active
-          a.articles__link Полезные плагины Gulp
-        li.articles_item
-          a.articles__link SVG-спрайты
-        li.articles_item
-          a.articles__link Немного про Git
-    .arlicle-content
-      h3.arlicle-content__title
-      p.arlicle-content__text.
-        Статья про плагины Галпа
-        Продолжение Статьи про плагины Галпа
-        Конец статьи про плагины галпа
-    include ./common/footer_box
+extends ../page
+
+block header__title
+  .header__title
+    .title__name БЛОГ
+    .title__content Статьи, которые я написала
+
+block article
+  .article
+    .container
+      nav.articles
+        ul.articles__list
+          li.articles_item.articles_item--active
+            a.articles__link Полезные плагины Gulp
+          li.articles_item
+            a.articles__link SVG-спрайты
+          li.articles_item
+            a.articles__link Немного про Git
+      .arlicle-content
+        h3.arlicle-content__title
+        p.arlicle-content__text.
+          Статья про плагины Галпа
+          Продолжение Статьи про плагины Галпа
+          Конец статьи про плагины галпа

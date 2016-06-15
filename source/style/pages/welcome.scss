@@ -37,11 +37,15 @@ body {
 
 .header .log-in-button__link {
   text-decoration: none;
-  font: 16pt 'robotomedium';
+  font: 16pt 'Roboto Medium';
   color: #fff;
 }
 
 /*main_begin*/
+
+.flip-container {
+  //background-color: rgba(28, 31, 41, .5);
+}
 
 .welcome-box {
   //margin: auto;
@@ -78,12 +82,12 @@ body {
 }
 
 .welcome-box__name {
-  font: 28pt 'robotomedium';
+  font: 28pt 'Roboto Medium';
 }
 
 .welcome-box__site {
   margin-top: 0;
-  font: 16pt 'robotolight';
+  font: 16pt 'Roboto Light';
 }
 
   /*welcome-box_for_socials*/
@@ -130,11 +134,11 @@ body {
 
 /***********************footer***************************/
 
-.footer-welcome {
+.footer {
   color: #fff;
   flex: 0 1 auto;
   padding: 30px 0;
-  font: 16pt 'robotolight';
+  font: 16pt 'Roboto Light';
 }
 
 

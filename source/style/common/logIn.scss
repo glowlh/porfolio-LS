@@ -1,6 +1,6 @@
 .back {
   width: 380px;
-  background-color: rgba(28, 31, 41, .5);
+  //background-color: rgba(28, 31, 41, .5);
 }
 
 .log-in-form {
@@ -13,17 +13,16 @@
   margin: 0 15px;
 }
 
-.input-name:before {
-  width: 15px;
-  content: url("assets/img/symbol/svg/sprite.symbol.svg#login");
+.log-in__svg {
+  width: 16px;
 }
 
 .log-in__svg {
-  width: 15px
+  background-color: #9c0033;
+  margin: -70px 0;
 }
 
-.log-in-form {
+.svg__icon {
 }
 
-.log-in__name {
-}
+

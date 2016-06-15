@@ -2,10 +2,10 @@
 
 module.exports = function() {
   $.gulp.task('jade', function() {
-    return $.gulp.src($.path.template)
-      .pipe($.gp.jade({ pretty: true }))
+    return $.gulp.src($.path.template + '/pages/*.jade')
+      .pipe($.gp.jade({ pretty: '\t' }))
       .on('error', $.gp.notify.onError(function(error) {
-        console.log(123);
+        console.log("Errors -> ");
         return {
           title: 'Jade',
           message:  error.message

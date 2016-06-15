@@ -3,27 +3,19 @@
 mixin setList(items, className, active)
     nav(class="#{className}")
         ul(class="#{className}__list")
-            each item, key in items
+            each href, name in items
                 if key == active
                     li(class="#{className})__item #{className}__item--active")
-                        a(href="#{item[1]}" class="#{className}__link")= item[0]
+                        a(href="#{href}" class="#{className}__link")= name
                 else
                     li(class="#{className}__item")
-                        a(href="#{item[1]}" class="#{className}__link")= item[0]
+                        a(href="#{href}" class="#{className}__link")= name
 
-//Mixin for header bar
-
-mixin setHeader()
-    header.header
-        .header__widgets
-            include socials
-            include menu-widget
-        include face-box
 
 //Mixin for titles with underline
 
 mixin setLinedTitle(name, className)
-    h3(class="#{className} .title") #{name}
+    h3(class="#{className} .title")= name
         .line
 
 //Mixin fo rounded image

@@ -3,9 +3,16 @@
 module.exports = function() {
   var config = {
     mode        : {
-      symbol                : true
+      symbol    : {
+        dest    : './',     //base directory
+        sprite  : 'sprite/img/',          //Sprite location
+        render  : {
+          scss  : {
+            dest: './source/svg', //CSS stylesheet location
+          }
+        }
+      }
     }
-
   };
 
   $.gulp.task('sprite', function() {

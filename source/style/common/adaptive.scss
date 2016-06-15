@@ -14,13 +14,11 @@ $iPhone-width: 320px;
 @media screen and (min-width: $iPhone-width) and (max-width: $iPad-width) {
   .header .log-in-button {
     margin: 25px 0 0 0;
-    position: relative;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    position: static;
+    display: inline-block;
   }
 
-  .header .log-in-button__link {
-    padding: 0;
+  .header {
+    text-align: center;
   }
 }
