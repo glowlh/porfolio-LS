@@ -5,7 +5,7 @@ module.exports = function() {
     mode        : {
       symbol    : {
         dest    : './',     //base directory
-        sprite  : 'sprite/img/',          //Sprite location
+        sprite  : 'sprite/img',          //Sprite location
         render  : {
           scss  : {
             dest: './source/svg', //CSS stylesheet location
@@ -17,6 +17,15 @@ module.exports = function() {
 
   $.gulp.task('sprite', function() {
     return $.gulp.src('./source/svg/*.svg')
+        .pipe($.gp.cheerio({
+            run: function($) {
+            // $('[fill]').removeAttr('fill');
+            // $('[style]').removeAttr('style');
+          },
+            parserOptions: {
+              xmlMode: true
+            }
+        }))
         .pipe($.gp.svgSprite(config))
         .pipe($.gulp.dest($.config.root + '/assets/img'))
         .pipe($.browserSync.stream());

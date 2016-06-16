@@ -1,0 +1,54 @@
+//.title {
+//  position: relative;
+//}
+//
+//.title__svg,
+//.title__text {
+//  position: absolute;
+//  top: 50%;
+//  left: 50%;
+//  transform: translate(-50%, -50%);
+//}
+//
+//.title__svg {
+//  fill: #1056d1;
+//  //fill: #fff;
+//  //opacity: .07;
+//  width: 280px;
+//  height: 180px;
+//  //opacity: .1;
+//  transform: rotate(190deg) translate(50%, 50%);
+//
+//}
+//
+//.title__text {
+//  margin: 0;
+//}
+
+.title {
+  min-height: 120px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title .title__text {
+  display: inline-block;
+  font: 25pt 'Sansus Regular';
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  user-select: none;
+  position: relative;
+  z-index: 2;
+}
+
+.title .title__svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+}

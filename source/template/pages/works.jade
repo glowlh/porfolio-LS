@@ -1,27 +1,37 @@
 extends ../page
 
+block header-bottom
+  .header-bottom
+    svg.bg__svg(preserveAspectRatio="xMaxYMax meet", viewBox="0 0 2032 360.368")
+      use.svg__icon(xlink:href="assets/img/sprite/img.svg#bg")
+
+block header__title
+  .header__title
+    .title__name Мария Гущина
+    .title__comment Личный сайт веб-разработчика
+
 block article
   .article
-      h1.works-title МОИ РАБОТЫ
+    + setStarsBackgroundTitle("Мои работы", "assets/img/sprite/img.svg#stars2")
     include ../common/exaples-works_widget
     .opinions
-      h1.opinions__title ЧТО ОБО МНЕ ГОВОРЯТ
+      + setStarsBackgroundTitle("Что обо мне говорят", "assets/img/sprite/img.svg#stars3")
       .opinions__comments
         .comments__dima
-          +setRoudedImage("/assets/img/dima-face.jpg", "Фото Димы")
-          blockquote.dima__blockquote.
-            ТЕКСТ текст ТЕКСТ текст ТЕКСТ текст
-            ТЕКСТ текст ТЕКСТ текст ТЕКСТ текст
-            ТЕКСТ текст ТЕКСТ текст ТЕКСТ текст
-            ТЕКСТ текст ТЕКСТ текст ТЕКСТ текст
-          .dima__signature Дима, Главный
-        .comments__dima
-          +setRoudedImage("/assets/img/dima-face.jpg", "Фото Зара")
-          blockquote.zar__blockquote.
-            ТЕКСТ текст ТЕКСТ текст ТЕКСТ текст
-            ТЕКСТ текст ТЕКСТ текст ТЕКСТ текст
-            ТЕКСТ текст ТЕКСТ текст ТЕКСТ текст
-            ТЕКСТ текст ТЕКСТ текст ТЕКСТ текст
-          .dima__signature Зар, Главный
+          .dima__photo
+            + setRoudedImage("/assets/img/photo-dima.png", "Фото Димы")
+          blockquote.blockquote.dima__blockquote.
+            Эта девушка проходила обучение веб-разработке не
+            где-то, а в LoftSchool. 2 месяца только самых
+            тяжёлых испытаний и бессоных ночей!
+          .dima__signature.signature <b>Ковльчук Дмитрий</b><br>- основатель LoftSchool
+        .comments__zar
+          .zar__photo
+            + setRoudedImage("/assets/img/photo-zar.png", "Фото Зара")
+          blockquote.blockquote.zar__blockquote.
+            Этот код выдерживает любые испытания. Только,
+            пожалуйста, не загружайте сайт на слишком
+            старых браузерах!
+          .zar__signature.signature <b>Зар Захаров</b><br>- главный преподаватель
       .linked-box
         include ../common/linked_widget

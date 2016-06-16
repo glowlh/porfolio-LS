@@ -26,10 +26,52 @@
 //  overflow: hidden;
 //}
 
+.about-me {
+  position: relative;
+  z-index: 1;
+}
+
+.about-me__content {
+  position: absolute;
+  top: 0;
+}
+
+.about-me__title {
+  min-height: 130px;
+}
+
+.about-me .about-bg-left__svg {
+  fill: rgba(#f2f0e8, 1);
+  max-width: 900px;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+}
+
 .container .about-me {
   float: left;
+  //background-color: #f2f0e8;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.about-me__title {
+  
 }
 
 .container .skills {
   float: right;
+  background-color: #f4f5f0;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.article {
+  position: relative;
 }

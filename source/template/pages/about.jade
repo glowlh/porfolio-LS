@@ -1,18 +1,22 @@
 extends ../page
 
 block article
-  .article
+  article.article
     .container.clearfix
       .about-me
-        h2.about-me__title ОБО МНЕ
-        img.about_me__img(src="/assets/img/welcome-face.jpg", alt="Фото Гущиной Марии")
-        .about-me__sub-title
-          +setLinedTitle("КТО Я")
-        p.about-me__text.
-          Я такая такая такая
-          Занимаюсь тем-то тем-то тем-то
-          Помогу вам с тем-то тем-то тем-то
-          Умею много
+        svg.about-bg-left__svg(preserveAspectRatio="none", viewBox="0 0 900.006 1013.986")
+          use.svg__icon(xlink:href="assets/img/sprite/img.svg#about_bg_left")
+        .about-me__content
+          .about-me__title
+            + setStarsBackgroundTitle("ОБО МНЕ")
+          img.about_me__img(src="/assets/img/welcome-face.jpg", alt="Фото Гущиной Марии")
+          .about-me__sub-title
+            + setLinedTitle("КТО Я")
+          p.about-me__text.
+            Я такая такая такая
+            Занимаюсь тем-то тем-то тем-то
+            Помогу вам с тем-то тем-то тем-то
+            Умею много
       .skills
         .about-me__sub-title
           +setLinedTitle("ЧЕМ Я МОГУ БЫТЬ ВАМ ПОЛЕЗЕН")
@@ -28,5 +32,5 @@ block header__title
   .header__title
     .title__name Мария Гущина
     .title__comment Личный сайт веб-разработчика
-  .pointer
+
 

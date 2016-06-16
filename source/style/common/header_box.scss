@@ -23,7 +23,7 @@
 
 .widgets__socials .socials__svg {
   fill: #fff;
-  &hover {
+  &:hover {
     fill: #004cd1;
   }
 }
@@ -43,7 +43,7 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 150px;
+  //top: 150px;
 }
 
 .stars__svg {
@@ -57,13 +57,14 @@
 .photo {
   width: $rounded-image-wh;
   margin: auto;
+  top: 23vh; //150px
 }
 
 .header__title {
   text-align: center;
   color: #fff;
   position: absolute;
-  top: 300px;
+  top: 49vh; //320px
   left: 50%;
   transform: translateX(-50%);
 }
@@ -73,7 +74,7 @@
 }
 
 .header__title .title__comment {
-  font: 16pt/1.3 'Roboto Light';
+  font: 14pt/1.4 'Roboto Light';
 }
 
 .clearfix:after {
@@ -84,6 +85,20 @@
   height: 0;
 }
 
-.svg__icon {
-  width: 600px;
+.pointer {
+  position: absolute;
+  z-index: 1;
+  top: 72vh; //470px
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.pointer .arrow-down__svg {
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+  fill: rgba(#fff, .7);
+  &:hover {
+    fill: rgba(#fff, 1);
+  }
 }

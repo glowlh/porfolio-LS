@@ -1,25 +1,36 @@
 //Mixin for navigation list
 
 mixin setList(items, className, active)
-    nav(class="#{className}")
-        ul(class="#{className}__list")
-            each href, name in items
-                if key == active
-                    li(class="#{className}__item #{className}__item--active")
-                        a(href="#{href}" class="#{className}__link")= name
-                else
-                    li(class="#{className}__item")
-                        a(href="#{href}" class="#{className}__link")= name
+  nav(class="#{className}")
+    ul(class="#{className}__list")
+      each href, name in items
+        if key == active
+          li(class="#{className}__item #{className}__item--active")
+            a(href="#{href}" class="#{className}__link")= name
+        else
+          li(class="#{className}__item")
+            a(href="#{href}" class="#{className}__link")= name
 
 
 //Mixin for titles with underline
 
 mixin setLinedTitle(name, className)
-    h3(class="#{className} .title")= name
-        .line
+  h3(class="#{className} .title")= name
+    .line
 
-//Mixin fo rounded image
+//Mixin for rounded image
 
 mixin setRoudedImage(src, altName)
-    .rounded-image
-        img.rounded-image__img(src="#{src}", alt="#{altName}")
+  .rounded-image
+    img.rounded-image__img(src="#{src}", alt="#{altName}")
+
+//Mixin for title with stars.svg background
+
+mixin setStarsBackgroundTitle(title, svgHref)
+  .title
+    h1.title__text
+      |#{title}
+    svg.title__svg(preserveAspectRatio="xMaxYMax meet", viewBox="0 0 171.5 132.5")
+      use.svg__icon(xlink:href= svgHref)
+
+
