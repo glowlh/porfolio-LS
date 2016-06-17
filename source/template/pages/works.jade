@@ -12,10 +12,19 @@ block header__title
 
 block article
   .article
-    + setStarsBackgroundTitle("Мои работы", "assets/img/sprite/img.svg#stars2")
+    .title.header-article
+      h1.title__text Мои работы
+
+
     include ../common/exaples-works_widget
     .opinions
-      + setStarsBackgroundTitle("Что обо мне говорят", "assets/img/sprite/img.svg#stars3")
+      .opinions__background
+        img.lighthouse(src="/assets/img/lighthouse.jpg")
+      .title.header-opinions
+        h1.title__text
+          |Что обо мне <br> говорят
+        svg.title__svg(preserveAspectRatio="xMaxYMax meet", viewBox="0 0 103.03 124.03")
+          use.svg__icon(xlink:href="assets/img/sprite/img.svg#stars3")
       .opinions__comments
         .comments__dima
           .dima__photo
@@ -35,3 +44,6 @@ block article
           .zar__signature.signature <b>Зар Захаров</b><br>- главный преподаватель
       .linked-box
         include ../common/linked_widget
+      .pointer-bottom
+        svg.arrow-down__svg(preserveAspectRatio="xMaxYMax meet", viewBox="0 0 25.18 16.164")
+          use.svg__icon(xlink:href="assets/img/sprite/img.svg#arrow_down")

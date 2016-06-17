@@ -24,28 +24,43 @@
   height: 120px;
 }
 
-.article .title__text {
+
+
+.article .header-article,
+         .header-opinions {
   color: #fff;
-  font: 25pt 'Sansus Regular';
+  font: 20pt 'Sansus Regular';
 }
 
-.article .title {
+.article .header-article {
   margin-top: -125px;
 }
 
 .opinions {
-  background: url("../img/lighthouse.jpg") no-repeat;
+  //background: url("../img/lighthouse.jpg") no-repeat;
   background-size: 100vw;
   display: flex;
   flex-direction: column;
+  padding: 50px 50px 0 50px;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: $footer-height-pages;
 }
 
-.opinions .title {
-  margin-top: 0;
+.lighthouse {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
 }
 
-.opinions .title .title__svg {
+.header-opinions .title__svg {
   opacity: .15;
+  width: 180px;
+  height: 215px;
 }
 
 .blockquote {
@@ -95,6 +110,29 @@
   position: absolute;
   top: -70px;
   z-index: -1;
+}
+
+.linked-box {
+  display: flex;
+  justify-content: center;
+  padding-top: 70px;
+}
+
+.pointer-bottom {
+  justify-content: center;
+  display: flex;
+  padding: 70px 0;
+}
+
+.pointer-bottom .arrow-down__svg {
+  cursor: pointer;
+  transform: rotate(180deg);
+  width: 20px;
+  height: 20px;
+  fill: rgba(#fff, .7);
+  &:hover {
+    fill: rgba(#fff, 1);
+  }
 }
 
 

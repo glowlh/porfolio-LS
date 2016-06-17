@@ -7,24 +7,24 @@
 
 /*footer*/
 
-//.wrapper {
-//  height: 100%;
-//  margin-bottom: -$footer-height-pages;
-//}
-//
-//.wrapper:after {
-//  content: '';
-//  display: block;
-//  height: $footer-height-pages;
-//}
-//
-//.footer {
-//  display: flex;
-//  flex-direction: column;
-//  height: $footer-height-pages;
-//  background-color: rgba(28, 31, 41, .5);
-//  overflow: hidden;
-//}
+.wrapper {
+  //height: 100%;
+  margin-bottom: -$footer-height-pages;
+}
+
+.wrapper:after {
+  //content: '';
+  //display: block;
+  //height: $footer-height-pages;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  height: $footer-height-pages;
+  background-color: rgba(28, 31, 41, .5);
+  overflow: hidden;
+}
 
 .about-me {
   position: relative;

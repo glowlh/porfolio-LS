@@ -1,0 +1,67 @@
+.linked-form {
+  width: $welcome-box-width;
+  background-color: rgba(28, 31, 41, .5);
+  display: flex;
+  flex-direction: column;
+}
+
+.linked-form__title {
+  width: 290px;
+  margin: auto;
+  padding: 20px 0;
+  font: 25pt 'Sansus Regular';
+  color: #fff;
+}
+
+.linked-form .input,
+             .textarea {
+  background-color: rgba(#fff, .07);
+  color: rgba(#fff, .5);
+  border: none;
+  outline:none;
+}
+
+.linked-form .input {
+  margin: 0 23px 23px 23px;
+  height: 44px;
+  padding: 0 17px;
+}
+
+.linked-form .textarea {
+  height: 133px;
+  margin: 0 23px 23px 23px;
+  resize: none;
+  padding: 17px 17px;
+}
+
+.form-bottom__list {
+  padding: 0;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+.form-bottom__item {
+  flex: 1;
+  padding: 15px 0;
+  text-align: center;
+  cursor: pointer;
+  background-color: $button-color;
+  &:hover{
+    background-color: $button-hover-color;
+  }
+}
+
+.form-bottom__item:last-child {
+  color: rgba(#fff, .5);
+  background-color: rgba($button-color, 0);
+  &:hover{
+    background-color: $button-hover-color;
+  }
+}
+
+.form-bottom__list .form-bottom__link {
+  text-decoration: none;
+  color: #fff;
+}

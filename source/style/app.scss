@@ -10,16 +10,20 @@ $rounded-image-wh: 143px;
 
 @import '/assets/fonts/roboto.css';
 @import '/assets/fonts/sansun.css';
+@import '/assets/fonts/fontawesome.css';
 
 @import 'pages/about';
 @import 'pages/works';
 @import 'pages/index';
 
+@import 'common/stars-background-title';
 //@import 'common/flipper';
-@import 'common/footer-menu';
+@import 'common/bottom-menu';
 @import 'common/footer_box';
 @import 'common/header_box';
-@import 'common/stars-background-title';
+@import 'common/exaples-works_widget';
+@import 'common/linked-title';
+@import 'common/linked_widget';
 //@import 'common/log-in';
 @import 'common/menu_widget';
 @import 'common/rounded-image';

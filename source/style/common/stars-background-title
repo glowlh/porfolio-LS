@@ -36,7 +36,7 @@
 
 .title .title__text {
   display: inline-block;
-  font: 25pt 'Sansus Regular';
+  font-family: 'Sansus Regular';
   text-transform: uppercase;
   text-align: center;
   margin: 0;
