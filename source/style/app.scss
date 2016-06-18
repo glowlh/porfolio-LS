@@ -12,11 +12,11 @@ $rounded-image-wh: 143px;
 @import '/assets/fonts/sansun.css';
 @import '/assets/fonts/fontawesome.css';
 
+@import 'common/stars-background-title';
 @import 'pages/about';
 @import 'pages/works';
 @import 'pages/index';
 
-@import 'common/stars-background-title';
 //@import 'common/flipper';
 @import 'common/bottom-menu';
 @import 'common/footer_box';

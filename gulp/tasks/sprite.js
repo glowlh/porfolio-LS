@@ -21,6 +21,7 @@ module.exports = function() {
             run: function($) {
             // $('[fill]').removeAttr('fill');
             // $('[style]').removeAttr('style');
+            // $('[stroke]').removeAttr('stroke');
           },
             parserOptions: {
               xmlMode: true

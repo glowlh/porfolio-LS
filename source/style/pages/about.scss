@@ -1,77 +1,108 @@
-/*header*/
-
-.header {
-  min-height: 100vh;
-  position: relative;
-}
-
-/*footer*/
-
-.wrapper {
-  //height: 100%;
-  margin-bottom: -$footer-height-pages;
-}
-
-.wrapper:after {
-  //content: '';
-  //display: block;
-  //height: $footer-height-pages;
-}
-
-.footer {
-  display: flex;
-  flex-direction: column;
-  height: $footer-height-pages;
-  background-color: rgba(28, 31, 41, .5);
-  overflow: hidden;
-}
+$title-color: #373e42;
 
 .about-me {
-  position: relative;
-  z-index: 1;
-}
-
-.about-me__content {
-  position: absolute;
-  top: 0;
-}
-
-.about-me__title {
-  min-height: 130px;
-}
-
-.about-me .about-bg-left__svg {
-  fill: rgba(#f2f0e8, 1);
-  max-width: 900px;
-  width: 100%;
-  height: 100%;
-}
-
-.container {
-  display: flex;
-}
-
-.container .about-me {
-  float: left;
-  //background-color: #f2f0e8;
-  width: 50vw;
   display: flex;
   flex-direction: column;
-
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
 }
 
-.about-me__title {
-  
+.about-me__triangles {
+  display: flex;
+  width: 100vw;
+  .about-bg-left__svg,
+  .about-bg-right__svg {
+    width: 50vw;
+  }
+  .about-bg-left__svg {
+    fill: #f2f0e8;
+  }
+  .about-bg-right__svg {
+    fill: #f4f5f0;
+  }
 }
 
-.container .skills {
-  float: right;
-  background-color: #f4f5f0;
-  width: 50vw;
+/*left-side*/
+
+.about-me.container {
+  display: flex;
+  flex-direction: row;
+  .about-me__description {
+    background-color: #f2f0e8;
+    display: flex;
+    align-items: center;
+  }
+  .about-me__skills {
+    background-color: #f4f5f0;
+  }
+  .about-me__description,
+  .about-me__skills {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.description__title .title__svg {
+  fill: #1056d1;
+  opacity: .1;
+  width: 195px;
+  height: 140px;
+  transform-origin: 40px 45px;
+  transform: rotate(-170deg);
+}
+
+.description__title .title__text {
+  font: 40pt 'Sansus Regular';
+  color: $title-color;
+}
+
+.description__img{
+  width: 420px;
+  height: 390px;
+  margin: 35px 0 5px 0;
+}
+
+.description__sub-title .who-i-am {
+    width: 80px;
+    margin: auto;
+    padding: 20px 0;
+    color: $title-color;
+    font: 25pt 'Sansus Regular';
+    &:after {
+      width: 80px;
+      background-color: $title-color;
+      padding: 0 0px;
+    }
+}
+
+.description__text {
+  margin:  0 120px 40px 120px;
+  .text__data{
+    font: 12pt/1.5 'Roboto Regular';
+    margin-bottom: 2em;
+    color:  $title-color;
+  }
+}
+
+/*right-side*/
+
+.about-me__skills {
   display: flex;
   flex-direction: column;
 }
 
-.article {
-  position: relative;
+.skills__title .text {
+  text-align: center;
+  width: 300px;
+  margin: auto;
+  padding: 20px 0;
+  color: $title-color;
+  font: 25pt 'Sansus Regular';
+  &:after {
+    width: 80px;
+    background-color: $title-color;
+    padding: 0 0px;
+  }
 }

@@ -18,7 +18,7 @@
   overflow: hidden;
 }
 
-.article .title__svg {
+.article .title__svg--opinions {
   fill: #fff;
   opacity: .07;
   height: 120px;

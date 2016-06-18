@@ -2,31 +2,37 @@ extends ../page
 
 block article
   article.article
-    .container.clearfix
-      .about-me
-        svg.about-bg-left__svg(preserveAspectRatio="none", viewBox="0 0 900.006 1013.986")
-          use.svg__icon(xlink:href="assets/img/sprite/img.svg#about_bg_left")
-        .about-me__content
-          .about-me__title
-            + setStarsBackgroundTitle("ОБО МНЕ")
-          img.about_me__img(src="/assets/img/welcome-face.jpg", alt="Фото Гущиной Марии")
-          .about-me__sub-title
-            + setLinedTitle("КТО Я")
-          p.about-me__text.
-            Я такая такая такая
-            Занимаюсь тем-то тем-то тем-то
-            Помогу вам с тем-то тем-то тем-то
-            Умею много
-      .skills
-        .about-me__sub-title
-          +setLinedTitle("ЧЕМ Я МОГУ БЫТЬ ВАМ ПОЛЕЗЕН")
-        .skilles-widget
-          include ../common/skilles_widget
-    .my-contacts
-      .my-contacts__google-map
-      .my-contacts__contact-box
-        +setLinedTitle("КОНТАКТЫ", "contact-box__title")
-        include ../common/contacts_box
+    .about-me
+      .about-me__triangles
+        svg.about-bg-left__svg(preserveAspectRatio="xMinYMin slice", viewBox="0 0 900.331 1014")
+          use.svg__icon(xlink:href="assets/img/sprite/img.svg#about_bg_left", x="0", y="0")
+        svg.about-bg-right__svg(preserveAspectRatio="xMinYMin slice", viewBox="0 5 900.331 1027")
+          use.svg__icon(xlink:href="assets/img/sprite/img.svg#about_bg_right")
+      .about-me.container
+        .about-me__description
+          .description__title
+            + setStarsBackgroundTitle("Обо мне", "assets/img/sprite/img.svg#stars2_blue")
+
+          img.description__img(src="/assets/img/welcome-face.jpg", alt="Фото Гущиной Марии")
+          .description__sub-title
+            + setLinedTitle("Кто я", "who-i-am")
+          .description__text
+            .text__data
+              p.data-first.
+                Я веб разработчик из Королёва, МО. Мне 22 года.
+                Я занимаюсь разработкой современных сайтов.
+                Мне нравится делать интересные
+                и современные проекты.
+              p.data-second.
+                Этот сайт я сделала в рамках обучения в
+                Школе онлайн образования LoftSchool.
+                Чуть позже я освежу в нём свой контент.
+                А пока посмотрите, как тут всё классно и красиво!
+        .about-me__skills
+          .skills__title
+            h3.text.linked-title Чем я могу быть <br> вам полезна
+          .skills__widget
+            include ../common/skilles_widget
 
 block header__title
   .header__title

@@ -102,3 +102,23 @@
     fill: rgba(#fff, 1);
   }
 }
+
+.header {
+  min-height: 100vh;
+  position: relative;
+  margin-bottom: -200px;
+  z-index: -1;
+}
+
+/*footer*/
+
+.wrapper {
+  //height: 100%;
+  margin-bottom: -$footer-height-pages;
+}
+
+.wrapper:after {
+  //content: '';
+  //display: block;
+  //height: $footer-height-pages;
+}
