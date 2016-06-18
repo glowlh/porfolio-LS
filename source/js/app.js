@@ -1,13 +1,6 @@
-'use strict';
-
-// $(document).ready(function() {
-//     $('.log-in-button__link').bind('click', function(e) {
-//       $('.welcome-box__flipper')
-//     });
-// });
-
 (function() {
   'use strict';
+  console.log(1111);
 
   $('.log-in-button__link').bind('click',
     function(event){
@@ -19,4 +12,10 @@
           'transform', 'rotateY(180deg)'
       );
     });
+
 })();
+
+
+
+
+

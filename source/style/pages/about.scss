@@ -10,7 +10,7 @@
 
 .about-me__triangles {
   display: flex;
-  width: 100vw;
+  width: 100%; //TODO сделать 100vw для tablet, phone
   .about-bg-left__svg,
   .about-bg-right__svg {
     width: 50vw;
@@ -103,7 +103,7 @@
   &:after {
     width: 80px;
     background-color: $title-color;
-    padding: 0 0px;
+    padding: 0 0;
   }
 }
 
@@ -111,4 +111,89 @@
   font: 12pt/1.5 'Roboto Regular';
   color: $title-color;
   margin-left: 45px;
+}
+
+.map__google-map {
+  height: calc(100vh + 200px); //$footer-height-pages = 200px
+  margin-bottom: -$footer-height-pages;
+
+}
+
+.map {
+  position: relative;
+  z-index: -1;
+}
+
+.map__contacts {
+  position: absolute;
+  top: 50vh; //из-за отступа!
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  transform: translate(-50%, -50%);
+  background-color: rgba(#fff, .7);
+  z-index: 2;
+  .contacts__title {
+    max-width: 150px;
+    margin: auto;
+    margin-top: 37px;
+    color: $title-color;
+    font: 25pt 'Sansus Regular';
+    &:after {
+      width: 80px;
+      background-color: $title-color;
+      padding: 0 0px;
+    }
+  }
+}
+
+.map__contacts .contacts__list {
+  display: flex;
+  flex-direction: row;
+  .contacts__item {
+    display: flex;
+    flex-direction: column;
+  }
+  .link {
+    text-decoration: none;
+    list-style: none;
+    font: 12pt 'Roboto Medium';
+    color: $title-color;
+  }
+  .item__link {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.link__svg {
+  width: 55px;
+  height: 55px;
+  fill: #1056d1;
+  margin-right: 15px;
+}
+
+.item__link--skype .link__svg {
+  width: 62px;
+  height: 62px;
+}
+
+.item__link--adress .link__svg {
+  width: 62px;
+  height: 62px;
+}
+
+.item__link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.item__link--skype,
+.item__link--phone {
+  margin-bottom: 30px;
+}
+
+.contacts__item--last {
+  margin-left: 60px;
 }
