@@ -1,0 +1,56 @@
+$title-color: #373e42;
+/*animation*/
+
+.skill-circle--back {
+  stroke: #dfdcd5;
+}
+
+circle {
+  transition: 1s stroke-dasharray;
+  stroke-width: 15px;
+}
+
+.inner-text {
+  dominant-baseline: central;
+  text-anchor: middle;
+  font: 9.5pt 'Roboto Medium';
+}
+
+.skill-circle {
+  animation: loading-circle 3s;
+  stroke: #658dd3;
+  transform-origin: 50%;
+  transform: rotate(-90deg);
+  stroke-dasharray: 70 251.2;
+}
+
+@-webkit-keyframes loading-circle {
+  from {
+    stroke-dasharray: 0 251.2;
+  }
+  to {
+    stroke-dasharray: 70 251.2;
+  }
+}
+
+/*position*/
+
+.frontend-skill,
+.backend-skill,
+.workflow-skill {
+  display: flex;
+  flex-direction: column;
+  .widget-title {
+    font: 20pt 'Roboto Medium';
+    color: $title-color;
+    margin: 30px 0 0 45px;
+  }
+  .diagrams {
+    margin-left: 50px;
+  }
+  .diagrams .skill-svg {
+    width: 90px;
+    padding-right: 35px;
+  }
+}
+

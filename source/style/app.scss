@@ -7,17 +7,20 @@ $button-hover-color: #083c96;
 $button-color: #0447bd;
 $border-left-color: #7195d2;
 $rounded-image-wh: 143px;
+$title-color: #373e42;
 
 @import '/assets/fonts/roboto.css';
 @import '/assets/fonts/sansun.css';
 @import '/assets/fonts/fontawesome.css';
 
-@import 'common/stars-background-title';
+@import 'common/_mixins';
+
 @import 'pages/about';
 @import 'pages/works';
 @import 'pages/index';
 
 //@import 'common/flipper';
+@import 'common/stars-background-title';
 @import 'common/bottom-menu';
 @import 'common/footer_box';
 @import 'common/header_box';
@@ -26,6 +29,7 @@ $rounded-image-wh: 143px;
 @import 'common/linked_widget';
 //@import 'common/log-in';
 @import 'common/menu_widget';
+@import 'common/skilles_widget';
 @import 'common/rounded-image';
 @import 'common/socials_widget';
 

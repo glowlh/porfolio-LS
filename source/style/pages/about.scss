@@ -1,4 +1,4 @@
-$title-color: #373e42;
+/*triangles-header-of-about-page*/
 
 .about-me {
   display: flex;
@@ -78,7 +78,7 @@ $title-color: #373e42;
 }
 
 .description__text {
-  margin:  0 120px 40px 120px;
+  margin:  0 120px;
   .text__data{
     font: 12pt/1.5 'Roboto Regular';
     margin-bottom: 2em;
@@ -105,4 +105,10 @@ $title-color: #373e42;
     background-color: $title-color;
     padding: 0 0px;
   }
+}
+
+.description {
+  font: 12pt/1.5 'Roboto Regular';
+  color: $title-color;
+  margin-left: 45px;
 }
