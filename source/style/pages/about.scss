@@ -121,7 +121,6 @@
 
 .map {
   position: relative;
-  z-index: -1;
 }
 
 .map__contacts {
@@ -153,6 +152,7 @@
   .contacts__item {
     display: flex;
     flex-direction: column;
+    //min-width: 200px;
   }
   .link {
     text-decoration: none;

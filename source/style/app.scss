@@ -1,3 +1,6 @@
+$border-left-color: #7195d2;
+$button-color: #0447bd;
+$button-hover-color: #083c96;
 $footer-height-pages: 200px;
 $big-width: 1800px;
 $normal-width: 1200px;
@@ -9,18 +12,21 @@ $border-left-color: #7195d2;
 $rounded-image-wh: 143px;
 $title-color: #373e42;
 
+
 @import '/assets/fonts/roboto.css';
 @import '/assets/fonts/sansun.css';
 @import '/assets/fonts/fontawesome.css';
 
 @import 'common/_mixins';
+@import 'common/_modificators';
 
 @import 'pages/index';
 @import 'pages/about';
 @import 'pages/works';
 @import 'pages/blog';
 
-//@import 'common/flipper';
+@import 'common/flipper';
+@import 'common/log-in';
 @import 'common/stars-background-title';
 @import 'common/bottom-menu';
 @import 'common/footer_box';
@@ -28,11 +34,9 @@ $title-color: #373e42;
 @import 'common/exaples-works_widget';
 @import 'common/linked-title';
 @import 'common/linked_widget';
-//@import 'common/log-in';
 @import 'common/menu_widget';
 @import 'common/skilles_widget';
 @import 'common/rounded-image';
 @import 'common/socials_widget';
 
-//@import 'common/adaptive';
-//The last
+

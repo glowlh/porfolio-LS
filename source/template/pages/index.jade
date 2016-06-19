@@ -7,6 +7,9 @@ html
     <p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите его</a></p>
     <![endif]-->
     .wrapper-welcome
+      video.background-welcome__video(autoplay, loop,  poster="./assets/img/background-night.jpg")
+        source.video__source(src="./assets/img/night.mp4", type="video/mp4")
+      img.background-welcome__img(src="./assets/img/night_mountains.png")
       header.header-welcome
         .log-in-button
           a.log-in-button__link(href="#") Авторизоваться
@@ -28,6 +31,6 @@ html
                 }
               .welcome-box__menu
                 + setList(items, "welcome-navigation")
-              //include ../common/log-in_widget
+              include ../common/log-in_widget
     footer.footer-welcome
       p.copyrigth © Мария Гущина | создано с любовью в LoftSchool | 2016

@@ -16,7 +16,7 @@ body {
 }
 
 .wrapper-welcome {
-  min-height: 100%;
+  min-height: 100vh;
   margin-bottom: -$footer-height;
 }
 
@@ -25,6 +25,30 @@ body {
   display: block;
   height: $footer-height;
   position: relative;
+}
+
+.background-welcome__video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100vw;
+  //height: 100vh;
+  //width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translate(-50%, -50%);
+}
+
+.background-welcome__img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  bottom: 0;
+  width: 100vw;
+  //height: 100vh;
+  //width: auto;
+  height: 100vh;
+  transform: translate(-50%, -50%);
 }
 
 /*header*/
@@ -101,15 +125,15 @@ body {
 /*footer*/
 
 .footer-welcome {
-  position: relative;
+  display: flex;
   height: $footer-height;
+  position: relative;
+  z-index: 1;
+  align-items: center;
+  justify-content: center;
 }
 
-.copyrigth {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.footer-welcome .copyrigth {
   color: #fff;
   font: 16pt 'Roboto Light';
 }

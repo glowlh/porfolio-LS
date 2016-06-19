@@ -1,12 +1,12 @@
 
 .header__content,
-.night {
+.header__background {
   position: absolute;
   top: 0;
   width: 100%;
 }
 
-.night .night__img{
+.header__background .background__img{
   width: 100%;
   top: 0;
   left: 0;
@@ -75,14 +75,6 @@
 
 .header__title .title__comment {
   font: 14pt/1.4 'Roboto Light';
-}
-
-.clearfix:after {
-  content: ".";
-  display: block;
-  clear: both;
-  visibility: hidden;
-  height: 0;
 }
 
 .pointer {
