@@ -15,9 +15,10 @@ $title-color: #373e42;
 
 @import 'common/_mixins';
 
+@import 'pages/index';
 @import 'pages/about';
 @import 'pages/works';
-@import 'pages/index';
+@import 'pages/blog';
 
 //@import 'common/flipper';
 @import 'common/stars-background-title';

@@ -24,8 +24,6 @@
   height: 120px;
 }
 
-
-
 .article .header-article,
          .header-opinions {
   color: #fff;
@@ -34,6 +32,10 @@
 
 .article .header-article {
   margin-top: -125px;
+}
+
+.article--works {
+  margin-top: 80px;
 }
 
 .opinions {
