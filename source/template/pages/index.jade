@@ -11,26 +11,26 @@ html
         source.video__source(src="./assets/img/night.mp4", type="video/mp4")
       img.background-welcome__img(src="./assets/img/night_mountains.png")
       header.header-welcome
-        .log-in-button
-          a.log-in-button__link(href="#") Авторизоваться
-      .flip-container
-        .welcome-box__flipper.flipper
-          .welcome-box.front
-            .welcome-box__item
-              .welcome-box__image
-                + setRoudedImage("/assets/img/welcome-face.jpg", "Фото Гущиной Марии")
-              h3.welcome-box__name Мария Гущина
-              h4.welcome-box__comment Личный сайт веб-разработчика
-              .welcome-box__socials
-                include ../common/socials_widget
-              -
-                var items = {
-                    "Мои работы": "works.html",
-                    "Обо мне"   : "about.html",
-                    "Блог"      : "blog.html"
-                }
-              .welcome-box__menu
-                + setList(items, "welcome-navigation")
-              include ../common/log-in_widget
+        .authorisation-button
+          a.authorisation-button__link(href="#") Авторизоваться
+      .flip-container#flipper
+        .welcome-box.welcome-box--front
+          .welcome-box__item
+            .welcome-box__image
+              + setRoudedImage("/assets/img/welcome-face.jpg", "Фото Гущиной Марии")
+            h3.welcome-box__name Мария Гущина
+            h4.welcome-box__comment Личный сайт веб-разработчика
+            .welcome-box__socials
+              include ../common/socials_widget
+            -
+              var items = {
+                  "Мои работы": "works.html",
+                  "Обо мне"   : "about.html",
+                  "Блог"      : "blog.html"
+              }
+            .welcome-box__menu
+              + setList(items, "welcome-navigation")
+        .welcome-box.welcome-box--back
+          include ../common/log-in_widget
     footer.footer-welcome
       p.copyrigth © Мария Гущина | создано с любовью в LoftSchool | 2016

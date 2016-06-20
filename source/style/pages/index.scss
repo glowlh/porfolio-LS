@@ -18,6 +18,13 @@ body {
 .wrapper-welcome {
   min-height: 100vh;
   margin-bottom: -$footer-height;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  perspective: 1000px;
 }
 
 .wrapper-welcome:after {
@@ -44,7 +51,7 @@ body {
   top: 50%;
   left: 50%;
   bottom: 0;
-  width: 100vw;
+  width: 100%;
   //height: 100vh;
   //width: auto;
   height: 100vh;
@@ -54,40 +61,31 @@ body {
 /*header*/
 
 .header-welcome {
+  display: flex;
+  justify-content: flex-end;
   width: 100%;
-  position: relative;
 }
 
-.header-welcome .log-in-button {
-  position: absolute;
-  right: 0;
-  top: 0;
+.header-welcome .authorisation-button {
   margin-top: 24px;
   margin-right: 20px;
-  border: 2px solid #fff;
+  outline: 2px solid #fff;
   padding: 15px 28px;
   cursor: pointer;
+  z-index: 2;
   &:hover {
-    border: none;
+    outline: none;
     background-color: $button-hover-color;
   }
 }
 
-.header-welcome .log-in-button__link {
+.header-welcome .authorisation-button__link {
   text-decoration: none;
   color: #fff;
   font: 14pt 'Roboto Regular';
 }
 
 /*welcome-box*/
-
-.welcome-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: $welcome-box-width;
-}
 
 .welcome-box__item {
   background-color: rgba(28, 31, 41, .5);

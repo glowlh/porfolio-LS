@@ -1,13 +1,10 @@
 $border-left-color: #7195d2;
 $button-color: #0447bd;
 $button-hover-color: #083c96;
-$footer-height-pages: 200px;
 $big-width: 1800px;
 $normal-width: 1200px;
 $iPad-width: 786px;
 $iPhone-width: 320px;
-$button-hover-color: #083c96;
-$button-color: #0447bd;
 $border-left-color: #7195d2;
 $rounded-image-wh: 143px;
 $title-color: #373e42;
@@ -26,7 +23,8 @@ $title-color: #373e42;
 @import 'pages/blog';
 
 @import 'common/flipper';
-@import 'common/log-in';
+@import 'common/log-in_widget';
+@import 'common/rounded-image';
 @import 'common/stars-background-title';
 @import 'common/bottom-menu';
 @import 'common/footer_box';
@@ -36,7 +34,6 @@ $title-color: #373e42;
 @import 'common/linked_widget';
 @import 'common/menu_widget';
 @import 'common/skilles_widget';
-@import 'common/rounded-image';
 @import 'common/socials_widget';
 
 

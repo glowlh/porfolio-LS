@@ -1,13 +1,13 @@
-window.onload = function () {
+$(document).ready(function () {
   var myLatLng = {lat: 55.926211, lng: 37.8590063};
   var myCenter = {lat: 55.9209714, lng: 37.7863583};
   var options = {
     mapTypeControlOptions: {
-      mapTypeIds: [ 'Styled']
+      mapTypeIds: [ 'korolev']
     },
     center: myCenter,
     zoom: 13,
-    mapTypeId: 'Styled',
+    mapTypeId: 'korolev',
     scrollwheel: false,
     disableDefaultUI: true,
     zoomControl: true
@@ -81,18 +81,14 @@ window.onload = function () {
 
   var div = document.getElementById('google-map');
   var map = new google.maps.Map(div, options);
-  var styledMapType = new google.maps.StyledMapType(styles, { name: 'Styled' });
+  var styledMapType = new google.maps.StyledMapType(styles, { name: 'korolev' });
   map.mapTypes.set('Styled', styledMapType);
 
-
-  var div = document.getElementById('google-map');
-  var map = new google.maps.Map(div, options);
-  var styledMapType = new google.maps.StyledMapType(styles, { name: 'Styled' });
   var marker = new google.maps.Marker({
     position: myLatLng,
     map: map,
     icon: '/assets/img/location-marker.png',
     title: 'Королёв'
   });
-  map.mapTypes.set('Styled', styledMapType);
-}
+  map.mapTypes.set('korolev', styledMapType);
+});
