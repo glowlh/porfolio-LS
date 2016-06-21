@@ -1,23 +1,31 @@
 h3.welcome-box__name АВТОРИЗИРУЙТЕСЬ
 form.log-in-form
-  .log-in__name
-    svg.log-in__svg.log-in__svg--name(preserveAspectRatio="xMinYMin meet", viewBox="0 0 14.137 15.422")
-      use.svg__icon(xlink:href="assets/img/sprite/img.svg#login")
-    input.name__input(placeholder="Логин")
-  .log-in__pass
-    svg.log-in__svg.log-in__svg--pass(preserveAspectRatio="xMinYMin meet", viewBox="0 0 16.897 15.984")
-      use.svg__icon(xlink:href="assets/img/sprite/img.svg#password")
-    input.pass__input(placeholder="Пароль")
+  .log-in__name.log-in--field
+    .log-in-logo
+      svg.log-in-logo__svg.log-in-logo__svg--name(preserveAspectRatio="xMinYMin meet", viewBox="0 0 14.137 15.422")
+        use.svg__icon(xlink:href="assets/img/sprite/img.svg#login")
+    input.log-in__input.log-in__input--name(placeholder="Логин")
+  .log-in__pass.log-in--field
+    .log-in-logo
+      svg.log-in-logo__svg.log-in-logo__svg--pass(preserveAspectRatio="xMinYMin meet", viewBox="0 0 16.897 15.984")
+        use.svg__icon(xlink:href="assets/img/sprite/img.svg#password")
+    input.log-in__input.log-in__input--pass(placeholder="Пароль")
   .log-in__capcha
     .capcha__robot
-      input.capcha__chekbox--place(type="checkbox")
-      .capcha__question Я человек
+      input.capcha__chekbox#human-checkbox(type="checkbox")
+      label.capcha__answer.capcha__answer--chekbox(for="human-checkbox") Я человек
     .capcha__robot-repeat
       .capcha__question Вы точно не робот?
-      input.capcha__radio(type="radio")
-      .capcha__radio--yes Да
-      input.capcha__radio(type="radio")
-      .capcha__radio--no Не уверен
-  - var items = [["На главную", "index.html"], ["Войти", "pages/personality.html"]]
-  +setList(items, "welcome-box-menu")
+      .capcha__answers
+        input.answers__radio#human-yes-radio(type="radio", name="capcha-answers")
+        label.capcha__answer.capcha__answer--yes.capcha__answer--radio(for="human-yes-radio") Да
+        input.answers__radio#human-no-radio(type="radio", name="capcha-answers")
+        label.capcha__answer.capcha__answer--radio(for="human-no-radio") Не уверен
+.bottom-menu
+  -
+    var items = {
+    "На главную": "index.html",
+    "Войти"   : "pages/personality.html"
+    }
+  +setList(items, "bottom-menu")
 

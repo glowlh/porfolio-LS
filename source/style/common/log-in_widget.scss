@@ -1,28 +1,161 @@
-.back {
-  width: 380px;
-  //background-color: rgba(28, 31, 41, .5);
+.welcome-box--back {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(#231c29, .5);
+  .bottom-menu {
+    flex: 0 0 auto;
+  }
 }
 
+.welcome-box__name,
 .log-in-form {
-  display: block;
+  flex: 1 0 auto;
 }
 
-.input__name, .input__pass {
-  display: inline-block;
-  width: auto;
-  margin: 0 15px;
+.welcome-box--back .welcome-box__name {
+  margin: 40px 0;
+  display: flex;
+  align-items: center;
+  font: 26pt 'Sansus Regular';
 }
 
-.log-in__svg {
+.log-in__form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.log-in-logo__svg {
   width: 16px;
+  height: 16px;
+  fill: #c4cbcd;
+  //background: #f0efe9;
 }
 
-.log-in__svg {
-  background-color: #9c0033;
-  margin: -70px 0;
+.log-in--field {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 48px;
+  margin-bottom: 20px;
 }
 
-.svg__icon {
+.log-in__input {
+  height: 100%;
+  width: 260px;
+  border: none;
+  padding: 0 16px;
+  font: 14pt 'Roboto Regular';
+  color: #373e42;
+  outline:none;
 }
 
+.log-in-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 48px;
+  background: #f0efe9;
+}
 
+.capcha__answer,
+.capcha__question {
+  font: 13.98pt 'Roboto Medium';
+  color: #fff;
+}
+
+.capcha__answer {
+  display: flex;
+  align-items: center;
+}
+
+.log-in__capcha {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.capcha__robot {
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.capcha__robot-repeat {
+  display: flex;
+  flex-direction: column;
+  .capcha__answers {
+    display: flex;
+  }
+  .answers {
+    display: flex;
+  }
+}
+
+.capcha__question {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.capcha__chekbox,
+.answers__radio {
+  display: none;
+}
+
+.capcha__answer:before {
+    margin-right: 5px;
+    display: inline-block;
+    font: 14px 'FontAwesome';
+    transition: all .15s;
+}
+
+.capcha__answer--chekbox:before {
+  content: '';
+  height: 20px;
+  width: 20px;
+  outline: 1px solid #fff;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.capcha__chekbox:checked + .capcha__answer--chekbox:before{
+  content: '\f00c';
+  outline: none;
+  background-color: #0548be;
+  color: #fff;
+  padding-left: 3px;
+  line-height: 20px;
+  width: 17px;
+}
+
+.capcha__answer--radio:before {
+  content: '';
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-left: 42px;
+  //&:first-child {
+  //  margin-left: 0;
+  //}
+}
+
+.capcha__answer--yes:before {
+  margin-left: 0;
+}
+
+.answers__radio:checked + .capcha__answer--radio:before{
+  content: '';
+  background-color: #0548be;
+  box-shadow: inset 0px 0px 0px 5px #fff;
+  //padding-left: 5px;
+  //line-height: 20px;
+  //width: 15px;
+}

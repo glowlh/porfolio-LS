@@ -5,7 +5,6 @@ $(document).ready(function () {
     $("#flipper").addClass("flipped");
     $(".authorisation-button").addClass("hidden");
     event.stopPropagation();
-    console.log(1111);// TODO delete
   });
   $(".background-welcome__video").on("click", function(event) {
     $("#flipper").removeClass("flipped");

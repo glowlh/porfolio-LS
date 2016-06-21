@@ -2,15 +2,15 @@ $border-left-color: #7195d2;
 $button-hover-color: #083c96;
 $button-color: #0447bd;
 
-.welcome-navigation__list {
+.bottom-menu__list {
   padding: 0;
-  margin-bottom: 0;
+  margin: 0;
   display: flex;
   flex-direction: row;
   list-style: none;
 }
 
-.welcome-navigation__item {
+.bottom-menu__item {
   flex: 1;
   padding: 15px 0;
   text-align: center;
@@ -22,11 +22,11 @@ $button-color: #0447bd;
   }
 }
 
-.welcome-navigation__list .welcome-navigation__item:first-child {
+.bottom-menu__list .bottom-menu__item:first-child {
   border: none;
 }
 
-.welcome-navigation__list .welcome-navigation__link {
+.bottom-menu__list .bottom-menu__link {
   text-decoration: none;
   color: #fff;
 }

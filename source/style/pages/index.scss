@@ -10,21 +10,13 @@ body {
 
 .body {
   background-color: #1a2c51;
-  background-size: cover;
-  background-attachment: fixed;
-
 }
 
 .wrapper-welcome {
   min-height: 100vh;
   margin-bottom: -$footer-height;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   overflow: hidden;
   position: relative;
-  perspective: 1000px;
 }
 
 .wrapper-welcome:after {
@@ -39,10 +31,8 @@ body {
   top: 50%;
   left: 50%;
   min-width: 100vw;
-  //height: 100vh;
-  //width: auto;
   height: auto;
-  z-index: -100;
+  z-index: -2;
   transform: translate(-50%, -50%);
 }
 
@@ -52,9 +42,8 @@ body {
   left: 50%;
   bottom: 0;
   width: 100%;
-  //height: 100vh;
-  //width: auto;
   height: 100vh;
+  z-index: -1;
   transform: translate(-50%, -50%);
 }
 
@@ -63,7 +52,7 @@ body {
 .header-welcome {
   display: flex;
   justify-content: flex-end;
-  width: 100%;
+  //width: 100%;
 }
 
 .header-welcome .authorisation-button {
@@ -72,7 +61,7 @@ body {
   outline: 2px solid #fff;
   padding: 15px 28px;
   cursor: pointer;
-  z-index: 2;
+  //z-index: 2;
   &:hover {
     outline: none;
     background-color: $button-hover-color;
@@ -87,53 +76,71 @@ body {
 
 /*welcome-box*/
 
-.welcome-box__item {
-  background-color: rgba(28, 31, 41, .5);
+.flip-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
+.flip-container,
+.welcome-box--front,
+.welcome-box--back {
+  width: 380px;
+  min-height: 390px;
+}
+
+.welcome-box--front {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(#231c29, .5);
 }
 
 .welcome-box__image {
   width: $rounded-image-wh;
-  margin: auto;
-  padding-top: 40px;
+  height: $rounded-image-wh;
+  margin: 40px 0 20px 0;
 }
 
 .welcome-box__name,
 .welcome-box__comment {
-  text-align: center;
   color: #fff;
-  margin-top: 20px;
+  text-align: center;
 }
 
 .welcome-box__name {
-  font: 26pt/1 'Roboto Regular';
+  margin: 0;
+  font: 26pt/1.5 'Roboto Regular';
 }
 
 .welcome-box__comment {
-  margin-top: -20px;
-  font: 14pt/.5 'Roboto Light';
+  margin: 0 0 35px 0;
+  font: 14pt/1.5 'Roboto Light';
 }
 
 .welcome-box__socials {
-  background-color: #9c0033;
-  display: inline;
-  text-align: center;
+  margin-bottom: 41px;
+}
+
+.bottom-menu {
+  width: 100%;
 }
 
 /*footer*/
 
 .footer-welcome {
+  flex: 0 0 auto;
   display: flex;
   height: $footer-height;
   position: relative;
-  z-index: 1;
   align-items: center;
   justify-content: center;
 }
 
 .footer-welcome .copyrigth {
   color: #fff;
-  font: 16pt 'Roboto Light';
+  font: 14pt 'Roboto Light';
 }
 
 
