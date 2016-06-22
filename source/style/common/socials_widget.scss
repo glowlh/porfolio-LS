@@ -9,7 +9,7 @@
 .socials__item {
   display:inline-block;
   list-style: none;
-  margin-left: 27px;
+  margin-left: rem(27px);
 }
 
 .socials__item:first-child {
@@ -17,20 +17,20 @@
 }
 
 .socials__svg--vk {
-  width: 30px;
+  width: rem(30px);
 }
 
 .socials__svg--github {
-  width: 26px;
+  width: rem(26px);
 }
 
 .socials__svg--in {
-  width: 24px;
+  width: rem(24px);
 }
 
 .socials__svg {
   fill: #004cd1;
-  height: 28px;
+  height: rem(28px);
 }
 
 .socials .svg__title{

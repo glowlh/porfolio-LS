@@ -9,8 +9,7 @@ $(document).ready(function () {
     zoom: 13,
     mapTypeId: 'korolev',
     scrollwheel: false,
-    disableDefaultUI: true,
-    zoomControl: true
+    disableDefaultUI: true
   };
   var styles = [
     {

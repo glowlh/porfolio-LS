@@ -56,10 +56,10 @@ body {
 }
 
 .header-welcome .authorisation-button {
-  margin-top: 24px;
-  margin-right: 20px;
+  margin-top: rem(24px);
+  margin-right: rem(20px);
   outline: 2px solid #fff;
-  padding: 15px 28px;
+  padding: rem(15px) rem(28px);
   cursor: pointer;
   //z-index: 2;
   &:hover {
@@ -86,8 +86,8 @@ body {
 .flip-container,
 .welcome-box--front,
 .welcome-box--back {
-  width: 380px;
-  min-height: 390px;
+  width: rem(380px);
+  min-height: rem(390px);
 }
 
 .welcome-box--front {
@@ -100,7 +100,7 @@ body {
 .welcome-box__image {
   width: $rounded-image-wh;
   height: $rounded-image-wh;
-  margin: 40px 0 20px 0;
+  margin: rem(40px) 0 rem(20px) 0;
 }
 
 .welcome-box__name,
@@ -115,12 +115,12 @@ body {
 }
 
 .welcome-box__comment {
-  margin: 0 0 35px 0;
+  margin: 0 0 rem(35px) 0;
   font: 14pt/1.5 'Roboto Light';
 }
 
 .welcome-box__socials {
-  margin-bottom: 41px;
+  margin-bottom: rem(41px);
 }
 
 .bottom-menu {

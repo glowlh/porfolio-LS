@@ -1,27 +1,18 @@
-.header-bottom .bg__svg {
-  fill: #0d1120;
-  opacity: .85;
-  min-height: 190px;
+$footer-height-pages: 200px;
+
+.under-header__triangles--works .triangles__left-svg,
+                                .triangles__right-svg {
+    fill: rgba(#0d1120, .85);
 }
 
-.bg__svg {
-  position: absolute;
-  bottom: 0;
-}
-
-.header-bottom {
-  width: 100vw;
-  margin-bottom: -30px;
-}
-
-.header {
-  overflow: hidden;
+.article {
+  position: relative;
 }
 
 .article .title__svg--opinions {
   fill: #fff;
   opacity: .07;
-  height: 120px;
+  height: rem(120px);
 }
 
 .article .header-article,
@@ -30,12 +21,18 @@
   font: 20pt 'Sansus Regular';
 }
 
-.article .header-article {
-  margin-top: -125px;
-}
-
 .article--works {
-  margin-top: 80px;
+  .header-article {
+    min-height: rem(210px);
+    background-color: rgba(#0d1120, .85);
+    .title__svg {
+      fill: #fff;
+      opacity: .2;
+      width: rem(250px);
+      transform-origin: rem(50px) rem(50px);
+      transform: rotate(190deg);
+    }
+  }
 }
 
 .opinions {
@@ -43,7 +40,7 @@
   background-size: 100vw;
   display: flex;
   flex-direction: column;
-  padding: 50px 50px 0 50px;
+  padding: rem(50px) rem(50px) 0 rem(50px);
   position: relative;
   overflow: hidden;
   padding-bottom: $footer-height-pages;
@@ -61,8 +58,8 @@
 
 .header-opinions .title__svg {
   opacity: .15;
-  width: 180px;
-  height: 215px;
+  width: rem(180px);
+  height: rem(215px);
 }
 
 .blockquote {
@@ -76,7 +73,7 @@
 
 .opinions__comments .comments__dima,
                     .comments__zar{
-  width: 380px;
+  width: rem(380px);
   display: flex;
   flex-direction: column;
 }
@@ -96,9 +93,9 @@
 }
 
 .opinions__comments .blockquote {
-  margin: 0 22px 22px 0;
+  margin: 0 rem(22px) rem(22px) 0;
   position: relative;
-  z-index: 25;
+  z-index: 5;
 }
 
 .opinions__comments .signature{
@@ -110,27 +107,27 @@
   font: 150pt 'Times New Roman';
   color: rgba(#fff, .1);
   position: absolute;
-  top: -70px;
+  top: rem(-70px);
   z-index: -1;
 }
 
 .linked-box {
   display: flex;
   justify-content: center;
-  padding-top: 70px;
+  padding-top: rem(70px);
 }
 
 .pointer-bottom {
   justify-content: center;
   display: flex;
-  padding: 70px 0;
+  padding: rem(70px) 0;
 }
 
 .pointer-bottom .arrow-down__svg {
   cursor: pointer;
   transform: rotate(180deg);
-  width: 20px;
-  height: 20px;
+  width: rem(20px);
+  height: rem(20px);
   fill: rgba(#fff, .7);
   &:hover {
     fill: rgba(#fff, 1);

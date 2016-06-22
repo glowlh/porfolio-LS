@@ -16,7 +16,7 @@ $footer-height-pages: 200px;
 }
 
 .footer .navigation-site__item {
-    margin-left: 20px;
+    margin-left: rem(20px);
     &:first-child {
         margin-left: 0;
     }
@@ -86,17 +86,13 @@ $footer-height-pages: 200px;
 
 }
 
-.navigation__socials {
-
-}
-
 .footer .copyrigth__text {
     margin: auto;
 }
 
 .footer__copyright {
     background-color: rgba(#083c96, .6);
-    min-height: 38px;
+    min-height: rem(38px);
 }
 
 .footer__copyright .copyright {
@@ -108,13 +104,13 @@ $footer-height-pages: 200px;
     .comment,
     .links,
     .contacts {
-    padding: 0 30px;
-    margin: 30px 0;
-    max-width: 33%;
+    padding: 0 rem(30px);
+    margin: rem(30px) 0;
+    max-width: 33.333%;
 }
 
 .footer__content .navigation__socials {
-    padding-top: 30px;
+    padding-top: rem(30px);
 }
 
 .footer {

@@ -11,9 +11,11 @@ $footer-height-pages: 200px;
   }
 }
 
-.about-me--blog .triangles__left-svg,
-                .triangles__right-svg {
-  fill: #f4f5f0;
+.under-header__triangles--blog{
+  .triangles__left-svg,
+  .triangles__right-svg {
+    fill: #f4f5f0;
+  }
 }
 
 .about-me--blog {
@@ -24,19 +26,19 @@ $footer-height-pages: 200px;
 .about-me--blog .blog-articles {
   background-color: #f4f5f0;
   display: flex;
-  padding-bottom: $footer-height-pages + 65px;
+  padding-bottom: rem($footer-height-pages) + rem(65px);
 }
 
 /*sidebar*/
 
 .about-me--blog .blog-articles__sidebar {
-  max-width: 300px;
+  max-width: rem(300px);
   .articles__list {
     list-style: none;
     padding: 0;
   }
   .articles__item {
-    padding: 15px 20px;
+    padding: rem(15px) rem(20px);
     text-align: right;
   }
   .articles__link {
@@ -57,8 +59,8 @@ $footer-height-pages: 200px;
 /*articles*/
 
 .blog-articles__content {
-  margin: 0 100px;
-  max-width: 900px;
+  margin: 0 rem(100px);
+  max-width: rem(900px);
   .content__title {
     margin: 0;
     font: 32pt/2 'Sansus Regular';
@@ -69,7 +71,7 @@ $footer-height-pages: 200px;
     color: #004cd1;
   }
   .content__text {
-    margin-bottom: 20px;
+    margin-bottom: rem(20px);
     font: 14pt/1.5 'Roboto Regular';
     color: #455a64;
   }

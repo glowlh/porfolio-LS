@@ -1,22 +1,11 @@
-header.header
-  .header__background
-    img.background__img(src="/assets/img/background-night-big.jpg")
-  .header__content
-    .header__widgets.clearfix
-      .widgets__socials
-        include socials_widget
-      .widgets__menu
-        include menu_widget
-    .header__profile-picture
-      svg.stars__svg(viewBox="0 0 186.861 110.966", preserveAspectRatio="xMaxYMax meet")
-        use.svg__icon(xlink:href="assets/img/sprite/img.svg#stars1")
-      .photo
-        +setRoudedImage("/assets/img/welcome-face.jpg", "Фото Гущмной Марии")
-
-  block header__title
-
-  .pointer
-    svg.arrow-down__svg(preserveAspectRatio="xMinYMin meet")
-      use.svg__icon(xlink:href="assets/img/sprite/img.svg#arrow_down")
-
-  block header-bottom
+.header__content
+  .header__widgets.clearfix
+    .widgets__socials
+      include socials_widget
+    .widgets__menu
+      include menu_widget
+  .header__profile-picture
+    svg.stars__svg(viewBox="0 0 186.861 110.966", preserveAspectRatio="xMaxYMax meet")
+      use.svg__icon(xlink:href="assets/img/sprite/img.svg#stars1")
+    .photo
+      +setRoudedImage("/assets/img/welcome-face.jpg", "Фото Гущмной Марии")

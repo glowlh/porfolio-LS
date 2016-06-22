@@ -1,9 +1,21 @@
 extends ../page
 
+block header
+  header.header
+    .header__background
+      img.background__img(src="/assets/img/background-night-big.jpg")
+    include ../common/header_box
+    .header__title
+      .title__name Мария Гущина
+      .title__comment Личный сайт веб-разработчика
+
 block article
   article.article
+    a.pointer(href="#about-me")
+      svg.arrow-down__svg(preserveAspectRatio="xMinYMin meet")
+        use.svg__icon(xlink:href="assets/img/sprite/img.svg#arrow_down")
     .about-me
-      .under-header__triangles
+      .under-header__triangles.under-header__triangles--about
         include ../common/under-header-triangles
       .about-me.container#about-me
         .about-me__description
@@ -12,7 +24,7 @@ block article
 
           img.description__img(src="/assets/img/welcome-face.jpg", alt="Фото Гущиной Марии")
           .description__sub-title
-            + setLinedTitle("Кто я", "who-i-am")
+            + setUnderlinedTitle("Кто я", "who-i-am")
           .description__text
             .text__data
               p.data-first.
@@ -27,7 +39,8 @@ block article
                 А пока посмотрите, как тут всё классно и красиво!
         .about-me__skills
           .skills__title
-            h3.text.linked-title Чем я могу быть <br> вам полезна
+            + setUnderlinedTitle("Чем я могу быть вам полезна", "benefit")
+            //h3.text.linked-title Чем я могу быть <br> вам полезна
             p.description.
               Больше всего меня привлекет Frontend разработка,
               но я также знаком и могу решать не сложные задачи
@@ -36,7 +49,7 @@ block article
             include ../common/skilles_widget
     .map
       .map__contacts
-        + setLinedTitle("Контакты", "contacts__title")
+        + setUnderlinedTitle("Контакты", "contacts__title")
         nav.contacts
           ul.contacts__list
 
@@ -67,9 +80,5 @@ block article
       .map__google-map#google-map
         include ../common/google-map
 
-block header__title
-  .header__title
-    .title__name Мария Гущина
-    .title__comment Личный сайт веб-разработчика
 
 

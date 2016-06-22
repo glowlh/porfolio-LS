@@ -1,19 +1,23 @@
 extends ../page
 
-block header__title
-  .header__title.header__title--blog
-    .title__name БЛОГ
-    .title__content Статьи, которые я написала
+block header
+  header.header
+    .header__background
+      img.background__img(src="/assets/img/background-night-big.jpg")
+    include ../common/header_box
+    .header__title.header__title--blog
+      .title__name БЛОГ
+      .title__content Статьи, которые я написала
 
 block article
   article.article
+    a.pointer(href="#blog")
+      svg.arrow-down__svg(preserveAspectRatio="xMinYMin meet")
+        use.svg__icon(xlink:href="assets/img/sprite/img.svg#arrow_down")
     .about-me.about-me--blog
-      .about-me__triangles
-        svg.about-bg-left__svg(preserveAspectRatio="xMinYMin slice", viewBox="0 0 900.331 1014")
-          use.svg__icon(xlink:href="assets/img/sprite/img.svg#about_bg_left", x="0", y="0")
-        svg.about-bg-right__svg(preserveAspectRatio="xMinYMin slice", viewBox="0 5 900.331 1027")
-          use.svg__icon(xlink:href="assets/img/sprite/img.svg#about_bg_right")
-      .blog-articles
+      .under-header__triangles.under-header__triangles--blog
+        include ../common/under-header-triangles
+      .blog-articles#blog
         aside.blog-articles__sidebar
             nav.sidebar__articles
               ul.articles__list

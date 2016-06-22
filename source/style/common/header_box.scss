@@ -24,8 +24,8 @@ $triangles-height: 120px;
 
 .widgets__socials {
   float: left;
-  margin: -20px 0;
-  margin-left: 30px;
+  //margin: -20px 0;
+  margin-left: rem(30px);
 }
 
 .widgets__socials .socials__svg {
@@ -36,13 +36,12 @@ $triangles-height: 120px;
 }
 
 .widgets__menu {
-  margin: -60px 0;
   float: right;
-  margin-right: 30px;
+  margin-right: rem(30px);
 }
 
 .header__widgets {
-  margin-top: 28px;
+  margin-top: rem(28px);
 }
 
 .stars__svg,
@@ -56,22 +55,22 @@ $triangles-height: 120px;
 .stars__svg {
   fill: #fff;
   opacity: .07;
-  width: 450px;
-  height: 450px;
-  margin-top: -140px;
+  width: rem(450px);
+  height: rem(450px);
+  margin-top: rem(-140px);
 }
 
 .photo {
   width: $rounded-image-wh;
   margin: auto;
-  top: 23vh; //150px
+  top: rem(150px);
 }
 
 .header__title {
   text-align: center;
   color: #fff;
   position: absolute;
-  top: 49vh; //320px
+  top: rem(320px);
   left: 50%;
   transform: translateX(-50%);
 }
@@ -81,43 +80,25 @@ $triangles-height: 120px;
 }
 
 .header__title .title__comment {
-  font: 14pt/1.4 'Roboto Light';
-}
-
-.pointer {
-  position: absolute;
-  z-index: 1;
-  top: 72vh; //470px
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.pointer .arrow-down__svg {
-  cursor: pointer;
-  width: 20px;
-  height: 20px;
-  fill: rgba(#fff, .7);
-  &:hover {
-    fill: rgba(#fff, 1);
-  }
+  font: 14pt/1.5 'Roboto Light';
 }
 
 .header {
-  min-height: 100vh;
   position: relative;
-  margin-bottom: -$triangles-height;
+  margin-bottom: rem(-330px);
   z-index: -1;
+  min-height: calc(100vh + 13.125rem);//210px
+  .header__background {
+    height: 100%;
+  }
+  .background__img {
+    height: 100%;
+  }
 }
 
 /*footer*/
 
 .wrapper {
-  //height: 100%;
-  margin-bottom: -$footer-height-pages;
+  margin-bottom: rem(-$footer-height-pages);
 }
 
-.wrapper:after {
-  //content: '';
-  //display: block;
-  //height: $footer-height-pages;
-}

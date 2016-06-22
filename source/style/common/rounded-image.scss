@@ -11,8 +11,8 @@ $rounded-image-wh: 143px;
 
 .rounded-image__img {
   position: absolute;
-  width: 200px;
-  left: -25px;
-  top: -30px;
+  width: rem(200px);
+  left: rem(-25px);
+  top: rem(-30px);
   z-index: 0;
 }

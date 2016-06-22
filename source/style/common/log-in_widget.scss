@@ -14,7 +14,7 @@
 }
 
 .welcome-box--back .welcome-box__name {
-  margin: 40px 0;
+  margin: rem(40px) 0;
   display: flex;
   align-items: center;
   font: 26pt 'Sansus Regular';
@@ -24,12 +24,12 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-bottom: 40px;
+  margin-bottom: rem(40px);
 }
 
 .log-in-logo__svg {
-  width: 16px;
-  height: 16px;
+  width: rem(16px);
+  height: rem(16px);
   fill: #c4cbcd;
   //background: #f0efe9;
 }
@@ -39,15 +39,15 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: 48px;
-  margin-bottom: 20px;
+  height: rem(48px);
+  margin-bottom: rem(20px);
 }
 
 .log-in__input {
   height: 100%;
-  width: 260px;
+  width: rem(260px);
   border: none;
-  padding: 0 16px;
+  padding: 0 rem(16px);
   font: 14pt 'Roboto Regular';
   color: #373e42;
   outline:none;
@@ -58,7 +58,7 @@
   align-items: center;
   justify-content: center;
   height: 100%;
-  width: 48px;
+  width: rem(48px);
   background: #f0efe9;
 }
 
@@ -82,7 +82,7 @@
 
 .capcha__robot {
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: rem(20px);
   justify-content: center;
 }
 
@@ -99,7 +99,7 @@
 
 .capcha__question {
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: rem(10px);
 }
 
 .capcha__chekbox,
@@ -108,19 +108,19 @@
 }
 
 .capcha__answer:before {
-    margin-right: 5px;
+    margin-right: rem(5px);
     display: inline-block;
-    font: 14px 'FontAwesome';
+    font: rem(14px) 'FontAwesome';
     transition: all .15s;
 }
 
 .capcha__answer--chekbox:before {
   content: '';
-  height: 20px;
-  width: 20px;
+  height: rem(20px);
+  width: rem(20px);
   outline: 1px solid #fff;
   cursor: pointer;
-  margin-right: 10px;
+  margin-right: rem(10px);
 }
 
 .capcha__chekbox:checked + .capcha__answer--chekbox:before{
@@ -128,23 +128,20 @@
   outline: none;
   background-color: #0548be;
   color: #fff;
-  padding-left: 3px;
-  line-height: 20px;
-  width: 17px;
+  padding-left: rem(3px);
+  line-height: rem(20px);
+  width: rem(17px);
 }
 
 .capcha__answer--radio:before {
   content: '';
-  height: 20px;
-  width: 20px;
+  height: rem(20px);
+  width: rem(20px);
   border-radius: 50%;
   background-color: #fff;
   cursor: pointer;
-  margin-right: 10px;
-  margin-left: 42px;
-  //&:first-child {
-  //  margin-left: 0;
-  //}
+  margin-right: rem(10px);
+  margin-left: rem(42px);
 }
 
 .capcha__answer--yes:before {
@@ -155,7 +152,4 @@
   content: '';
   background-color: #0548be;
   box-shadow: inset 0px 0px 0px 5px #fff;
-  //padding-left: 5px;
-  //line-height: 20px;
-  //width: 15px;
 }

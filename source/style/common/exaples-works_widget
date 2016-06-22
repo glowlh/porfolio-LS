@@ -23,7 +23,7 @@ $font-color-description: #474b57;
 
 .exaples-works__description .description__technologies {
   font: 14pt 'Roboto Regular';
-  margin-bottom: 57px;
+  margin-bottom: rem(57px);
   color: $button-color;
 }
 
@@ -34,13 +34,13 @@ $font-color-description: #474b57;
   text-decoration: none;
   color: #fff;
   background-color: $button-color;
-  padding: 15px 15px 15px 0;
+  padding: rem(15px) rem(15px) rem(15px) 0;
   font: 14pt 'Roboto Regular';
   &:before {
     content: '\f0c1';
     font: 16pt 'FontAwesome';
     color: #fff;
-    padding: 0 15px;
+    padding: 0 rem(15px);
   }
 }
 
@@ -99,8 +99,8 @@ $font-color-description: #474b57;
   z-index: 3;
   .arrow-down__svg {
     cursor: pointer;
-    width: 25px;
-    height: 25px;
+    width: rem(25px);
+    height: rem(25px);
     fill: rgba(#fff, .7);
     &:hover {
       fill: rgba(#fff, 1);

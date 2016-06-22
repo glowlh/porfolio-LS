@@ -6,9 +6,9 @@
 }
 
 .linked-form__title {
-  width: 290px;
+  width: rem(290px);
   margin: auto;
-  padding: 20px 0;
+  padding: rem(20px) 0;
   font: 25pt 'Sansus Regular';
   color: #fff;
 }
@@ -22,16 +22,16 @@
 }
 
 .linked-form .input {
-  margin: 0 23px 23px 23px;
-  height: 44px;
-  padding: 0 17px;
+  margin: 0 rem(23px) rem(23px) rem(23px);
+  height: rem(44px);
+  padding: 0 rem(17px);
 }
 
 .linked-form .textarea {
-  height: 133px;
-  margin: 0 23px 23px 23px;
+  height: rem(133px);
+  margin: 0 rem(23px) rem(23px) rem(23px);
   resize: none;
-  padding: 17px 17px;
+  padding: rem(17px) rem(17px);
 }
 
 .form-bottom__list {
@@ -44,7 +44,7 @@
 
 .form-bottom__item {
   flex: 1;
-  padding: 15px 0;
+  padding: rem(15px) 0;
   text-align: center;
   cursor: pointer;
   background-color: $button-color;
