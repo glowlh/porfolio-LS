@@ -1,5 +1,6 @@
 $footer-height-pages: 200px;
 $title-color: #373e42;
+$triangles-height: 120px;
 
 /*triangles-header-of-about-page*/
 
@@ -11,17 +12,20 @@ $title-color: #373e42;
   z-index: 2;
 }
 
-.about-me__triangles {
+.under-header__triangles {
   display: flex;
   width: 100%; //TODO сделать 100vw для tablet, phone
-  .about-bg-left__svg,
-  .about-bg-right__svg {
+  .triangles__left-svg,
+  .triangles__right-svg {
     width: 50vw;
+    height: $triangles-height;
   }
-  .about-bg-left__svg {
+  .triangles__left-svg {
     fill: #f2f0e8;
+    transform-origin: 50%;
+    transform: scale(-1, 1);
   }
-  .about-bg-right__svg {
+  .triangles__right-svg {
     fill: #f4f5f0;
   }
 }

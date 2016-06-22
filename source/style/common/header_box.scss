@@ -1,5 +1,6 @@
 $rounded-image-wh: 143px;
 $footer-height-pages: 200px;
+$triangles-height: 120px;
 
 .header__content,
 .header__background {
@@ -15,6 +16,10 @@ $footer-height-pages: 200px;
   right: 0;
   bottom: 0;
   z-index: -1;
+}
+
+.background__img {
+  height: 100vh;
 }
 
 .widgets__socials {
@@ -100,7 +105,7 @@ $footer-height-pages: 200px;
 .header {
   min-height: 100vh;
   position: relative;
-  margin-bottom: -200px;
+  margin-bottom: -$triangles-height;
   z-index: -1;
 }
 

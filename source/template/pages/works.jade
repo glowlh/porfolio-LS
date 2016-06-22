@@ -1,18 +1,15 @@
 extends ../page
 
-block header-bottom
-  .header-bottom
-    svg.bg__svg(preserveAspectRatio="xMaxYMax meet", viewBox="0 0 2032 360.368")
-      use.svg__icon(xlink:href="assets/img/sprite/img.svg#bg")
-
 block header__title
   .header__title
     .title__name Мария Гущина
     .title__comment Личный сайт веб-разработчика
 
 block article
-  .article.article--works
-    .title.header-article
+  article.article.article--works
+    .under-header__triangles.under-header__triangles--works
+      include ../common/under-header-triangles
+    .title.header-article#works-header-title
       h1.title__text Мои работы
 
 
