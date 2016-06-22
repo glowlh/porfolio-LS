@@ -1,6 +1,6 @@
-'use strict';
 
-$(document).ready(function () {
+$(function () {
+ 'use strict';
   $(".authorisation-button").on("click", function(event) {
     $("#flipper").addClass("flipped");
     $(".authorisation-button").addClass("hidden");

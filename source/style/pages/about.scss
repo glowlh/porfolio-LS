@@ -86,7 +86,7 @@ $triangles-height: 120px;
 }
 
 .description__title .title__text {
-  font: 40pt 'Sansus Regular';
+  font: rem(40px) 'Sansus Regular';
   color: $title-color;
 }
 
@@ -99,7 +99,7 @@ $triangles-height: 120px;
 .description__sub-title .who-i-am {
     padding: rem(20px) 0;
     color: $title-color;
-    font: 25pt 'Sansus Regular';
+    font: rem(25px) 'Sansus Regular';
     &:after {
       background-color: $title-color;
       padding: 0 0px;
@@ -109,7 +109,7 @@ $triangles-height: 120px;
 .skills__title .benefit {
   padding: rem(20px) 0;
   color: $title-color;
-  font: 25pt 'Sansus Regular';
+  font: rem(25px) 'Sansus Regular';
   max-width: rem(250px);
   margin: auto;
   &:after {
@@ -121,7 +121,8 @@ $triangles-height: 120px;
 .description__text {
   margin:  0 rem(120px);
   .text__data{
-    font: 12pt/1.5 'Roboto Regular';
+    font: rem(16px) 'Roboto Regular';
+    line-height: 1.5;
     margin-bottom: 2em;
     color:  $title-color;
   }
@@ -135,7 +136,8 @@ $triangles-height: 120px;
 }
 
 .description {
-  font: 12pt/1.5 'Roboto Regular';
+  font: rem(16px) 'Roboto Regular';
+  line-height: 1.5;
   color: $title-color;
   margin-left: rem(45px);
 }
@@ -164,7 +166,7 @@ $triangles-height: 120px;
     margin: auto;
     margin-top: rem(37px);
     color: $title-color;
-    font: 25pt 'Sansus Regular';
+    font: rem(25px) 'Sansus Regular';
     &:after {
       width: rem(80px);
       background-color: $title-color;
@@ -176,6 +178,7 @@ $triangles-height: 120px;
 .map__contacts .contacts__list {
   display: flex;
   flex-direction: row;
+  padding-left: 0;
   .contacts__item {
     display: flex;
     flex-direction: column;
@@ -184,7 +187,7 @@ $triangles-height: 120px;
   .link {
     text-decoration: none;
     list-style: none;
-    font: 12pt 'Roboto Medium';
+    font: rem(16px) 'Roboto Medium';
     color: $title-color;
   }
   .item__link {
@@ -206,8 +209,8 @@ $triangles-height: 120px;
 }
 
 .item__link--adress .link__svg {
-  width: rem(62px);
-  height: rem(62px);
+  width: rem(95px);
+  height: rem(95px);
 }
 
 .item__link {

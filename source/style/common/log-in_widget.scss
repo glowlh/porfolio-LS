@@ -14,10 +14,10 @@
 }
 
 .welcome-box--back .welcome-box__name {
-  margin: rem(40px) 0;
+  margin: rem(25px) 0;
   display: flex;
   align-items: center;
-  font: 26pt 'Sansus Regular';
+  font: rem(30px) 'Sansus Regular';
 }
 
 .log-in__form {
@@ -48,7 +48,7 @@
   width: rem(260px);
   border: none;
   padding: 0 rem(16px);
-  font: 14pt 'Roboto Regular';
+  font: rem(16px) 'Roboto Regular';
   color: #373e42;
   outline:none;
 }
@@ -64,7 +64,7 @@
 
 .capcha__answer,
 .capcha__question {
-  font: 13.98pt 'Roboto Medium';
+  font: rem(16px) 'Roboto Medium';
   color: #fff;
 }
 

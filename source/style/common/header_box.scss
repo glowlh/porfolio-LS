@@ -76,17 +76,16 @@ $triangles-height: 120px;
 }
 
 .header__title .title__name {
-  font: 28pt/1 'Roboto Regular';
+  font: rem(35px) 'Roboto Regular';
 }
 
 .header__title .title__comment {
-  font: 14pt/1.5 'Roboto Light';
+  font: rem(16px) 'Roboto Light';
 }
 
 .header {
   position: relative;
   margin-bottom: rem(-330px);
-  z-index: -1;
   min-height: calc(100vh + 13.125rem);//210px
   .header__background {
     height: 100%;
@@ -94,6 +93,10 @@ $triangles-height: 120px;
   .background__img {
     height: 100%;
   }
+}
+
+.header__background {
+  z-index: -1;
 }
 
 /*footer*/

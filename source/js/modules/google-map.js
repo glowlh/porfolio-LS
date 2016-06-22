@@ -1,4 +1,14 @@
-$(document).ready(function () {
+var loadScript = function (url,callback){
+  var script = document.createElement('script');
+  script.setAttribute('type','text/javascript');
+  if(typeof callback==='function'){
+    script.addEventListener('load',callback,false);
+  }
+  script.setAttribute('src',url);
+  document.body.appendChild(script);
+};
+
+var initGoogleMap = function () {
   var myLatLng = {lat: 55.926211, lng: 37.8590063};
   var myCenter = {lat: 55.9209714, lng: 37.7863583};
   var options = {
@@ -78,7 +88,7 @@ $(document).ready(function () {
     }
   ];
 
-  var div = document.getElementById('google-map');
+  var div = $('#google-map')[0];
   var map = new google.maps.Map(div, options);
   var styledMapType = new google.maps.StyledMapType(styles, { name: 'korolev' });
   map.mapTypes.set('Styled', styledMapType);
@@ -90,4 +100,8 @@ $(document).ready(function () {
     title: 'Королёв'
   });
   map.mapTypes.set('korolev', styledMapType);
+};
+
+$(function(){
+  loadScript("https://maps.googleapis.com/maps/api/js?key=AIzaSyCVB5MBE6dwQ6STo3wzfAJRqfj_sPF9b_c&sensor=false", initGoogleMap);
 });

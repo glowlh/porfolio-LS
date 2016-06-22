@@ -30,7 +30,7 @@ $footer-height-pages: 200px;
 .footer  .comment,
          .contacts,
          .copyright {
-    font: 14pt 'Roboto Light';
+    font: rem(16px) 'Roboto Light';
     color: #fff;
 }
 
@@ -46,7 +46,7 @@ $footer-height-pages: 200px;
 }
 
 .footer .links {
-    font: 14pt 'Roboto Regular';
+    font: rem(16px) 'Roboto Regular';
 }
 
 .footer .copyright {

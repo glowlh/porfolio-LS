@@ -41,7 +41,7 @@ circle {
   display: flex;
   flex-direction: column;
   .widget-title {
-    font: 20pt 'Roboto Medium';
+    font: rem(28px) 'Roboto Medium';
     color: $title-color;
     margin: rem(30px) 0 0 rem(45px);
   }

@@ -1,5 +1,6 @@
-$(document).ready(function(){
-  $(".pointer").bind("click", function (event) {
+$(function(){
+  console.log(1111);
+  $(".pointer").on("click", function (event) {
     event.preventDefault();
     var id  = $(this).attr('href'),
     top = $(id).offset().top;

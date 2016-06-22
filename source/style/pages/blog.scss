@@ -4,10 +4,10 @@ $footer-height-pages: 200px;
 
 .header__title.header__title--blog {
   .title__name {
-    font: 60pt 'Sansus Regular';
+    font: rem(60px) 'Sansus Regular';
   }
   .title__content {
-    font: 14pt 'Roboto Regular';
+    font: rem(16px) 'Roboto Regular';
   }
 }
 
@@ -43,7 +43,7 @@ $footer-height-pages: 200px;
   }
   .articles__link {
     text-decoration: none;
-    font: 14pt 'Roboto Regular';
+    font: rem(16px) 'Roboto Regular';
     color: #566358;
   }
 }
@@ -52,27 +52,30 @@ $footer-height-pages: 200px;
   border-right: 2px solid #004cd1;
   .articles__link {
     color: #004cd1;
-    font: 14pt 'Roboto Medium';
+    font: rem(16px) 'Roboto Medium';
   }
 }
 
 /*articles*/
 
 .blog-articles__content {
-  margin: 0 rem(100px);
+  margin: rem(20px) rem(100px);
   max-width: rem(900px);
   .content__title {
     margin: 0;
-    font: 32pt/2 'Sansus Regular';
+    font: rem(25px) 'Sansus Regular';
+    line-height: 1.5;
     color: #455a64;
   }
   .content__date {
-    font: 14pt/2 'Roboto Regular';
+    font: rem(16px) 'Roboto Regular';
+    line-height: 2;
     color: #004cd1;
   }
   .content__text {
     margin-bottom: rem(20px);
-    font: 14pt/1.5 'Roboto Regular';
+    font: rem(16px)'Roboto Regular';
+    line-height: 1.5;
     color: #455a64;
   }
 }

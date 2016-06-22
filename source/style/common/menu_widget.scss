@@ -8,4 +8,7 @@
 .menu__link .menu__svg--humburger {
   width: rem(28px);
   fill: #fff;
+  &:hover {
+    fill: $button-hover-color;
+  }
 }

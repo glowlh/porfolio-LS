@@ -18,7 +18,7 @@ $footer-height-pages: 200px;
 .article .header-article,
          .header-opinions {
   color: #fff;
-  font: 20pt 'Sansus Regular';
+  font: rem(30px) 'Sansus Regular';
 }
 
 .article--works {
@@ -87,7 +87,7 @@ $footer-height-pages: 200px;
                     .comments__zar {
   //margin: 22px 0;
   color: #fff;
-  font: 12pt 'Roboto Italic';
+  font: rem(16px) 'Roboto Italic';
   line-height: 1.6;
   position: relative;
 }
@@ -104,7 +104,7 @@ $footer-height-pages: 200px;
 
 .opinions .blockquote:before {
   content: "\201C";
-  font: 150pt 'Times New Roman';
+  font: rem(160px) 'Times New Roman';
   color: rgba(#fff, .1);
   position: absolute;
   top: rem(-70px);
