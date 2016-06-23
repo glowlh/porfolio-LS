@@ -2,6 +2,10 @@
 
 ### Description
 
+This is my site portfolio and I have done in the LoftSchool. 
+
+### Technologies
+
 In this project was used [GULP](http://gulpjs.com/) task-manager,
 [JADE](http://jade-lang.com/) and [SASS](http://sass-lang.com/) preprocessors.
 
