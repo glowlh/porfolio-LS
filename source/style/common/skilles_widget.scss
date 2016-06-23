@@ -33,7 +33,10 @@ circle {
   }
 }
 
-/*position*/
+.skill-svg {
+}
+
+  /*position*/
 
 .frontend-skill,
 .backend-skill,
@@ -46,11 +49,12 @@ circle {
     margin: rem(30px) 0 0 rem(45px);
   }
   .diagrams {
-    margin-left: rem(50px);
+    margin-left: rem(40px);
   }
   .diagrams .skill-svg {
-    width: rem(90px);
-    padding-right: rem(35px);
+    width: rem(115px);
+    height: rem(115px);
+    padding-right: rem(17px);
   }
 }
 

@@ -3,7 +3,7 @@ extends ../page
 block header
   header.header
     .header__background
-      img.background__img(src="/assets/img/background-night-big.jpg")
+      img.background__img(src="/assets/img/background-night-big.jpg", alt="Ночной пейза")
     include ../common/header_box
     .header__title
       .title__name Мария Гущина
@@ -16,8 +16,9 @@ block article
         use.svg__icon(xlink:href="assets/img/sprite/img.svg#arrow_down")
     .about-me
       .under-header__triangles.under-header__triangles--about
-        include ../common/under-header-triangles
-      .about-me.container#about-me
+        .triangles__left
+        .triangles__right
+      .about-me.about-me--container#about-me
         .about-me__description
           .description__title
             + setStarsBackgroundTitle("Обо мне", "assets/img/sprite/img.svg#stars2_blue")

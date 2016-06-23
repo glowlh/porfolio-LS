@@ -12,6 +12,16 @@ mixin setList(items, className, active)
             a(href="#{href}" class="#{className}__link")= name
 
 
+//Mixin for submit form
+
+mixin setButtons(items, className)
+  .buttons-panel(class=className)
+    each type, value in items
+      if type == submit
+        input.buttons-panel__item.buttons-panel__item--send(type="#{type}", value="#{value}")
+      else
+        input.buttons-panel__item(type="#{type}", value="#{value}")
+
 //Mixin for titles with underline
 
 mixin setUnderlinedTitle(name, className)
@@ -36,8 +46,8 @@ mixin setStarsBackgroundTitle(title, svgHref)
 
 //Mixin for skill
 
-mixin setSkill(name, ClassName)
-  svg(class="skill-svg #{ClassName}", width="100", height="100", viewbox="0 0 100 100", preserveAspectRatio="xMaxYMax meet")
+mixin setSkill(name, ClassName, vhValue)
+  svg(class="skill-svg #{ClassName}", width="100", height="100", viewbox="0 0 100 100", preserveAspectRatio="xMinYMin slice")
     g.skill-svg__skill-circle
       circle.skill-circle--back(r="40", cx="50%", cy="50%", fill="none", stroke-dasharray="251.2 251.2")
       circle.skill-circle(r="40", cx="50%", cy="50%", fill="none",  stroke-dasharray="0 251.2")

@@ -14,16 +14,18 @@ $triangles-height: 120px;
 
 .under-header__triangles {
   display: flex;
-  width: 100%; //TODO сделать 100vw для tablet, phone
-  .triangles__left-svg,
-  .triangles__right-svg {
-    width: 50vw;
-    height: rem($triangles-height);
+  width: 100vw; //TODO сделать 100vw для tablet, phone
+  .triangles__left {
+    width: 0;
+    height: 0;
+    border-bottom: $triangles-height solid #f2f0e8;
+    border-right: 50vw solid transparent;
   }
-  .triangles__left-svg {
-    fill: #f2f0e8;
-    transform-origin: 50%;
-    transform: scale(-1, 1);
+  .triangles__right {
+    width: 0;
+    height: 0;
+    border-bottom: $triangles-height solid #f4f5f0;
+    border-left: 50vw solid transparent;
   }
 }
 
@@ -40,15 +42,15 @@ $triangles-height: 120px;
   display: block;
   position: absolute;
   z-index: 3;
-  top: rem(50px);
+  top: rem(33px);
   left: 50%;
   transform: translateX(-50%);
 }
 
 .pointer .arrow-down__svg {
   cursor: pointer;
-  width: rem(20px);
-  height: rem(20px);
+  width: rem(25px);
+  height: rem(30px);
   fill: rgba(#fff, .7);
   &:hover {
     fill: rgba(#fff, 1);
@@ -57,7 +59,7 @@ $triangles-height: 120px;
 
 /*left-side*/
 
-.about-me.container {
+.about-me.about-me--container {
   display: flex;
   flex-direction: row;
   .about-me__description {
@@ -86,7 +88,7 @@ $triangles-height: 120px;
 }
 
 .description__title .title__text {
-  font: rem(40px) 'Sansus Regular';
+  font: rem(63px) 'Sansus Regular';
   color: $title-color;
 }
 
@@ -99,9 +101,10 @@ $triangles-height: 120px;
 .description__sub-title .who-i-am {
     padding: rem(20px) 0;
     color: $title-color;
-    font: rem(25px) 'Sansus Regular';
+    font: rem(35px) 'Sansus Regular';
     &:after {
       background-color: $title-color;
+      margin-top: 10px;
       padding: 0 0px;
     }
 }
@@ -109,7 +112,7 @@ $triangles-height: 120px;
 .skills__title .benefit {
   padding: rem(20px) 0;
   color: $title-color;
-  font: rem(25px) 'Sansus Regular';
+  font: rem(33px) 'Sansus Regular';
   max-width: rem(250px);
   margin: auto;
   &:after {
@@ -121,10 +124,14 @@ $triangles-height: 120px;
 .description__text {
   margin:  0 rem(120px);
   .text__data{
+    min-width: 430px;
     font: rem(16px) 'Roboto Regular';
     line-height: 1.5;
     margin-bottom: 2em;
     color:  $title-color;
+    .data-first {
+      margin-top: 0;
+    }
   }
 }
 
@@ -166,7 +173,7 @@ $triangles-height: 120px;
     margin: auto;
     margin-top: rem(37px);
     color: $title-color;
-    font: rem(25px) 'Sansus Regular';
+    font: rem(35px) 'Sansus Regular';
     &:after {
       width: rem(80px);
       background-color: $title-color;
@@ -182,13 +189,15 @@ $triangles-height: 120px;
   .contacts__item {
     display: flex;
     flex-direction: column;
-    //min-width: 200px;
   }
   .link {
     text-decoration: none;
     list-style: none;
     font: rem(16px) 'Roboto Medium';
     color: $title-color;
+    &:hover {
+      color: #1056d1;
+    }
   }
   .item__link {
     display: flex;
@@ -197,20 +206,20 @@ $triangles-height: 120px;
 }
 
 .link__svg {
-  width: rem(55px);
-  height: rem(55px);
+  width: rem(47px);
+  height: rem(47px);
   fill: #1056d1;
   margin-right: rem(15px);
 }
 
 .item__link--skype .link__svg {
-  width: rem(62px);
-  height: rem(62px);
+  width: rem(50px);
+  height: rem(50px);
 }
 
 .item__link--adress .link__svg {
-  width: rem(95px);
-  height: rem(95px);
+  width: rem(77px);
+  height: rem(77px);
 }
 
 .item__link {
@@ -225,5 +234,6 @@ $triangles-height: 120px;
 }
 
 .contacts__item--last {
-  margin-left: rem(60px);
+  margin-left: rem(45px);
+  min-width: 200px;
 }

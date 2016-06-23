@@ -9,7 +9,7 @@
   width: rem(290px);
   margin: auto;
   padding: rem(20px) 0;
-  font: rem(25px) 'Sansus Regular';
+  font: rem(34px) 'Sansus Regular';
   color: #fff;
 }
 
@@ -29,40 +29,41 @@
 }
 
 .linked-form .textarea {
-  height: rem(133px);
+  height: rem(100px);
   margin: 0 rem(23px) rem(23px) rem(23px);
   resize: none;
   padding: rem(17px) rem(17px);
 }
 
-.form-bottom__list {
-  padding: 0;
-  margin-bottom: 0;
+/**/
+
+.buttons-panel {
   display: flex;
+  margin-bottom: 0;
   flex-direction: row;
-  list-style: none;
+  &:hover {
+    background-color: $button-hover-color;
+  }
 }
 
-.form-bottom__item {
+.buttons-panel__item {
   flex: 1;
   padding: rem(15px) 0;
+  color: #fff;
   text-align: center;
   cursor: pointer;
+  border: none;
   background-color: $button-color;
   &:hover{
     background-color: $button-hover-color;
   }
 }
 
-.form-bottom__item:last-child {
+.bottom-form--works .buttons-panel__item:last-child {
   color: rgba(#fff, .5);
   background-color: rgba($button-color, 0);
   &:hover{
     background-color: $button-hover-color;
   }
-}
 
-.form-bottom__list .form-bottom__link {
-  text-decoration: none;
-  color: #fff;
 }

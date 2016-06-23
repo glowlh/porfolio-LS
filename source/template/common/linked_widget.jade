@@ -5,11 +5,7 @@ form.linked-form
   textarea.textarea.linked-form__message(placeholder="Ваше сообщение")
   -
     var items = {
-    "Отправить"   : "#",
-    "Отчистить"   : "#"
+    "Отправить"   : "submit",
+    "Отчистить"   : "button"
     }
-  .welcome-box__menu
-  + setList(items, "form-bottom")
-  //.linked-form__bottom
-    input.linked-form__send(type="submit", value="Отправить")
-    input.linked-form__clear(type="button", value="Отчистить")
+  + setButtons(items, "bottom-form bottom-form--works")

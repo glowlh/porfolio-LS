@@ -1,59 +1,67 @@
 $background-description: #f2f0e8;
 $font-color-description: #474b57;
 
-.exaples-works {
+.examples-works {
   min-height: 100vh;
   display: flex;
 }
 /*left-side*/
-.exaples-works__description {
+.examples-works__description {
   background-color: $background-description;
   justify-content: center;
   align-items: center;
   display: flex;
   flex-direction: column;
   width: 50vw;
-  font: rem(25px) 'Sansus Regular';
+  font: rem(30px) 'Sansus Regular';
   color: $font-color-description;
 }
 
-.exaples-works__description .work:after {
+.examples-works__description .work:after {
   background-color: rgba($font-color-description, .5);
 }
 
-.exaples-works__description .description__technologies {
+.examples-works__description .description__technologies {
   font: rem(16px) 'Roboto Regular';
-  margin-bottom: rem(57px);
+  margin-bottom: rem(40px);
   color: $button-color;
+  .technologies__text {
+    margin-top: rem(20px);
+  }
 }
 
-.exaples-works__description .site__link {
+.examples-works__description .site__link {
   cursor: pointer;
-  display: flex;
-  justify-content: center;
-  text-decoration: none;
+  //display: flex;
+  //justify-content: center;
+  //text-decoration: none;
   color: #fff;
   background-color: $button-color;
-  padding: rem(15px) rem(15px) rem(15px) 0;
+  padding: rem(11px) rem(11px) rem(11px) 0;
   font: rem(16px) 'Roboto Regular';
+  &:hover {
+    background-color: #083c96;
+  }
   &:before {
     content: '\f0c1';
-    font: rem(16px) 'FontAwesome';
+    font: rem(18px) 'FontAwesome';
     color: #fff;
     padding: 0 rem(15px);
+    display: inline-block;
+    vertical-align: middle;
   }
 }
 
 /*right-side*/
 
-.exaples-works__img {
+.examples-works__img {
   background-color: #fff;
   width: 50vw;
   display: flex;
   flex-direction: column;
 }
 
-.exaples-works__img .img-box {
+.examples-works__img .img-box {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -62,7 +70,7 @@ $font-color-description: #474b57;
   }
 }
 
-.exaples-works__img .img-display{
+.examples-works__img .img-display{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -100,7 +108,7 @@ $font-color-description: #474b57;
   .arrow-down__svg {
     cursor: pointer;
     width: rem(25px);
-    height: rem(25px);
+    height: rem(30px);
     fill: rgba(#fff, .7);
     &:hover {
       fill: rgba(#fff, 1);

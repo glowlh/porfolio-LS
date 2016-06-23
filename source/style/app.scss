@@ -10,9 +10,9 @@ $rounded-image-wh: 143px;
 $title-color: #373e42;
 
 
-@import '/assets/fonts/roboto.css';
-@import '/assets/fonts/sansun.css';
-@import '/assets/fonts/fontawesome.css';
+@import '../fonts/common/roboto.css';
+@import '../fonts/common/sansun.css';
+@import '../fonts/common/fontawesome.css';
 
 @import 'common/_mixins';
 @import 'common/_modificators';
@@ -29,7 +29,7 @@ $title-color: #373e42;
 @import 'common/bottom-menu';
 @import 'common/footer_box';
 @import 'common/header_box';
-@import 'common/exaples-works_widget';
+@import 'common/examples-works_widget';
 @import 'common/underlined-title';
 @import 'common/linked_widget';
 @import 'common/menu_widget';

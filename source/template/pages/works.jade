@@ -1,9 +1,9 @@
 extends ../page
 
 block header
-  header.header.header--works
+  header.header.header--works#header-works
     .header__background
-      img.background__img(src="/assets/img/background-night-big.jpg")
+      img.background__img(src="/assets/img/background-night-big.jpg", alt="Ночной пейзаж")
     include ../common/header_box
     .header__title
       .title__name Мария Гущина
@@ -15,16 +15,17 @@ block article
       svg.arrow-down__svg(preserveAspectRatio="xMinYMin meet")
         use.svg__icon(xlink:href="assets/img/sprite/img.svg#arrow_down")
     .under-header__triangles.under-header__triangles--works
-      include ../common/under-header-triangles
+      .triangles__left
+      .triangles__right
     .title.header-article#my-works
       h1.title__text Мои работы
       svg.title__svg(preserveAspectRatio="xMaxYMax meet", viewBox="0 0 171.5 132.5")
         use.svg__icon(xlink:href="assets/img/sprite/img.svg#stars2")
 
-    include ../common/exaples-works_widget
+    include ../common/examples-works_widget
     .opinions
       .opinions__background
-        img.lighthouse(src="/assets/img/lighthouse.jpg")
+        img.lighthouse(src="/assets/img/lighthouse.jpg", alt="Фото маяка")
       .title.header-opinions
         h1.title__text
           |Что обо мне <br> говорят
@@ -33,7 +34,7 @@ block article
       .opinions__comments
         .comments__dima
           .dima__photo
-            + setRoudedImage("/assets/img/photo-dima.png", "Фото Димы")
+            + setRoudedImage("/assets/img/photo-dima.png", "Ковльчук Дмитрий")
           blockquote.blockquote.dima__blockquote.
             Эта девушка проходила обучение веб-разработке не
             где-то, а в LoftSchool. 2 месяца только самых
@@ -41,7 +42,7 @@ block article
           .dima__signature.signature <b>Ковльчук Дмитрий</b><br>- основатель LoftSchool
         .comments__zar
           .zar__photo
-            + setRoudedImage("/assets/img/photo-zar.png", "Фото Зара")
+            + setRoudedImage("/assets/img/photo-zar.png", "Зар Захаров")
           blockquote.blockquote.zar__blockquote.
             Этот код выдерживает любые испытания. Только,
             пожалуйста, не загружайте сайт на слишком
@@ -49,6 +50,6 @@ block article
           .zar__signature.signature <b>Зар Захаров</b><br>- главный преподаватель
       .linked-box
         include ../common/linked_widget
-      .pointer-bottom
+      a.pointer-bottom(href="#header-works")
         svg.arrow-down__svg(preserveAspectRatio="xMaxYMax meet", viewBox="0 0 25.18 16.164")
           use.svg__icon(xlink:href="assets/img/sprite/img.svg#arrow_down")

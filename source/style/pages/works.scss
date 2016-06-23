@@ -13,6 +13,8 @@ $footer-height-pages: 200px;
   fill: #fff;
   opacity: .07;
   height: rem(120px);
+  transform-origin: rem(200px) rem(-70px);
+  transform: rotate(40deg);
 }
 
 .article .header-article,
@@ -29,9 +31,14 @@ $footer-height-pages: 200px;
       fill: #fff;
       opacity: .2;
       width: rem(250px);
-      transform-origin: rem(50px) rem(50px);
-      transform: rotate(190deg);
     }
+  }
+}
+
+.under-header__triangles--works{
+  .triangles__left,
+  .triangles__right {
+    border-bottom-color: rgba(#0d1120, .85);
   }
 }
 
@@ -61,6 +68,9 @@ $footer-height-pages: 200px;
   width: rem(180px);
   height: rem(215px);
 }
+.header-opinions {
+  margin-bottom: 25px;
+}
 
 .blockquote {
   margin: 0;
@@ -81,6 +91,8 @@ $footer-height-pages: 200px;
 .dima__photo, .zar__photo {
   margin: 0 auto;
   transform: scale(0.6,0.6);
+  width: 125px;
+  height: 125px;
 }
 
 .opinions__comments .comments__dima,
@@ -93,7 +105,7 @@ $footer-height-pages: 200px;
 }
 
 .opinions__comments .blockquote {
-  margin: 0 rem(22px) rem(22px) 0;
+  margin: 0 rem(22px) rem(10px) 0;
   position: relative;
   z-index: 5;
 }
@@ -104,7 +116,7 @@ $footer-height-pages: 200px;
 
 .opinions .blockquote:before {
   content: "\201C";
-  font: rem(160px) 'Times New Roman';
+  font: rem(250px) 'Times New Roman';
   color: rgba(#fff, .1);
   position: absolute;
   top: rem(-70px);
@@ -126,8 +138,8 @@ $footer-height-pages: 200px;
 .pointer-bottom .arrow-down__svg {
   cursor: pointer;
   transform: rotate(180deg);
-  width: rem(20px);
-  height: rem(20px);
+  width: rem(25px);
+  height: rem(30px);
   fill: rgba(#fff, .7);
   &:hover {
     fill: rgba(#fff, 1);

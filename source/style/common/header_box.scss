@@ -37,11 +37,17 @@ $triangles-height: 120px;
 
 .widgets__menu {
   float: right;
-  margin-right: rem(30px);
+  margin-right: rem(20px);
 }
 
 .header__widgets {
   margin-top: rem(28px);
+}
+
+.header__profile-picture {
+  min-width: rem(450px);
+  min-height: rem(450px);
+  margin: auto;
 }
 
 .stars__svg,
@@ -62,6 +68,7 @@ $triangles-height: 120px;
 
 .photo {
   width: $rounded-image-wh;
+  height: $rounded-image-wh;
   margin: auto;
   top: rem(150px);
 }
@@ -70,7 +77,7 @@ $triangles-height: 120px;
   text-align: center;
   color: #fff;
   position: absolute;
-  top: rem(320px);
+  top: rem(310px);
   left: 50%;
   transform: translateX(-50%);
 }

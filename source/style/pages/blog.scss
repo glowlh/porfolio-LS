@@ -12,15 +12,13 @@ $footer-height-pages: 200px;
 }
 
 .under-header__triangles--blog{
-  .triangles__left-svg,
-  .triangles__right-svg {
-    fill: #f4f5f0;
+  .triangles__left {
+    border-bottom-color: #f4f5f0;
   }
 }
 
 .about-me--blog {
   position: relative;
-  z-index: -1;
 }
 
 .about-me--blog .blog-articles {
@@ -32,7 +30,8 @@ $footer-height-pages: 200px;
 /*sidebar*/
 
 .about-me--blog .blog-articles__sidebar {
-  max-width: rem(300px);
+  margin-top: 85px;
+  width: 30%;
   .articles__list {
     list-style: none;
     padding: 0;
@@ -45,6 +44,10 @@ $footer-height-pages: 200px;
     text-decoration: none;
     font: rem(16px) 'Roboto Regular';
     color: #566358;
+    cursor: pointer;
+    &:hover {
+      color: #004cd1;
+    }
   }
 }
 
@@ -60,10 +63,11 @@ $footer-height-pages: 200px;
 
 .blog-articles__content {
   margin: rem(20px) rem(100px);
-  max-width: rem(900px);
+  width: 70%;
+  margin-top: 85px;
   .content__title {
     margin: 0;
-    font: rem(25px) 'Sansus Regular';
+    font: rem(35px) 'Sansus Regular';
     line-height: 1.5;
     color: #455a64;
   }
