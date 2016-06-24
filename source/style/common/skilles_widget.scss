@@ -33,9 +33,6 @@ circle {
   }
 }
 
-.skill-svg {
-}
-
   /*position*/
 
 .frontend-skill,
@@ -47,9 +44,17 @@ circle {
     font: rem(28px) 'Roboto Medium';
     color: $title-color;
     margin: rem(30px) 0 0 rem(45px);
+    @include tablets {
+      margin-bottom: rem(20px);
+      margin-left: 0;
+    }
   }
   .diagrams {
     margin-left: rem(40px);
+    @include phones {
+      text-align: center;
+      margin-left: 0;
+    }
   }
   .diagrams .skill-svg {
     width: rem(115px);

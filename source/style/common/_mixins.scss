@@ -3,13 +3,13 @@
 }
 
 @mixin desktop {
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1800px) {
     @content;
   }
 }
 
 @mixin laptop {
-  @media screen and (max-width: 992px) {
+  @media screen and (max-width: 1200px) {
     @content;
   }
 }

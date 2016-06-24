@@ -37,6 +37,9 @@ body {
 }
 
 .background-welcome__img {
+  background: url("./assets/img/night_mountains.png");
+  background-size: cover;
+  background-position: center;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -52,7 +55,9 @@ body {
 .header-welcome {
   display: flex;
   justify-content: flex-end;
-  //width: 100%;
+  @include phones {
+    justify-content: center;
+  }
 }
 
 .header-welcome .authorisation-button {
@@ -87,7 +92,7 @@ body {
 .welcome-box--front,
 .welcome-box--back {
   width: rem(380px);
-  min-height: rem(390px);
+  height: rem(390px);
 }
 
 .welcome-box--front {
@@ -115,12 +120,15 @@ body {
 }
 
 .welcome-box__comment {
-  margin: 0 0 rem(35px) 0;
+  margin: 0 0 rem(20px) 0;
   font: rem(16px) 'Roboto Light';
 }
 
 .welcome-box__socials {
-  margin-bottom: rem(41px);
+  margin-bottom: rem(20px);
+  @include desktop {
+    margin-bottom: rem(28px);
+  }
 }
 
 .bottom-menu {
@@ -141,6 +149,16 @@ body {
 .footer-welcome .copyrigth {
   color: #fff;
   font: rem(16px) 'Roboto Light';
+  text-align: center;
+  @include phones {
+    display: flex;
+    flex-direction: column;
+  }
+  .display-none {
+    @include  phones {
+      display: none;
+    }
+  }
 }
 
 

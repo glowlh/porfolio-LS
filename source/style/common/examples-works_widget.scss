@@ -4,6 +4,9 @@ $font-color-description: #474b57;
 .examples-works {
   min-height: 100vh;
   display: flex;
+  @include tablets {
+    flex-direction: column-reverse;
+  }
 }
 /*left-side*/
 .examples-works__description {
@@ -15,6 +18,10 @@ $font-color-description: #474b57;
   width: 50vw;
   font: rem(30px) 'Sansus Regular';
   color: $font-color-description;
+  @include tablets {
+    width: 100%;
+    padding: rem(40px) 0 rem(60px) 0;
+  }
 }
 
 .examples-works__description .work:after {
@@ -28,13 +35,13 @@ $font-color-description: #474b57;
   .technologies__text {
     margin-top: rem(20px);
   }
+  @include tablets {
+    margin-bottom: rem(15px);
+  }
 }
 
 .examples-works__description .site__link {
   cursor: pointer;
-  //display: flex;
-  //justify-content: center;
-  //text-decoration: none;
   color: #fff;
   background-color: $button-color;
   padding: rem(11px) rem(11px) rem(11px) 0;
@@ -59,14 +66,22 @@ $font-color-description: #474b57;
   width: 50vw;
   display: flex;
   flex-direction: column;
+  @include tablets {
+    width: 100%;
+  }
 }
 
 .examples-works__img .img-box {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  height: 30vh;
   .img-hide--current {
-    height: 30vh;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 
@@ -83,6 +98,11 @@ $font-color-description: #474b57;
 .img-box .img-hide {
   position: relative;
   width: 25vw;
+  overflow: hidden;
+  height: 100%;
+  @include laptop {
+    width: 50vw;
+  }
 }
 
 .img-box .img-hide__mask {

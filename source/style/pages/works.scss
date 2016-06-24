@@ -1,4 +1,7 @@
-$footer-height-pages: 200px;
+$footer-height-pages: rem(200px);
+$footer-height-pages-tablets: rem(230px);
+$footer-height-pages-phones: rem(360px);
+
 
 .under-header__triangles--works .triangles__left-svg,
                                 .triangles__right-svg {
@@ -51,16 +54,41 @@ $footer-height-pages: 200px;
   position: relative;
   overflow: hidden;
   padding-bottom: $footer-height-pages;
+  @include tablets {
+    padding-bottom: $footer-height-pages-tablets;
+  }
+  @include phones {
+    padding-bottom: $footer-height-pages-phones;
+  }
 }
 
-.lighthouse {
+.opinions__background {
   position: absolute;
   top:0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100%;
   z-index: -1;
   overflow: hidden;
+}
+
+.lighthouse {
+  background: url("/assets/img/lighthouse-big.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  @include laptop {
+    background: url("/assets/img/lighthouse.jpg");
+    background-position: center;
+  }
+  @include tablets {
+    background: url("/assets/img/lighthouse-tablets.jpg");
+    background-position: center;
+  }
+  @include phones {
+    background: url("/assets/img/lighthouse-phones.jpg");
+    background-position: center;
+  }
 }
 
 .header-opinions .title__svg {
@@ -79,6 +107,9 @@ $footer-height-pages: 200px;
 .opinions__comments {
   display: flex;
   justify-content: center;
+  @include phones {
+    flex-direction: column;
+  }
 }
 
 .opinions__comments .comments__dima,
@@ -133,6 +164,9 @@ $footer-height-pages: 200px;
   justify-content: center;
   display: flex;
   padding: rem(70px) 0;
+  @include phones {
+    padding-top: rem(30px);
+  }
 }
 
 .pointer-bottom .arrow-down__svg {

@@ -3,27 +3,28 @@ footer.footer
     .comment
       p.comment__text.
         Этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool
-    .links
-      .links__navigation
+    .content__box
+      .links
+        .links__navigation
+          -
+            var items = {
+              "Мои работы"  : "works.html",
+              "Обо мне"     : "about.html",
+              "Блог"        : "blog.html",
+              "Авторизация" : "index.html"
+            }
+          +setList(items, "navigation-site")
+          .navigation__socials
+            include socials_widget
+      .contacts
         -
           var items = {
-            "Мои работы"  : "works.html",
-            "Обо мне"     : "about.html",
-            "Блог"        : "blog.html",
-            "Авторизация" : "index.html"
+            "betrayal-mmm"                  : "#",
+            "m.o.gushchina@gmail.com"       : "#",
+            "+7 962 961 78 37"              : "#",
+            "Королёв, ул. Строителей, д. 17": "#"
           }
-        +setList(items, "navigation-site")
-        .navigation__socials
-          include socials_widget
-    .contacts
-      -
-        var items = {
-          "betrayal-mmm"                  : "#",
-          "m.o.gushchina@gmail.com"       : "#",
-          "+7 962 961 78 37"              : "#",
-          "Королёв, ул. Строителей, д. 17": "#"
-        }
-      +setList(items, "contacts-links")
+        +setList(items, "contacts-links")
   .footer__copyright
     .copyright
       p.copyrigth__text © Мария Гущина | создано с любовью в LoftSchool | 2016

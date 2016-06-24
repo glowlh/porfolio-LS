@@ -1,5 +1,7 @@
 $rounded-image-wh: 143px;
 $footer-height-pages: 200px;
+$footer-height-pages-tablets: 230px;
+$footer-height-pages-phones: 330px;
 $triangles-height: 120px;
 
 .header__content,
@@ -80,10 +82,16 @@ $triangles-height: 120px;
   top: rem(310px);
   left: 50%;
   transform: translateX(-50%);
+  @include tablets {
+    top: rem(360px)
+  }
 }
 
 .header__title .title__name {
   font: rem(35px) 'Roboto Regular';
+  @include phones {
+    font-size: rem(25px);
+  }
 }
 
 .header__title .title__comment {
@@ -98,7 +106,21 @@ $triangles-height: 120px;
     height: 100%;
   }
   .background__img {
+    background: url("/assets/img/background-night-big.jpg");
+    background-size: 100% 100%;
     height: 100%;
+    @include laptop {
+      background: url("/assets/img/background-night-big.jpg");
+      background-size: 100% 100%;
+    }
+    @include tablets {
+      background: url("/assets/img/background-night-tablet.jpg");
+      background-size: 100% 100%;
+    }
+    @include phones {
+      background: url("/assets/img/background-night-phone.jpg");
+      background-size: 100% 100%;
+    }
   }
 }
 
@@ -109,6 +131,12 @@ $triangles-height: 120px;
 /*footer*/
 
 .wrapper {
-  margin-bottom: rem(-$footer-height-pages);
+  margin-bottom: -$footer-height-pages;
+  @include tablets {
+    margin-bottom: -$footer-height-pages-tablets;
+  }
+  @include phones {
+    margin-bottom: -$footer-height-pages-phones;
+  }
 }
 

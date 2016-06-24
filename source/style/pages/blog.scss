@@ -1,4 +1,6 @@
 $footer-height-pages: 200px;
+$footer-height-pages-tablets: 230px;
+$footer-height-pages-phones: 360px;
 
 /*header-title*/
 
@@ -19,12 +21,25 @@ $footer-height-pages: 200px;
 
 .about-me--blog {
   position: relative;
+  @include tablets {
+    .triangles__right {
+      border-bottom-color: #f4f5f0;
+    }    
+  }
 }
 
 .about-me--blog .blog-articles {
   background-color: #f4f5f0;
   display: flex;
   padding-bottom: rem($footer-height-pages) + rem(65px);
+  @include tablets {
+    padding-bottom: rem($footer-height-pages-tablets) + rem(30px);
+    display: block;
+    position: relative;
+  }
+  @include phones {
+    padding-bottom: rem($footer-height-pages-phones) + rem(20px);
+  }
 }
 
 /*sidebar*/
@@ -48,6 +63,19 @@ $footer-height-pages: 200px;
     &:hover {
       color: #004cd1;
     }
+    @include phones {
+      color: #fff;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+  @include tablets {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    left: -100%;
+    background-color: #004cd1;
   }
 }
 
@@ -56,6 +84,9 @@ $footer-height-pages: 200px;
   .articles__link {
     color: #004cd1;
     font: rem(16px) 'Roboto Medium';
+    @include phones {
+      color: #fff;
+    }
   }
 }
 
@@ -81,6 +112,17 @@ $footer-height-pages: 200px;
     font: rem(16px)'Roboto Regular';
     line-height: 1.5;
     color: #455a64;
+    @include tablets {
+      margin-right: rem(20px);
+    }
+  }
+  @include tablets {
+    margin: rem(30px) rem(20px) rem(30px) rem(15px);
+    width: 100%;
+  }
+  @include phones {
+    margin: rem(30px) rem(20px) rem(30px) rem(15px);
+    width: 100%;
   }
 }
 

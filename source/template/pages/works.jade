@@ -3,7 +3,7 @@ extends ../page
 block header
   header.header.header--works#header-works
     .header__background
-      img.background__img(src="/assets/img/background-night-big.jpg", alt="Ночной пейзаж")
+      .background__img(alt="Ночной пейзаж")
     include ../common/header_box
     .header__title
       .title__name Мария Гущина
@@ -25,7 +25,7 @@ block article
     include ../common/examples-works_widget
     .opinions
       .opinions__background
-        img.lighthouse(src="/assets/img/lighthouse.jpg", alt="Фото маяка")
+        .lighthouse(alt="Фото маяка")
       .title.header-opinions
         h1.title__text
           |Что обо мне <br> говорят

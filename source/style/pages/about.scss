@@ -1,4 +1,5 @@
 $footer-height-pages: 200px;
+$footer-height-pages-tablets: 230px;
 $title-color: #373e42;
 $triangles-height: 120px;
 
@@ -26,6 +27,9 @@ $triangles-height: 120px;
     height: 0;
     border-bottom: $triangles-height solid #f4f5f0;
     border-left: 50vw solid transparent;
+    @include tablets {
+      border-bottom-color: #f2f0e8;
+    }
   }
 }
 
@@ -62,18 +66,28 @@ $triangles-height: 120px;
 .about-me.about-me--container {
   display: flex;
   flex-direction: row;
-  .about-me__description {
-    background-color: #f2f0e8;
-    display: flex;
-    align-items: center;
-  }
-  .about-me__skills {
-    background-color: #f4f5f0;
-  }
   .about-me__description,
   .about-me__skills {
     width: 50vw;
     display: flex;
+    flex-direction: column;
+  }
+  .about-me__description {
+    background-color: #f2f0e8;
+    display: flex;
+    align-items: center;
+    @include tablets {
+      width: 100%;
+    }
+  }
+  .about-me__skills {
+    background-color: #f4f5f0;
+    @include tablets {
+      width: 100%;
+      padding-bottom: 50px;
+    }
+  }
+  @include tablets {
     flex-direction: column;
   }
 }
@@ -96,17 +110,21 @@ $triangles-height: 120px;
   width: rem(420px);
   height: rem(390px);
   margin: rem(35px) 0 rem(5px) 0;
+  @include phones {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .description__sub-title .who-i-am {
-    padding: rem(20px) 0;
-    color: $title-color;
-    font: rem(35px) 'Sansus Regular';
-    &:after {
-      background-color: $title-color;
-      margin-top: 10px;
-      padding: 0 0px;
-    }
+  padding: rem(20px) 0;
+  color: $title-color;
+  font: rem(35px) 'Sansus Regular';
+  &:after {
+    background-color: $title-color;
+    margin-top: 10px;
+    padding: 0 0px;
+  }
 }
 
 .skills__title .benefit {
@@ -132,6 +150,13 @@ $triangles-height: 120px;
     .data-first {
       margin-top: 0;
     }
+    @include phones {
+      min-width: 100%;
+    }
+  }
+  @include phones {
+    margin-left: rem(10px);
+    margin-right: rem(10px);
   }
 }
 
@@ -149,9 +174,45 @@ $triangles-height: 120px;
   margin-left: rem(45px);
 }
 
+.skills__widget {
+  @include tablets {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: rem(30px);
+  }
+  @include phones {
+    margin-top: rem(15px);
+  }
+  .widget-title {
+    @include tablets {
+      text-align: center;
+    }
+  }
+}
+
+
+.skills__title .description {
+  @include tablets {
+    margin:  0 rem(120px);
+  }
+  @include phones {
+    margin: 0 rem(10px);
+  }
+}
+
+
+/*map*/
+
 .map__google-map {
   height: calc(100vh + 12.5rem);//200px
-
+  @include tablets {
+    height: calc(100vh + 16.4rem);
+  }
+  @include phones {
+    height: calc(100vh + 23rem);
+  }
 }
 
 .map {
@@ -180,6 +241,13 @@ $triangles-height: 120px;
       padding: 0 0px;
     }
   }
+  @include phones {
+    position: relative;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
 }
 
 .map__contacts .contacts__list {
@@ -202,6 +270,9 @@ $triangles-height: 120px;
   .item__link {
     display: flex;
     flex-direction: row;
+  }
+  @include tablets {
+    flex-direction: column;
   }
 }
 
@@ -236,4 +307,31 @@ $triangles-height: 120px;
 .contacts__item--last {
   margin-left: rem(45px);
   min-width: 200px;
+  @include tablets {
+    margin-left: 0;
+  }
+}
+
+.map .contacts {
+  max-width: 100%;
+  margin: 0;
+  .item__link {
+    @include tablets {
+      margin-bottom: rem(30px);
+    }
+    @include phones {
+      margin-bottom: rem(15px);
+    }
+  }
+  .item__link--adress {
+    .link__svg {
+      @include tablets {
+        width: rem(45px);
+        height: rem(45px);
+      }
+    }
+  }
+  @include  tablets {
+    margin-bottom: 0;
+  }
 }

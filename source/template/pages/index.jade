@@ -8,8 +8,8 @@ html
     <![endif]-->
     .wrapper-welcome
       video.background-welcome__video(autoplay, loop,  poster="./assets/img/background-night.jpg")
-        source.video__source(src="./assets/img/night.mp4", type="video/mp4")
-      img.background-welcome__img(src="./assets/img/night_mountains.png", alt="Горы")
+        source.video__source(src="./assets/img/background-night.mp4", type="video/mp4")
+      .background-welcome__img(alt="Горы")
       header.header-welcome
         .authorisation-button
           a.authorisation-button__link(href="#") Авторизоваться
@@ -28,9 +28,8 @@ html
                   "Обо мне"   : "about.html",
                   "Блог"      : "blog.html"
               }
-            //.bottom-menu
             + setList(items, "bottom-menu")
           .welcome-box.welcome-box--back
             include ../common/log-in_widget
     footer.footer-welcome
-      p.copyrigth © Мария Гущина | создано с любовью в LoftSchool | 2016
+      p.copyrigth <span>© Мария Гущина</span> <span class="display-none">|</span> <span>создано с любовью в LoftSchool | 2016</span>
