@@ -126,6 +126,12 @@ body {
 
 .welcome-box__socials {
   margin-bottom: rem(20px);
+  .socials__svg {
+    fill: #fff;
+    &:hover {
+      fill: #0548be;
+    }
+  }
   @include desktop {
     margin-bottom: rem(28px);
   }

@@ -132,7 +132,14 @@ $footer-height-pages-phones: 300px;
     .contacts {
     padding: 0 rem(30px);
     margin: rem(30px) 0;
-    max-width: 33.333%;
+}
+
+.footer__content .comment {
+  max-width: rem(350px);
+}
+
+.footer__content .contacts-links__item {
+  margin-bottom: 2px;
 }
 
 .footer__content {
@@ -145,7 +152,7 @@ $footer-height-pages-phones: 300px;
 }
 
 .footer__content .navigation__socials {
-    padding-top: rem(30px);
+    padding-top: rem(45px);
     @include phones {
       padding-top: rem(15px);
     }

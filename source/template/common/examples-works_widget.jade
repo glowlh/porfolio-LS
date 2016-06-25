@@ -1,5 +1,5 @@
 .examples-works
-  .examples-works__description
+  .examples-works__description.examples-works__description--laptop
     + setUnderlinedTitle("Первый пример", "work")
     .description__technologies
       p.technologies__text HTML, CSS, JAVASCRIPT
@@ -8,6 +8,12 @@
   .examples-works__img
     .img-display
       img(src="/assets/img/work-test.jpg", alt="Пример сайта").img-display--current
+    .examples-works__description.examples-works__description--tablets
+      + setUnderlinedTitle("Первый пример", "work")
+      .description__technologies
+        p.technologies__text HTML, CSS, JAVASCRIPT
+      .description__site
+        a.site__link Посмотреть сайт
     .img-box
       .img-hide
         .img-hide__mask

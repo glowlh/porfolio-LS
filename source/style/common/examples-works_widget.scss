@@ -24,6 +24,19 @@ $font-color-description: #474b57;
   }
 }
 
+.examples-works__description--tablets {
+  display: none;
+  @include tablets {
+    display: flex;
+  }
+}
+
+.examples-works__description--laptop {
+  @include tablets {
+    display: none;
+  }
+}
+
 .examples-works__description .work:after {
   background-color: rgba($font-color-description, .5);
 }
@@ -123,12 +136,16 @@ $font-color-description: #474b57;
   position: absolute;
   left: 50%;
   top: 50%;
+  width: rem(45px);
+  @include tablets {
+    width: 33%;
+  }
   transform: translate(-50%, -50%);
   z-index: 3;
   .arrow-down__svg {
     cursor: pointer;
-    width: rem(25px);
-    height: rem(30px);
+    width: 100%;
+    height: 100%;
     fill: rgba(#fff, .7);
     &:hover {
       fill: rgba(#fff, 1);

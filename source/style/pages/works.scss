@@ -97,7 +97,8 @@ $footer-height-pages-phones: rem(360px);
   height: rem(215px);
 }
 .header-opinions {
-  margin-bottom: 25px;
+  margin-bottom: rem(35px);
+  letter-spacing: rem(2.5px);
 }
 
 .blockquote {
@@ -114,7 +115,7 @@ $footer-height-pages-phones: rem(360px);
 
 .opinions__comments .comments__dima,
                     .comments__zar{
-  width: rem(380px);
+  width: rem(400px);
   display: flex;
   flex-direction: column;
 }
