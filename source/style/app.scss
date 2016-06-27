@@ -10,9 +10,9 @@ $rounded-image-wh: 143px;
 $title-color: #373e42;
 
 
-@import '../fonts/common/roboto.css';
-@import '../fonts/common/sansun.css';
-@import '../fonts/common/fontawesome.css';
+@import '../css/fonts/roboto.css';
+@import '../css/fonts/sansun.css';
+@import '../css/fonts/fontawesome.css';
 
 @import 'common/_mixins';
 @import 'common/_modificators';

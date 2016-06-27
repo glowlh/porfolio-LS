@@ -72,6 +72,11 @@ $triangles-height: 120px;
     display: flex;
     flex-direction: column;
   }
+  .description__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .about-me__description {
     background-color: #f2f0e8;
     display: flex;
@@ -240,6 +245,11 @@ $triangles-height: 120px;
       background-color: $title-color;
       padding: 0 0px;
     }
+  .contacts {
+    margin-top: rem(15px);
+    padding-top: rem(20px);
+    padding-left: rem(20px);
+  }
   }
   @include phones {
     position: relative;
@@ -276,7 +286,7 @@ $triangles-height: 120px;
   }
 }
 
-.link__svg {
+.contacts .link__svg {
   width: rem(47px);
   height: rem(47px);
   fill: #1056d1;
@@ -286,11 +296,6 @@ $triangles-height: 120px;
 .item__link--skype .link__svg {
   width: rem(50px);
   height: rem(50px);
-}
-
-.item__link--adress .link__svg {
-  width: rem(77px);
-  height: rem(77px);
 }
 
 .item__link {
@@ -321,14 +326,6 @@ $triangles-height: 120px;
     }
     @include phones {
       margin-bottom: rem(15px);
-    }
-  }
-  .item__link--adress {
-    .link__svg {
-      @include tablets {
-        width: rem(45px);
-        height: rem(45px);
-      }
     }
   }
   @include  tablets {

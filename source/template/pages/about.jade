@@ -20,22 +20,22 @@ block article
         .about-me__description
           .description__title
             + setStarsBackgroundTitle("Обо мне", "assets/img/sprite/img.svg#stars2_blue")
-
-          img.description__img(src="/assets/img/welcome-face.jpg", alt="Фото Гущиной Марии")
-          .description__sub-title
-            + setUnderlinedTitle("Кто я", "who-i-am")
-          .description__text
-            .text__data
-              p.data-first.
-                Я веб разработчик из Королёва, МО. Мне 22 года.
-                Я занимаюсь разработкой современных сайтов.
-                Мне нравится делать интересные
-                и современные проекты.
-              p.data-second.
-                Этот сайт я сделала в рамках обучения в
-                Школе онлайн образования LoftSchool.
-                Чуть позже я освежу в нём свой контент.
-                А пока посмотрите, как тут всё классно и красиво!
+          .description__content
+            img.description__img(src="/assets/img/welcome-face.jpg", alt="Фото Гущиной Марии")
+            .description__sub-title
+              + setUnderlinedTitle("Кто я", "who-i-am")
+            .description__text
+              .text__data
+                p.data-first.
+                  Я веб разработчик из Королёва, МО. Мне 22 года.
+                  Я занимаюсь разработкой современных сайтов.
+                  Мне нравится делать интересные
+                  и современные проекты.
+                p.data-second.
+                  Этот сайт я сделала в рамках обучения в
+                  Школе онлайн образования LoftSchool.
+                  Чуть позже я освежу в нём свой контент.
+                  А пока посмотрите, как тут всё классно и красиво!
         .about-me__skills
           .skills__title
             + setUnderlinedTitle("Чем я могу быть вам полезна", "benefit")
@@ -49,7 +49,7 @@ block article
     .map
       .map__contacts
         + setUnderlinedTitle("Контакты", "contacts__title")
-        nav.contacts
+        .contacts
           ul.contacts__list
 
             li.contacts__item
@@ -72,7 +72,7 @@ block article
                 a.link(href="#") +7 962 961 78 37
 
               .item__link.item__link--adress
-                svg.link__svg(preserveAspectRatio="xMinYMin meet", viewBox="0 0 45 45")
+                svg.link__svg(preserveAspectRatio="xMinYMin meet", viewBox="0 0 609.563 609.563")
                   use.svg__icon(xlink:href="assets/img/sprite/img.svg#map_n", x="0", y="0")
                 a.link(href="#") Королёв, ул. Строителей, д. 17
 

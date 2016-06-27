@@ -12,6 +12,7 @@ module.exports = [
   './gulp/tasks/js.lint.js',
   './gulp/tasks/copy.image.js',
   './gulp/tasks/sprite.js',
-  './gulp/tasks/copy.fonts.js'
+  './gulp/tasks/copy.fonts.js',
+  './gulp/tasks/copy.fonts-styles.js'
 ];
 

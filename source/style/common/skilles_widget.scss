@@ -51,15 +51,19 @@ circle {
   }
   .diagrams {
     margin-left: rem(40px);
+    margin-top: rem(10px);
     @include phones {
       text-align: center;
       margin-left: 0;
     }
   }
   .diagrams .skill-svg {
-    width: rem(115px);
-    height: rem(115px);
+    width: rem(120px);
+    height: rem(120px);
     padding-right: rem(17px);
   }
+}
+.widget-title--frontend .widget-title {
+  margin-top: rem(35px);
 }
 
