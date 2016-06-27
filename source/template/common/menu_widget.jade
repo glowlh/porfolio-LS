@@ -1,3 +1,15 @@
+.main-menu-box
+  .main-menu-box__left
+  .main-menu-box__right
+  .main-menu-box__content
+    -
+      var items = {
+      "МОИ РАБОТЫ"  : "works.html",
+      "ОБО МНЕ"     : "about.html",
+      "БЛОГ"        : "blog.html",
+      "АВТОРИЗАЦИЯ" : "index.html"
+      }
+    +setList(items, "main-menu")
 a.menu__link.link-humburger(href="#")
   svg.menu__svg.menu__svg--humburger(preserveAspectRatio="xMinYMin meet", viewBox="0 0 40 35")
     title.svg__title menu

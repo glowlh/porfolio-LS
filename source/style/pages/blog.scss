@@ -47,6 +47,7 @@ $footer-height-pages-phones: 360px;
 .about-me--blog .blog-articles__sidebar {
   margin-top: 85px;
   width: 30%;
+  position: relative;
   .articles__list {
     list-style: none;
     padding: 0;
@@ -116,6 +117,15 @@ $footer-height-pages-phones: 360px;
       margin-right: rem(20px);
     }
   }
+  .content__article {
+    border-top: 4px solid #cfcfcf;
+    margin-bottom: rem(50px);
+    padding-top: rem(50px);
+  }
+  .content__article:first-child {
+    border-top: none;
+    padding-top: 0;
+  }
   @include tablets {
     margin: rem(30px) rem(20px) rem(30px) rem(15px);
     width: 100%;
@@ -124,6 +134,10 @@ $footer-height-pages-phones: 360px;
     margin: rem(30px) rem(20px) rem(30px) rem(15px);
     width: 100%;
   }
+}
+
+.articles__link[href='#article-gulp'] {
+  color: red;
 }
 
 
