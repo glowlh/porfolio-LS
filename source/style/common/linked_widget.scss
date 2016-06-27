@@ -53,6 +53,7 @@
   text-align: center;
   cursor: pointer;
   border: none;
+  outline: none;
   background-color: $button-color;
   &:hover{
     background-color: $button-hover-color;

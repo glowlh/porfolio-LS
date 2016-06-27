@@ -17,8 +17,10 @@ mixin setList(items, className, active)
 mixin setButtons(items, className)
   .buttons-panel(class=className)
     each type, value in items
-      if type == submit
+      if type=='submit'
         input.buttons-panel__item.buttons-panel__item--send(type="#{type}", value="#{value}")
+      else if value=="На главную"
+        input.buttons-panel__item#home(type="#{type}", value="#{value}")
       else
         input.buttons-panel__item(type="#{type}", value="#{value}")
 
