@@ -1,4 +1,5 @@
 $(function(){
+  // 'use strict';
   $(".pointer").on("click", function (event) {
     event.preventDefault();
     var id  = $(this).attr('href'),

@@ -1,4 +1,5 @@
 $(function () {
+    // 'use strict';
     var menuOffsetTop = $("#blog-navigation").offset().top;
     $(document).scroll(function () {
         var width = $("#blog-navigation").width();

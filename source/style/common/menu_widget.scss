@@ -1,17 +1,41 @@
 
 /*hamburger-menu*/
 
-.menu__link .svg__title{
-  text-indent: -99999px;
+//.menu__link .svg__title{
+//  text-indent: -99999px;
+//}
+//
+//.menu__link .menu__svg--humburger {
+//  width: rem(40px);
+//  fill: #fff;
+//  &:hover {
+//    fill: $button-hover-color;
+//  }
+//}
+.menu-hamburger {
+  display: inline-block;
+  position: relative;
+  z-index: 4;
+  cursor: pointer;
+}
+.menu-hamburger__item:nth-child(n) {
+  width: rem(40px);
+  height: rem(5px);
+  background: #fff;
+  margin-bottom: rem(8px);
+  border-radius: rem(10px);
+}
+#menu-hamburger__item--line-first {
+  transform-origin: 100% 0;
+}
+#menu-hamburger__item--line-third {
+  transform-origin: 100% 100%;
+}
+.menu-hamburger__item:last-child {
+  margin-bottom: 0;
 }
 
-.menu__link .menu__svg--humburger {
-  width: rem(40px);
-  fill: #fff;
-  &:hover {
-    fill: $button-hover-color;
-  }
-}
+/*menu page*/
 
 .main-menu-box {
   position: fixed;
@@ -19,7 +43,7 @@
   left: 0;
   bottom: 0;
   right: 0;
-  display: flex;
+  display: none;
   z-index: 4;
 }
 
@@ -28,6 +52,15 @@
   width: 50vw;
   height: 100%;
   background-color: rgba(#183669, .85);
+  position: relative;
+}
+
+.main-menu-box__left {
+  left: -100%;
+}
+
+.main-menu-box__right {
+  right: -100%;
 }
 
 .main-menu-box__content {
@@ -51,6 +84,7 @@
   }
   .main-menu__link {
     font: rem(63px) 'Sansus Regular';
+    opacity: 0;
     color: #fff;
     text-decoration: none;
     user-select: none;
