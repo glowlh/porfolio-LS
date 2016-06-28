@@ -37,9 +37,9 @@ body {
 }
 
 .background-welcome__img {
-  background: url("./assets/img/night_mountains.png");
+  background-image: url("/assets/img/night_mountains.png");
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
   position: absolute;
   top: 50%;
   left: 50%;

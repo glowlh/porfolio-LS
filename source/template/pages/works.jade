@@ -23,29 +23,29 @@ block article
     include ../common/examples-works_widget
     .opinions
       .opinions__background
-        .lighthouse(alt="Фото маяка")
+        .lighthouse
       .title.header-opinions
         h1.title__text
           |Что обо мне <br> говорят
         svg.title__svg.title__svg--opinions(preserveAspectRatio="xMaxYMax meet", viewBox="0 0 103.03 124.03")
           use.svg__icon(xlink:href="assets/img/sprite/img.svg#stars3")
       .opinions__comments
-        .comments__dima
-          .dima__photo
+        .comments__person
+          .person__photo
             + setRoundedImage("/assets/img/photo-dima.png", "Ковльчук Дмитрий")
-          blockquote.blockquote.dima__blockquote.
+          blockquote.blockquote.
             Эта девушка проходила обучение веб-разработке не
             где-то, а в LoftSchool. 2 месяца только самых
             тяжёлых испытаний и бессоных ночей!
-          .dima__signature.signature <b>Ковльчук Дмитрий</b><br>- основатель LoftSchool
-        .comments__zar
-          .zar__photo
+          .signature <b>Ковльчук Дмитрий</b><br>- основатель LoftSchool
+        .comments__person
+          .person__photo
             + setRoundedImage("/assets/img/photo-zar.png", "Зар Захаров")
-          blockquote.blockquote.zar__blockquote.
+          blockquote.blockquote.
             Этот код выдерживает любые испытания. Только,
             пожалуйста, не загружайте сайт на слишком
             старых браузерах!
-          .zar__signature.signature <b>Зар Захаров</b><br>- главный преподаватель
+          .signature <b>Зар Захаров</b><br>- главный преподаватель
       .linked-box
         include ../common/linked_widget
       a.pointer-bottom(href="#header-works")

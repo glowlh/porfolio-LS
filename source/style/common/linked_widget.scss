@@ -35,15 +35,12 @@
   padding: rem(17px) rem(17px);
 }
 
-/**/
+/*buttons*/
 
 .buttons-panel {
   display: flex;
   margin-bottom: 0;
   flex-direction: row;
-  &:hover {
-    background-color: $button-hover-color;
-  }
 }
 
 .buttons-panel__item {

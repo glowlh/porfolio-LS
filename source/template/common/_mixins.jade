@@ -1,5 +1,3 @@
-//Mixin for navigation list
-
 mixin setList(items, className, active)
   nav(class="#{className}")
     ul(class="#{className}__list")
@@ -11,9 +9,6 @@ mixin setList(items, className, active)
           li(class="#{className}__item")
             a(href="#{href}" class="#{className}__link")= name
 
-
-//Mixin for submit form
-
 mixin setButtons(items, className)
   .buttons-panel(class=className)
     each type, value in items
@@ -24,20 +19,14 @@ mixin setButtons(items, className)
       else
         input.buttons-panel__item(type="#{type}", value="#{value}")
 
-//Mixin for titles with underline
-
 mixin setUnderlinedTitle(name, className)
   .underlined-box
     h3(class="#{className} underlined-title")
       |#{name}
 
-//Mixin for rounded image
-
 mixin setRoundedImage(src, altName)
   .rounded-image
     img.rounded-image__img(src="#{src}", alt="#{altName}")
-
-//Mixin for title with stars.svg background
 
 mixin setStarsBackgroundTitle(title, svgHref)
   .title
@@ -45,8 +34,6 @@ mixin setStarsBackgroundTitle(title, svgHref)
       |#{title}
     svg.title__svg(preserveAspectRatio="xMaxYMax meet", viewBox="0 0 171.5 132.5")
       use.svg__icon(xlink:href= svgHref)
-
-//Mixin for skill
 
 mixin setSkill(name, ClassName, vhValue)
   svg(class="skill-svg #{ClassName}", width="100", height="100", viewbox="0 0 100 100", preserveAspectRatio="xMinYMin slice")

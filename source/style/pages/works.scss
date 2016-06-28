@@ -73,20 +73,20 @@ $footer-height-pages-phones: rem(360px);
 }
 
 .lighthouse {
-  background: url("/assets/img/lighthouse-big.jpg");
+  background-image: url("/assets/img/lighthouse-big.jpg");
   background-size: cover;
   background-position: center;
   height: 100%;
   @include laptop {
-    background: url("/assets/img/lighthouse.jpg");
+    background-image: url("/assets/img/lighthouse.jpg");
     background-position: center;
   }
   @include tablets {
-    background: url("/assets/img/lighthouse-tablets.jpg");
+    background-image: url("/assets/img/lighthouse-tablets.jpg");
     background-position: center;
   }
   @include phones {
-    background: url("/assets/img/lighthouse-phones.jpg");
+    background-image: url("/assets/img/lighthouse-phones.jpg");
     background-position: center;
   }
 }
@@ -113,27 +113,22 @@ $footer-height-pages-phones: rem(360px);
   }
 }
 
-.opinions__comments .comments__dima,
-                    .comments__zar{
+.opinions__comments .comments__person {
   width: rem(400px);
   display: flex;
   flex-direction: column;
-}
-
-.dima__photo, .zar__photo {
-  margin: 0 auto;
-  transform: scale(0.6,0.6);
-  width: 125px;
-  height: 125px;
-}
-
-.opinions__comments .comments__dima,
-                    .comments__zar {
   //margin: 22px 0;
   color: #fff;
   font: rem(16px) 'Roboto Italic';
   line-height: 1.6;
   position: relative;
+}
+
+.person__photo{
+  margin: 0 auto;
+  transform: scale(0.6,0.6);
+  width: 125px;
+  height: 125px;
 }
 
 .opinions__comments .blockquote {
