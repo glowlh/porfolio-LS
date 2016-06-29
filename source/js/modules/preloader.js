@@ -49,7 +49,7 @@ $(document).ready(function(){
             $(".preloader .big").css({
                 'stroke-dasharray': Math.ceil(percent*157/100) + 'px 157px'
             });
-            $(".inner-text").text(percent);
+            $(".loading-value").text(percent);
         }
     });
 

@@ -24,6 +24,10 @@ $font-color-description: #474b57;
   }
 }
 
+.underlined-title .work {
+  font-size: rem(36px);
+}
+
 .examples-works__description--tablets {
   display: none;
   @include tablets {
@@ -46,7 +50,7 @@ $font-color-description: #474b57;
   margin-bottom: rem(40px);
   color: $button-color;
   .technologies__text {
-    margin-top: rem(20px);
+    margin-top: rem(26px);
   }
   @include tablets {
     margin-bottom: rem(15px);
@@ -57,14 +61,14 @@ $font-color-description: #474b57;
   cursor: pointer;
   color: #fff;
   background-color: $button-color;
-  padding: rem(11px) rem(11px) rem(11px) 0;
+  padding: rem(11px) rem(20px) rem(11px) 0;
   font: rem(16px) 'Roboto Regular';
   &:hover {
     background-color: #083c96;
   }
   &:before {
     content: '\f0c1';
-    font: rem(18px) 'FontAwesome';
+    font: rem(20px) 'FontAwesome';
     color: #fff;
     padding: 0 rem(15px);
     display: inline-block;

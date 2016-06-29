@@ -53,7 +53,7 @@ $triangles-height: 120px;
 
 .pointer .arrow-down__svg {
   cursor: pointer;
-  width: rem(25px);
+  width: rem(28px);
   height: rem(30px);
   fill: rgba(#fff, .7);
   &:hover {
@@ -124,11 +124,12 @@ $triangles-height: 120px;
 .description__sub-title .who-i-am {
   padding: rem(20px) 0;
   color: $title-color;
-  font: rem(35px) 'Sansus Regular';
+  font: rem(37px) 'Sansus Regular';
   &:after {
     background-color: $title-color;
     margin-top: 10px;
     padding: 0 0px;
+    width: 10%;
   }
 }
 
@@ -247,7 +248,7 @@ $triangles-height: 120px;
     }
   .contacts {
     margin-top: rem(15px);
-    padding-top: rem(20px);
+    //padding-top: rem(20px);
     padding-left: rem(20px);
   }
   }
@@ -320,6 +321,8 @@ $triangles-height: 120px;
 .map .contacts {
   max-width: 100%;
   margin: 0;
+  padding-top: rem(15px);
+  padding-bottom: rem(15px);
   .item__link {
     @include tablets {
       margin-bottom: rem(30px);

@@ -6,11 +6,16 @@
 }
 
 .linked-form__title {
-  width: rem(290px);
+  max-width: rem(400px);
   margin: auto;
   padding: rem(35px) 0;
   font: rem(34px) 'Sansus Regular';
   color: #fff;
+}
+
+.linked-form__title:after {
+  margin-top: rem(26px);
+  width: 10%;
 }
 
 .linked-form .input,
@@ -29,7 +34,7 @@
 }
 
 .linked-form .textarea {
-  height: rem(100px);
+  height: rem(105px);
   margin: 0 rem(23px) rem(23px) rem(23px);
   resize: none;
   padding: rem(17px) rem(17px);

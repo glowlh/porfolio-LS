@@ -89,12 +89,14 @@ $triangles-height: 120px;
 
 .header__title .title__name {
   font: rem(35px) 'Roboto Regular';
+  margin: 0;
   @include phones {
     font-size: rem(25px);
   }
 }
 
 .header__title .title__comment {
+  margin: 0;
   font: rem(16px) 'Roboto Light';
 }
 

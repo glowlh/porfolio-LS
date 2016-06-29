@@ -1,6 +1,6 @@
 $(function(){
-  // 'use strict';
-  $(".pointer").on("click", function (event) {
+  'use strict';
+  $(".smooth-scroll").on("click", function (event) {
     event.preventDefault();
     var id  = $(this).attr('href'),
     top = $(id).offset().top;

@@ -4,19 +4,19 @@ block header
   header.header.header--works#header-works
     include ../common/header_box
     .header__title
-      .title__name Мария Гущина
-      .title__comment Личный сайт веб-разработчика
+      h1.title__name Мария Гущина
+      h2.title__comment Личный сайт веб-разработчика
 
 block article
   article.article.article--works
-    a.pointer(href="#my-works")
+    a.smooth-scroll.pointer(href="#my-works")
       svg.arrow-down__svg(preserveAspectRatio="xMinYMin meet")
         use.svg__icon(xlink:href="assets/img/sprite/img.svg#arrow_down")
     .under-header__triangles.under-header__triangles--works
       .triangles__left
       .triangles__right
     .title.header-article#my-works
-      h1.title__text Мои работы
+      .title__text Мои работы
       svg.title__svg(preserveAspectRatio="xMaxYMax meet", viewBox="0 0 171.5 132.5")
         use.svg__icon(xlink:href="assets/img/sprite/img.svg#stars2")
 
@@ -25,7 +25,7 @@ block article
       .opinions__background
         .lighthouse
       .title.header-opinions
-        h1.title__text
+        .title__text
           |Что обо мне <br> говорят
         svg.title__svg.title__svg--opinions(preserveAspectRatio="xMaxYMax meet", viewBox="0 0 103.03 124.03")
           use.svg__icon(xlink:href="assets/img/sprite/img.svg#stars3")
@@ -48,6 +48,6 @@ block article
           .signature <b>Зар Захаров</b><br>- главный преподаватель
       .linked-box
         include ../common/linked_widget
-      a.pointer-bottom(href="#header-works")
+      a.smooth-scroll.pointer-bottom(href="#header-works")
         svg.arrow-down__svg(preserveAspectRatio="xMaxYMax meet", viewBox="0 0 25.18 16.164")
           use.svg__icon(xlink:href="assets/img/sprite/img.svg#arrow_down")

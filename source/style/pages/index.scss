@@ -64,9 +64,8 @@ body {
   margin-top: rem(24px);
   margin-right: rem(20px);
   outline: 2px solid #fff;
-  padding: rem(15px) rem(28px);
+  padding: rem(12px) rem(28px);
   cursor: pointer;
-  //z-index: 2;
   &:hover {
     outline: none;
     background-color: $button-hover-color;
@@ -77,6 +76,7 @@ body {
   text-decoration: none;
   color: #fff;
   font: rem(16px) 'Roboto Regular';
+  letter-spacing: .7px;
 }
 
 /*welcome-box*/
@@ -91,8 +91,12 @@ body {
 .flip-container,
 .welcome-box--front,
 .welcome-box--back {
-  width: rem(380px);
+  width: rem(400px);
   height: rem(390px);
+}
+
+.welcome-box--back {
+  height: rem(400px);
 }
 
 .welcome-box--front {
@@ -105,7 +109,7 @@ body {
 .welcome-box__image {
   width: $rounded-image-wh;
   height: $rounded-image-wh;
-  margin: rem(40px) 0 rem(20px) 0;
+  margin: rem(40px) 0 rem(12px) 0;
 }
 
 .welcome-box__name,
@@ -125,15 +129,13 @@ body {
 }
 
 .welcome-box__socials {
-  margin-bottom: rem(20px);
+  margin-bottom: rem(36px);
+  margin-top: rem(16px);
   .socials__svg {
     fill: #fff;
     &:hover {
       fill: #0548be;
     }
-  }
-  @include desktop {
-    margin-bottom: rem(28px);
   }
 }
 

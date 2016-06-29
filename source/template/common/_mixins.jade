@@ -21,7 +21,7 @@ mixin setButtons(items, className)
 
 mixin setUnderlinedTitle(name, className)
   .underlined-box
-    h3(class="#{className} underlined-title")
+    .underlined-title(class="#{className}")
       |#{name}
 
 mixin setRoundedImage(src, altName)
@@ -30,7 +30,7 @@ mixin setRoundedImage(src, altName)
 
 mixin setStarsBackgroundTitle(title, svgHref)
   .title
-    h1.title__text
+    .title__text
       |#{title}
     svg.title__svg(preserveAspectRatio="xMaxYMax meet", viewBox="0 0 171.5 132.5")
       use.svg__icon(xlink:href= svgHref)

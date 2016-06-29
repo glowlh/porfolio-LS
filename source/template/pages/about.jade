@@ -4,12 +4,12 @@ block header
   header.header
     include ../common/header_box
     .header__title
-      .title__name Мария Гущина
-      .title__comment Личный сайт веб-разработчика
+      h1.title__name Мария Гущина
+      h2.title__comment Личный сайт веб-разработчика
 
 block article
   article.article
-    a.pointer(href="#about-me")
+    a.smooth-scroll.pointer(href="#about-me")
       svg.arrow-down__svg(preserveAspectRatio="xMinYMin meet")
         use.svg__icon(xlink:href="assets/img/sprite/img.svg#arrow_down")
     .about-me
