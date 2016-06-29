@@ -11,7 +11,6 @@ $(function () {
                     "width"    : width
                 });
             } else {
-                console.log("here");
                 $("#blog-navigation").css({
                     "position": "static"
                 });
