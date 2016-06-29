@@ -1,4 +1,4 @@
-$(function(){
+module.exports = $(function(){
   'use strict';
   $(".smooth-scroll").on("click", function (event) {
     event.preventDefault();

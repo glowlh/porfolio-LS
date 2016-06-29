@@ -1,4 +1,4 @@
-$(function () {
+module.exports = $(function () {
     'use strict';
     if($("#blog-navigation").length) {
         var menuOffsetTop = $("#blog-navigation").offset().top;

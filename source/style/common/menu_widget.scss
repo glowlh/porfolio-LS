@@ -17,6 +17,9 @@
   position: relative;
   z-index: 4;
   cursor: pointer;
+  &:hover .menu-hamburger__item{
+    background-color: #004cd1;
+  }
 }
 .menu-hamburger__item:nth-child(n) {
   width: rem(40px);

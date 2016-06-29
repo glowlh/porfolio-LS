@@ -1,4 +1,4 @@
-$(function(){
+module.exports = $(function(){
     if($(".background-welcome__img").length){
         $(document).on("mousemove", function(event){
             var mousePosX = event.pageX - $(document).width()/2,

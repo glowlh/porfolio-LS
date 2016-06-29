@@ -1,4 +1,4 @@
-$(function () {
+module.exports = $(function () {
  'use strict';
   $(".authorisation-button").on("click", function(event) {
     $("#flipper").addClass("flipped");

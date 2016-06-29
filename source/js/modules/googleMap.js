@@ -102,6 +102,6 @@ var initGoogleMap = function () {
   map.mapTypes.set('korolev', styledMapType);
 };
 
-$(function(){
+module.exports = $(function(){
   loadScript("https://maps.googleapis.com/maps/api/js?key=AIzaSyCVB5MBE6dwQ6STo3wzfAJRqfj_sPF9b_c&sensor=false", initGoogleMap);
 });

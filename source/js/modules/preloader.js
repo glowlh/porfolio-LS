@@ -1,4 +1,4 @@
-$(document).ready(function(){
+module.exports = $(document).ready(function(){
     $(".preloader").css({
         display: 'flex'
     });

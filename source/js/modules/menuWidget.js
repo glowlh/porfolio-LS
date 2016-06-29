@@ -1,4 +1,4 @@
-$(function () {
+module.exports = $(function () {
     // 'use strict';
     var isDone = false;
     $(".menu-hamburger").on("click", function() {

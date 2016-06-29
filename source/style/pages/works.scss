@@ -110,6 +110,9 @@ $footer-height-pages-phones: rem(360px);
   justify-content: center;
   @include phones {
     flex-direction: column;
+    align-items: center;
+    margin-left: 40px;
+    margin-right: 20px;
   }
 }
 
