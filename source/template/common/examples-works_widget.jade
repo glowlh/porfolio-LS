@@ -7,7 +7,7 @@
       a.site__link Посмотреть сайт
   .examples-works__img
     .img-display
-      img(src="/assets/img/work-test.jpg", alt="Пример сайта").img-display--current
+      img(src="/assets/img/work-1.png", alt="Пример сайта").img-display--current
     .examples-works__description.examples-works__description--tablets
       + setUnderlinedTitle("Первый пример", "work")
       .description__technologies
@@ -15,16 +15,31 @@
       .description__site
         a.site__link Посмотреть сайт
     .img-box
-      .img-hide
-        .img-hide__mask
+      .img-hide.slider
+        .img-hide__mask.img-hide__mask--prev
         .img-hide__pointer.img-hide__pointer--left
           svg.arrow-down__svg(preserveAspectRatio="xMaxYMax meet", viewBox="0 0 25.18 16.164")
             use.svg__icon(xlink:href="assets/img/sprite/img.svg#arrow_down")
-        img(src="/assets/img/work-test.jpg", alt="Пример сайта").img-hide--current
-      .img-hide
-        .img-hide__mask
+        ul.slider__list
+          li.slider__item
+            img(src="/assets/img/work-1.png", alt="Пример сайта").slider__img
+          li.slider__item
+            img(src="/assets/img/work-2.png", alt="Пример сайта").slider__img
+          li.slider__item
+            img(src="/assets/img/work-3.png", alt="Пример сайта").slider__img
+          li.slider__item.slider__item--active
+            img(src="/assets/img/work-4.png", alt="Пример сайта").slider__img
+      .img-hide.slider
+        .img-hide__mask.img-hide__mask--next
         .img-hide__pointer.img-hide__pointer--right
           svg.arrow-down__svg(preserveAspectRatio="xMaxYMax meet", viewBox="0 0 25.18 16.164")
             use.svg__icon(xlink:href="assets/img/sprite/img.svg#arrow_down")
-        img(src="/assets/img/work-test.jpg", alt="Пример сайта").img-hide--current
-    //JS-галерея. Посмотреть плагин для слайдера.
+        ul.slider__list
+          li.slider__item
+            img(src="/assets/img/work-1.png", alt="Пример сайта").slider__img
+          li.slider__item.slider__item--active
+            img(src="/assets/img/work-2.png", alt="Пример сайта").slider__img
+          li.slider__item
+            img(src="/assets/img/work-3.png", alt="Пример сайта").slider__img
+          li.slider__item
+            img(src="/assets/img/work-4.png", alt="Пример сайта").slider__img

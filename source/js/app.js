@@ -4,7 +4,8 @@ var blogNavigation = require('./modules/blogNavigation.js'),
     menuWidget = require('./modules/menuWidget.js'),
     parallax = require('./modules/parallax.js'),
     preloader = require('./modules/preloader.js'),
-    smoothScroll = require('./modules/smoothScroll.js');
+    smoothScroll = require('./modules/smoothScroll.js'),
+    sliderWorks = require('./modules/sliderWorks');
 
 $(function(){
     blogNavigation("#blog-navigation");
@@ -14,4 +15,7 @@ $(function(){
     parallax();
     preloader();
     smoothScroll(".smooth-scroll");
+    if ($('.slider').length) {
+        sliderWorks().init();   
+    }
 });

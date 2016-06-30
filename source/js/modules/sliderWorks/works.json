@@ -1,0 +1,26 @@
+[
+  {
+    "srcImage"      : "/assets/img/work-test.jpg",
+    "title"         : "Первый пример",
+    "technologies"  : ["html", "css", "javascript"],
+    "link"          : "#"
+  },
+  {
+    "srcImage"      : "/assets/img/work-test.jpg",
+    "title"         : "Второй пример",
+    "technologies"  : ["html", "css", "javascript", "php"],
+    "link"          : "#"
+  },
+  {
+    "srcImage"      : "/assets/img/work-test.jpg",
+    "title"         : "Третий пример",
+    "technologies"  : ["html", "css"],
+    "link"          : "#"
+  },
+  {
+    "srcImage"      : "/assets/img/work-test.jpg",
+    "title"         : "Четвёртый пример",
+    "technologies"  : ["php", "css", "html"],
+    "link"          : "#"
+  }
+]
