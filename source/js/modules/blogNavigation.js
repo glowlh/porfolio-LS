@@ -1,20 +1,28 @@
-module.exports = $(function () {
-    'use strict';
-    if($("#blog-navigation").length) {
-        var menuOffsetTop = $("#blog-navigation").offset().top;
+
+'use strict';
+
+module.exports = function(element) {
+
+    if($(element).length) {
+        
+        var menuOffsetTop = $(element).offset().top;
+       
         $(document).scroll(function () {
-            var width = $("#blog-navigation").width();
+
+            var width = $(element).width();
+           
             if ($(document).scrollTop() >= menuOffsetTop){
-                $("#blog-navigation").css({
+                $(element).css({
                     "position": "fixed",
                     "top"     : "0px",
                     "width"    : width
                 });
             } else {
-                $("#blog-navigation").css({
+                $(element).css({
                     "position": "static"
                 });
             }
+            
             $(".content__article").each(function () {
                 if (($(document).scrollTop() - $(this).offset().top) >= 0){
                     $(".articles__item").each(function () {
@@ -24,6 +32,7 @@ module.exports = $(function () {
                     currentLink.parent().addClass('articles__item--active');
                 }
             });
+            
         });
     }
 
@@ -33,4 +42,5 @@ module.exports = $(function () {
             top = $(id).offset().top;
         $('body,html').animate({scrollTop: top}, 1000);
     });
-});
+    
+};

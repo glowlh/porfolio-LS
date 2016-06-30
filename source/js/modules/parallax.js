@@ -1,4 +1,8 @@
-module.exports = $(function(){
+
+'use strict';
+
+module.exports = function() {
+    
     if($(".background-welcome__img").length){
         $(document).on("mousemove", function(event){
             var mousePosX = event.pageX - $(document).width()/2,
@@ -8,12 +12,14 @@ module.exports = $(function(){
             });
         })
     }
+    
     if($(".background__img").length){
-        $(document).scroll(function(event){
+        $(document).scroll(function(){
             var documentScrollTop = $(document).scrollTop();
             $(".background__img").css({
                 "transform": "translate3d(0px, " + documentScrollTop*0.2 + "px, 0)"
             });
         });
     }
-});
+    
+};

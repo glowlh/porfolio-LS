@@ -1,7 +1,17 @@
-require('./modules/blogNavigation.js');
-require('./modules/flipper.js');
-require('./modules/googleMap.js');
-require('./modules/menuWidget.js');
-require('./modules/parallax.js');
-require('./modules/preloader.js');
-require('./modules/smoothScroll.js');
+var blogNavigation = require('./modules/blogNavigation.js'),
+    flipper = require('./modules/flipper.js'),
+    googleMap = require('./modules/googleMap.js'),
+    menuWidget = require('./modules/menuWidget.js'),
+    parallax = require('./modules/parallax.js'),
+    preloader = require('./modules/preloader.js'),
+    smoothScroll = require('./modules/smoothScroll.js');
+
+$(function(){
+    blogNavigation("#blog-navigation");
+    flipper(".authorisation-button");
+    googleMap("https://maps.googleapis.com/maps/api/js?key=AIzaSyCVB5MBE6dwQ6STo3wzfAJRqfj_sPF9b_c&sensor=false");
+    menuWidget();
+    parallax();
+    preloader();
+    smoothScroll(".smooth-scroll");
+});

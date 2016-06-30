@@ -1,9 +1,11 @@
-module.exports = $(function(){
-  'use strict';
-  $(".smooth-scroll").on("click", function (event) {
+
+'use strict';
+
+module.exports = function(element) {
+  $(element).on("click", function (event) {
     event.preventDefault();
     var id  = $(this).attr('href'),
-    top = $(id).offset().top;
+        top = $(id).offset().top;
     $('body,html').animate({scrollTop: top}, 1000);
   });
-});
+};

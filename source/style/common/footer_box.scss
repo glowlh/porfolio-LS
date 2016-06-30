@@ -37,7 +37,7 @@ $footer-height-pages-phones: 300px;
 }
 
 .footer .navigation-site__item {
-    margin-left: rem(20px);
+    margin-left: rem(40px);
     &:first-child {
         margin-left: 0;
     }
@@ -68,6 +68,7 @@ $footer-height-pages-phones: 300px;
 
 .footer .links {
     font: rem(16px) 'Roboto Regular';
+    letter-spacing: 0.4px;
 }
 
 .footer .copyright {

@@ -1,3 +1,8 @@
+
+module.exports = function(url) {
+  loadScript(url, initGoogleMap);
+};
+
 var loadScript = function (url,callback){
   var script = document.createElement('script');
   script.setAttribute('type','text/javascript');
@@ -101,7 +106,3 @@ var initGoogleMap = function () {
   });
   map.mapTypes.set('korolev', styledMapType);
 };
-
-module.exports = $(function(){
-  loadScript("https://maps.googleapis.com/maps/api/js?key=AIzaSyCVB5MBE6dwQ6STo3wzfAJRqfj_sPF9b_c&sensor=false", initGoogleMap);
-});

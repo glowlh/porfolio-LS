@@ -99,6 +99,10 @@ $footer-height-pages-phones: rem(360px);
 .header-opinions {
   margin-bottom: rem(35px);
   letter-spacing: rem(2.5px);
+  .title__text {
+    letter-spacing: 0px;
+    line-height: 65px;
+  }
 }
 
 .blockquote {
