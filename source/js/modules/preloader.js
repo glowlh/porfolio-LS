@@ -10,8 +10,7 @@ module.exports = function(){
     $.each($('*'), function(){
         var that = $(this),
             background = that.css('background-image'),
-            image = that.is('img'),
-            video = that.is('source');
+            image = that.is('img');
 
         if(background != 'none') {
             var path = background.replace('url("', '').replace('")', '');
@@ -38,13 +37,21 @@ module.exports = function(){
     }
 
     var setPercents = function(total, current){
-        var percent = Math.ceil(current/total*100);
+        var percent = Math.ceil(current/total*100),
+            percentPre = Math.ceil((current - 1)/total*100),
+            i = percentPre;
         if(percent >= 100) {
-            $(".preloader").fadeOut('slow');
+            $(".preloader").fadeOut(2500);
         }
-        $(".preloader .big").css({
-            'stroke-dasharray': Math.ceil(percent*157/100) + 'px 157px'
-        });
-        $(".loading-value").text(percent);
+        setTimeout(function(){
+          for(; i <= percent ; i++) {
+            $(".loading-value").text(i);
+            console.log(i);
+            $(".preloader .big").css({
+              'stroke-dasharray': Math.ceil(i * 157 / 100) + 'px 157px'
+            });
+          }
+        }, 100);
+
     }
 };
