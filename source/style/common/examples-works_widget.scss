@@ -63,6 +63,7 @@ $font-color-description: #474b57;
   background-color: $button-color;
   padding: rem(11px) rem(20px) rem(11px) 0;
   font: rem(16px) 'Roboto Regular';
+  text-decoration: none;
   &:hover {
     background-color: #083c96;
   }
@@ -142,8 +143,18 @@ $font-color-description: #474b57;
   justify-content: center;
   align-items: center;
   height: 70vh;
-  .img-display--current {
-    height: 25vh;
+  .slider__list {
+    width: 100%;
+  }
+  .slider__item {
+    height: 30vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+  }
+  .slider__item--active {
+    opacity: 1;
   }
 }
 
@@ -165,8 +176,9 @@ $font-color-description: #474b57;
   bottom: 0;
   left: 0;
   background-color: rgba($font-color-description, .4);
-  &:hover, .img-hide__pointer .arrow-down__svg:hover {
+  &:hover {
     background-color: rgba($font-color-description, 0.15);
+    cursor: pointer;
   }
 
 }
@@ -186,13 +198,18 @@ $font-color-description: #474b57;
     width: 100%;
     height: 100%;
     fill: rgba(#fff, .7);
+    transition: 1s;
     &:hover {
       fill: rgba(#fff, 1);
+      transform: translateY(50%);
     }
   }
 }
 
 .img-hide__pointer--right .arrow-down__svg {
   transform: rotate(180deg);
+  &:hover {
+    transform: translateY(-50%) rotate(180deg);
+  }
 }
 
