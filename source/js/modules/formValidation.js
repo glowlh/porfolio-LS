@@ -76,7 +76,7 @@ module.exports = function() {
     $(sendButton).on('click', function(event){
       event.preventDefault();
       var isSended = true;
-      if(!sendForm.find('.capcha__chekbox:checked').length) {
+      if(!sendForm.find('.capcha__chekbox:checked').length && $('.capcha__chekbox').length) {
         isSended = false;
       }
         
