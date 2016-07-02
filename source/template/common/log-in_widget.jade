@@ -1,16 +1,16 @@
 .welcome-box__name.uppercase Авторизуйтесь
-form.log-in-form
+form.form.log-in-form#logInForm(action="#!")
   .log-in-form__wrapper
     .log-in__name.log-in--field
       .log-in-logo
         svg.log-in-logo__svg.log-in-logo__svg--name(preserveAspectRatio="xMinYMin meet", viewBox="0 0 14.137 15.422")
           use.svg__icon(xlink:href="assets/img/sprite/img.svg#login")
-      input.log-in__input.log-in__input--name(placeholder="Логин")
+      input.log-in__input.form-field.error.log-in__input--name#login(placeholder="Логин", name="login")
     .log-in__pass.log-in--field
       .log-in-logo
         svg.log-in-logo__svg.log-in-logo__svg--pass(preserveAspectRatio="xMinYMin meet", viewBox="0 0 16.897 15.984")
           use.svg__icon(xlink:href="assets/img/sprite/img.svg#password")
-      input.log-in__input.log-in__input--pass(placeholder="Пароль")
+      input.log-in__input.form-field.error.log-in__input--pass#pass(type="password", placeholder="Пароль", name="pass")
     .log-in__capcha
       .capcha__robot
         input.capcha__chekbox#human-checkbox(type="checkbox")
@@ -20,7 +20,7 @@ form.log-in-form
         .capcha__answers
           input.answers__radio#human-yes-radio(type="radio", name="capcha-answers")
           label.capcha__answer.capcha__answer--yes.capcha__answer--radio(for="human-yes-radio") Да
-          input.answers__radio#human-no-radio(type="radio", name="capcha-answers")
+          input.answers__radio#human-no-radio(type="radio", name="capcha-answers", checked)
           label.capcha__answer.capcha__answer--radio(for="human-no-radio") Не уверен
   -
     var items = {

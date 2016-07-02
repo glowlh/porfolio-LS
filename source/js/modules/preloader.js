@@ -46,7 +46,6 @@ module.exports = function(){
         setTimeout(function(){
           for(; i <= percent ; i++) {
             $(".loading-value").text(i);
-            console.log(i);
             $(".preloader .big").css({
               'stroke-dasharray': Math.ceil(i * 157 / 100) + 'px 157px'
             });

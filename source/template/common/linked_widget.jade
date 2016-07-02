@@ -1,8 +1,8 @@
-form.linked-form
+form.form.linked-form#linkedForm(action="#!")
   + setUnderlinedTitle("Связаться со мной", "linked-form__title")
-  input.input.linked-form__name(placeholder="Ваше имя")
-  input.input.linked-form__mail(placeholder="Ваше email")
-  textarea.textarea.linked-form__message(placeholder="Ваше сообщение")
+  input.input.form-field.error#name(placeholder="Ваше имя", name="name")
+  input.input.form-field.error#mail(placeholder="Ваш email", name="mail")
+  textarea.textarea.form-field.error#message(placeholder="Ваше сообщение", name="message")
   -
     var items = {
     "Отправить"   : "submit",
