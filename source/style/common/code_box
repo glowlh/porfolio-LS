@@ -1,0 +1,45 @@
+$string-color: #87ad3b;
+$symbol-color: #afb5bc;
+$key-color: #004cd1;
+
+.code-box {
+  width: 100%;
+}
+
+.pre {
+  display: flex;
+  flex-direction: row;
+  font: rem(16px) 'Courier';
+  line-height: 20px;
+}
+
+.code-box__line-numbers {
+  display: flex;
+  flex-direction: column;
+  background-color: #E5E4E2;
+  width: 25px;
+  padding: 15px;
+  .number {
+    display: inline-block;
+    text-align: right;
+    color: $symbol-color;
+  }
+}
+
+.code-box__code {
+  width: 100%;
+  background-color: #fafafa;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  color: #000;
+  .symbol {
+    color: $symbol-color;
+  }
+  .string {
+    color: $string-color;
+  }
+  .key-word {
+    color: $key-color;
+  }
+}

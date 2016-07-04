@@ -204,7 +204,7 @@ module.exports = function() {
         titleSlide = container.find('.work'),
         technologiesSlide = container.find('.technologies__text'),
         linkSlide = container.find('.site__link');
-
+     
       titleSlide.text(works[slide].title);
       technologiesSlide.text(function(){
         var tech = "", i = 0;

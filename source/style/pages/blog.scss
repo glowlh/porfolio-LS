@@ -114,6 +114,13 @@ $footer-height-pages-phones: 360px;
     font: rem(16px)'Roboto Regular';
     line-height: 1.5;
     color: #455a64;
+    .link {
+      text-decoration: none;
+      color: #004cd1;
+    }
+    .link:hover {
+      text-decoration: underline;
+    }
     @include tablets {
       margin-right: rem(20px);
     }

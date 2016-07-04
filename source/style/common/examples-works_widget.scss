@@ -16,7 +16,7 @@ $font-color-description: #474b57;
   display: flex;
   flex-direction: column;
   width: 50vw;
-  font: rem(30px) 'Sansus Regular';
+  font-family: 'Sansus Regular';
   color: $font-color-description;
   @include tablets {
     width: 100%;
@@ -24,8 +24,9 @@ $font-color-description: #474b57;
   }
 }
 
-.underlined-title .work {
+.underlined-title.work {
   font-size: rem(36px);
+  transition: 3s;
 }
 
 .examples-works__description--tablets {

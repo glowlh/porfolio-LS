@@ -25,24 +25,66 @@ block article
               li.articles__item
                 a.articles__link(href="#article-svg") Про SVG-анимацию
               li.articles__item
-                a.articles__link(href="#article-git") Если Вы только узнали про <span class="uppercase">git</span>
+                a.articles__link(href="#article-git") <span class="uppercase">git</span>: право на ошибку
         .blog-articles__content
           .content__article#article-gulp
             .content__title Полезные плагины <span class="uppercase">gulp</span>
             .content__date 19 июня 2016
             .content__text
-              p.text__paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              p.text__paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              p.text__paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              p.text__paragraph.
+                Использование task-менеджеров значительно ускоряет работу над проектом и избавляет Вас от рутинной работы. Gulp появился как альтернатива Grunt, которая принесла новое и упростила некоторые моменты. Вот небольшой список тех плагинов, на которые следует обратить внимание и включить в сборку по-умолчанию.
+              p.text__paragraph.
+                Начнём со стилей. Если Вы используете какой-либо препроцессор, то, конечно, лучше автоматизировать компиляцию файлов и добавить соответствующий плагин. Так как я использую SASS, то в моём случае - это <a class="link" target="_blank" href="https://www.npmjs.com/package/gulp-sass">gulp-sass</a>. Теперь у нас есть наши стили в нужном нам формате, но, допустим, мы не задумывались о разнообразии браузеров и везде писали свойства без префиксов. Здесь на помощь приходит мой самый любимый плагин <a class="link" target="_blank" href="https://www.npmjs.com/package/gulp-autoprefixer">gulp-autoprefixer</a>. В конфигурации данного плагина можно указать желаемые браузеры и их версии. Пришло время для соединения всех стилей в один, с чем нам поможет <a class="link" target="_blank" href="https://www.npmjs.com/package/gulp-concat-css">gulp-concat-css</a> и минификации плюс оптимизации полученного файла <a class="link" target="_blank" href="https://www.npmjs.com/package/gulp-csso">gulp-csso</a>. Естественно, если Вы больше предпочитаете постпроцессоры, то количество плагинов будет больше, т.к. часть возможностей уже обеспечивает SASS. Поэтому этого вполне хватает.
+              p.text__paragraph.
+                Далее идёт разметка страницы. Для удобства я также использую препроцессор и это JADE. Поэтому аналогично с SASS необходимо установить плагин, отвечающий за компиляцию входных файлов <a class="link" target="_blank" href="https://www.npmjs.com/package/gulp-jade">gulp-jade</a>. На этом, наверное, и всё: каких-то очень необходимых плагинов для разметки я не могу выделить. Думаю, что за это нужно благодарить сам JADE, в котором и так много чего есть.
+              p.text__paragraph.
+                Теперь нужно позаботиться о js-файлах. Для красоты и надёжности, конечно же, лучше использовать модульный подход при проектировании системы. Выделив и написав модули необходимо их собрать. Я использую <a class="link" target="_blank" href="https://www.npmjs.com/package/gulp-webpack">gulp-webpack</a>. У него есть множество настроек и модулей, которые также можно подключать уже к нему. Лучше всего об этом узнать, например, <a class="link" target="_blank" href="https://learn.javascript.ru/screencast/webpack">здесь</a>.
+              p.text__paragraph.
+                Рассказав про частное, хотелось бы упомянуть ещё про один плагин, который упростит подключение каждого последующего. <a class="link" target="_blank" href="https://www.npmjs.com/package/gulp-load-plugins">gulp-load-plugins</a>, который инициализирует все зависимости из файла-манифеста Gulp и в дальнейшем достаточно указывать одну переменную для обращения к той или иной функции плагина. 
+              p.text__paragraph.
+                Я привела небольшой перечень плагинов, но это те самые нужные компоненты, которые сделают написание кода ещё приятней.
+
+              //.code-box
+              //  pre.pre
+              //    .code-box__line-numbers
+              //      .number 1
+              //      .number 2
+              //      .number 3
+              //      .number 4
+              //    code.code-box__code
+              //      .line <span class="key-word">var</span> getArray <span class="symbol">=</span> <span class="key-word">function</span><span class="symbol">(</span>array<span class="symbol">,</span> <span class="string">'массив'<span><span class="symbol">) {</span>
+              //      .line   <span class="symbol">//Возвращаем массив</span>
+              //      .line   <span class="key-word">return</span> <span class="symbol">[</span>array<span class="symbol">,</span> <span class="string">'массив'</span><span class="symbol">];</span>
+              //      .line <span class="symbol">}</span>
           .content__article#article-svg
             .content__title Про SVG-анимацию
             .content__date 19 июня 2016
             .content__text
-              p.text__paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              p.text__paragraph.
+                SVG могут как упростить, так и усложнить построение графического интерфейса сайта. Для меня, самым приятным их использованием является анимация. <a class="link" target="_blank" href="http://slides.com/glowlh/deck#/">Здесь</a> можно посмотреть компактную по содержанию презентацию, которая рассказывает про основные атрибуты компонентов SVG и в конце приведены 4 примера анимации для прелоадеров. Рассмотрим один из них.
               p.text__paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           .content__article#article-git
-            .content__title Если Вы только узнали про <span class="uppercase">git</span>
+            .content__title <span class="uppercase">git</span>: право на ошибку
             .content__date 19 июня 2016
             .content__text
-              p.text__paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              p.text__paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              p.text__paragraph.
+                Я часто слышала про git до первого по-настоящему стоящего его применения. После первого ознакомления появился страх перед использованием его без графического интерфейса, то есть через консоль. Но на самом деле здесь ничего сложного: нужно просто выучить пару команд и все Ваши версии уже под контролем.
+                Это мощный и полезный инструмент, который пару даже пару раз меня выручал, позволив вернуться к предыдущей версии проекта.
+              p.text__paragraph.
+                С мои небольшим опытом разработки функция отката версии на данный момент является одной из самых полезных. Её использование так же просто как и сделать новый коммит, проиндексировать файлы и так далее. Первое, что нам необходимо знать, чтобы откатить изменения до последнего коммита - это его идентификатор. Например, с помощью следующей команды:
+              .code-box
+                pre.pre
+                  .code-box__line-numbers
+                    .number 1
+                  code.code-box__code
+                    .line $ git <span class="key-word">log</span>
+              p.text__paragraph.
+                Будут выведены совершённые коммиты (для выхода: ctrl + Q). Теперь мы значем идентификатор - commitId. Для отката версии необходимо применить команду reset, которая меняет положение ветки, на которую указывает сслыка HEAD. Если у Вас, как и у меня, одна единственная ветка, то не нужно задумываться об этом на данном этапе (более подробно описание представлено <a  class="link" target="_blank" href="https://git-scm.com/book/ru/v2/%D0%98%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D1%8B-Git-%D0%A0%D0%B0%D1%81%D0%BA%D1%80%D1%8B%D1%82%D0%B8%D0%B5-%D1%82%D0%B0%D0%B9%D0%BD-reset">здесь</a>):
+              .code-box
+                pre.pre
+                  .code-box__line-numbers
+                    .number 1
+                  code.code-box__code
+                    .line $ git <span class="key-word">reset</span> <span class="string">commitId</span>
+              p.text__paragraph.
+                Теперь проект находится на этапе версии коммита commitId. Эта возможность намного упрощает разработку и также заставляет задуматься про огранизацию самих коммитов: их частоту, наименование, что немало важно.
