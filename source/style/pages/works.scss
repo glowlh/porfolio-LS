@@ -160,15 +160,15 @@ $footer-height-pages-phones: rem(360px);
 .linked-box {
   display: flex;
   justify-content: center;
-  padding-top: rem(70px);
+  margin-top: rem(70px);
 }
 
 .pointer-bottom {
   justify-content: center;
   display: flex;
-  padding: rem(70px) 0;
+  margin: rem(70px) 0;
   @include phones {
-    padding-top: rem(30px);
+    margin-top: rem(30px);
   }
 }
 

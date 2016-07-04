@@ -4,6 +4,7 @@ var blogNavigation = require('./modules/blogNavigation.js'),
     menuWidget = require('./modules/menuWidget.js'),
     parallax = require('./modules/parallax.js'),
     preloader = require('./modules/preloader.js'),
+    skillsLevel = require('./modules/skillsLevel.js'),
     smoothScroll = require('./modules/smoothScroll.js'),
     sliderWorks = require('./modules/sliderWorks'),
     formValidation = require('./modules/formValidation.js');
@@ -15,6 +16,7 @@ $(function(){
   menuWidget();
   parallax();
   preloader();
+  skillsLevel(".skill-circle");
   smoothScroll(".smooth-scroll");
   if ($('.slider').length) {
     sliderWorks().init();   

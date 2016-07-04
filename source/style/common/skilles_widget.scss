@@ -17,11 +17,9 @@ circle {
 }
 
 .skill-circle {
-  animation: loading-circle 3s;
   stroke: #658dd3;
   transform-origin: 50%;
   transform: rotate(-90deg);
-  stroke-dasharray: 70 251.2;
 }
 
 @-webkit-keyframes loading-circle {
@@ -43,11 +41,14 @@ circle {
   .widget-title {
     font: rem(28px) 'Roboto Medium';
     color: $title-color;
-    margin: rem(30px) 0 0 rem(45px);
+    margin: 30px 0 0 rem(45px);
     @include tablets {
       margin-bottom: rem(20px);
       margin-left: 0;
     }
+  }
+  .widget-title--frontend {
+    margin-top: 0;
   }
   .diagrams {
     margin-left: rem(40px);

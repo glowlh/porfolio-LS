@@ -112,9 +112,9 @@ $triangles-height: 120px;
 }
 
 .description__img{
-  width: rem(420px);
-  height: rem(390px);
-  margin: rem(35px) 0 rem(5px) 0;
+  width: 430px;
+  height: 390px;
+  margin: 35px 0 rem(5px) 0;
   @include phones {
     width: 100%;
     height: 100%;
@@ -131,6 +131,10 @@ $triangles-height: 120px;
     padding: 0 0px;
     width: 10%;
   }
+}
+
+.skills__title {
+  margin-top: 5px;
 }
 
 .skills__title .benefit {
@@ -181,15 +185,16 @@ $triangles-height: 120px;
 }
 
 .skills__widget {
+  margin-top: 30px;
   @include tablets {
     justify-content: center;
     align-items: center;
     display: flex;
     flex-direction: column;
-    margin-top: rem(30px);
+    margin-top: 30px;
   }
   @include phones {
-    margin-top: rem(15px);
+    margin-top: 15px;
   }
   .widget-title {
     @include tablets {
@@ -238,7 +243,7 @@ $triangles-height: 120px;
   .contacts__title {
     max-width: 100%;
     margin: auto;
-    margin-top: rem(37px);
+    margin-top: 30px;
     color: $title-color;
     font: rem(35px) 'Sansus Regular';
     &:after {
@@ -247,8 +252,7 @@ $triangles-height: 120px;
       padding: 0 0px;
     }
   .contacts {
-    margin-top: rem(15px);
-    //padding-top: rem(20px);
+    margin-top: 15px;
     padding-left: rem(20px);
   }
   }
@@ -295,8 +299,8 @@ $triangles-height: 120px;
 }
 
 .item__link--skype .link__svg {
-  width: rem(50px);
-  height: rem(50px);
+  width: 50px;
+  height: 50px;
 }
 
 .item__link {
@@ -307,7 +311,7 @@ $triangles-height: 120px;
 
 .item__link--skype,
 .item__link--phone {
-  margin-bottom: rem(30px);
+  margin-bottom: 30px;
 }
 
 .contacts__item--last {
@@ -321,8 +325,9 @@ $triangles-height: 120px;
 .map .contacts {
   max-width: 100%;
   margin: 0;
-  padding-top: rem(15px);
-  padding-bottom: rem(15px);
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-left: 16px;
   .item__link {
     @include tablets {
       margin-bottom: rem(30px);

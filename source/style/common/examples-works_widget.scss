@@ -115,7 +115,8 @@ $font-color-description: #474b57;
 .slider__item {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 50%;
+  transform: translate(-50%);
   z-index: 0;
   height: 100%;
 }

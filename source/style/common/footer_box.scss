@@ -140,7 +140,7 @@ $footer-height-pages-phones: 300px;
 }
 
 .footer__content .contacts-links__item {
-  margin-bottom: 2px;
+  line-height: rem(26px);
 }
 
 .footer__content {
@@ -153,9 +153,9 @@ $footer-height-pages-phones: 300px;
 }
 
 .footer__content .navigation__socials {
-    padding-top: rem(45px);
+    margin-top: 40px;
     @include phones {
-      padding-top: rem(15px);
+      margin-top: 15px;
     }
 }
 

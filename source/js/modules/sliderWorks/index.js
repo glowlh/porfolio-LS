@@ -142,6 +142,18 @@ module.exports = function() {
         "top": reqCssPosition
       }).addClass('slider__item--inslide');
 
+      slides.each(function(){
+        if ($(this).hasClass('slider__item--inslide') || $(this).hasClass('slider__item--active')) {
+          $(this).css({
+            opacity: 1
+          });
+        } else {
+          $(this).css({
+            opacity: 0
+          });
+        }
+      });
+
       var translatableSlide = slides.filter('.slider__item--inslide');
       activeSlide.animate({
         "top": reqSlideStrafe
