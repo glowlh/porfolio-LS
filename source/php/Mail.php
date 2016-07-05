@@ -32,9 +32,9 @@ class Mail
         $mail->AltBody = 'Добрый день! Спасибо за Ваше письмо.'.$this->message;
 
         if(!$mail->send()) {
-            return json_encode(array("message" => "Сообщение не может быть отправлено"), JSON_UNESCAPED_UNICODE);
+            return 'Сообщение не может быть отправлено';
         } else {
-            return json_encode(array("message" => "Сообщение отправлено. Можете проверить свою почту"), JSON_UNESCAPED_UNICODE);
+            return 'Сообщение отправлено. Можете проверить свою почту';
         }
     }
 

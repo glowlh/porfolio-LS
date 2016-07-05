@@ -164,3 +164,23 @@
 .bottom-form--log-in .buttons-panel__item:last-child {
   border-left: 2px solid #7195d2;
 }
+
+.bottom-form--log-in .buttons-panel__item{
+  background-color: #0548be;
+  &:hover {
+    background-color: #083c96;
+  }
+}
+
+.bottom-form--log-in .buttons-panel__item--send[disable=true] {
+  color: rgba(#fff, .5);
+  background-color: #0548be;
+}
+
+.bottom-form--log-in .buttons-panel__item--send[disable=false] {
+  color: #fff;
+  background-color: $button-color;
+  &:hover {
+    background-color: $button-hover-color;
+  }
+}

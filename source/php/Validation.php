@@ -22,9 +22,11 @@ class Validation
         $v = new Valitron\Validator($this->mail);
         $v->rule('required', 'email');
         $v->rule('email', 'email');
-        if(!$v->validate()) {
-            return json_encode(array("statusMail" => "false"));
-        } 
+        if($v->validate()) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
 }

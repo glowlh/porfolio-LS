@@ -37,6 +37,17 @@ module.exports = function() {
 
   };
 
+  var setMailTip = function(content) {
+
+    $('.qtip-container').text(content);
+    $('.qtip-container').animate({
+      opacity: 1
+    }, 1000, function () {
+      $(this).animate({
+        opacity: 0
+      }, 5000);
+    });
+  }
   var setFormStatus = function(fields, sendButton) {
     
     var isSended = true;
@@ -106,7 +117,11 @@ module.exports = function() {
             },
             success: function (response) {
               var data = jQuery.parseJSON(response);
-              console.log("-> ", data["message"]);
+              setMailTip(data.mailStatus);
+              $(sendButton).attr('disable', true);
+              fields.each(function() {
+                $(this).reset();
+              });
             }
           });
         } else {

@@ -8,12 +8,9 @@
     $data = $helper->receiveData();
     
     $mail = new Mail(array($data["mail"], $data["name"]), $data["message"]);
-    $response[] = $mail->send();    
+    $response["mailStatus"] = $mail->send();    
 
     $validation = new Validation($data["name"], $data["mail"]);
-    $response[] = $validation->run();
+    $response["validationStatus"] = $validation->run();
     
-    $helper->sendData($response);
-    
-//    print_r($data["name"]);
-    
+    $helper->sendData($response);    
