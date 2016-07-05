@@ -36,18 +36,93 @@ module.exports = function() {
     }
 
   };
+
+  var setFormStatus = function(fields, sendButton) {
+    
+    var isSended = true;
+
+    fields.each(function(){
+      var fieldId = $(this).attr('id'),
+        fieldData = $(this).val();
+      if(!validateField(fieldData, fieldId).status) {
+        isSended = false;
+      }
+    });
+
+    if(isSended) {
+      $(sendButton).attr('disable', false);
+    } else {
+      $(sendButton).attr('disable', true);
+    }
+    
+  };
+  
+  var sendData = function(fields, sendButton, form) {
+
+    var isSended = true;
+    
+    $(sendButton).on('click', function(event){
+      event.preventDefault();
+      if(!form.find('.capcha__chekbox:checked').length && $('.capcha__chekbox').length) {
+        isSended = false;
+      }
+
+      fields.each(function(){
+        var fieldId = $(this).attr('id'),
+            fieldData = $(this).val();
+        if(!validateField(fieldData, fieldId).status) {
+          isSended = false;
+          $(this).qtip({
+            content: validateField(fieldData, fieldId).message,
+            position: {
+              my: 'left center',
+              at: 'right center'
+            },
+            show: {
+              ready: true
+            },
+            hide: {
+              event: false
+            },
+            style: {
+              classes: 'qtip-tipsy qtip-tipsy--custom'
+            }
+          });
+        }
+      });
+
+      if($('#linkedForm').length) {
+        if (isSended) {
+          var data = {};
+          fields.each(function() {
+            data[$(this).attr('name')] = $(this).val();
+          });
+          data = JSON.stringify(data);
+          $.ajax({
+            type: "post",
+            url: "../../php/common.php",
+            data: {
+              data: data
+            },
+            success: function (response) {
+              var data = jQuery.parseJSON(response);
+              console.log("-> ", data["message"]);
+            }
+          });
+        } else {
+          return false
+        }
+      }
+    });
+  };
   
   var setTooltips = function(sendButton) {
 
-    var sendForm = $(sendButton).closest('.form'),
-        fieldsForm = sendForm.find('.form-field')
+    var form = $(sendButton).closest('.form'),
+        fieldsForm = form.find('.form-field')
 
-    $('.form-field#name, ' +
-      '.form-field#mail, ' +
-      '.form-field#message, ' +
-      '.form-field#login, ' +
-      '.form-field#pass' )
-      .on('blur', function(){
+    $('.form-field')
+      .on('input', function(){
         var fieldId = $(this).attr('id'),
             fieldData = $(this).val();
 
@@ -71,30 +146,12 @@ module.exports = function() {
       } else {
         fieldsForm.filter('#' + fieldId).qtip('destroy');
         }
-      });
-    
-    $(sendButton).on('click', function(event){
-      event.preventDefault();
-      var isSended = true;
-      if(!sendForm.find('.capcha__chekbox:checked').length && $('.capcha__chekbox').length) {
-        isSended = false;
-      }
+
+      setFormStatus(fieldsForm, sendButton);
         
-      fieldsForm.each(function(){
-        var fieldId = $(this).attr('id'),
-            fieldData = $(this).val();
-        if(!validateField(fieldData, fieldId).status) {
-          isSended = false;
-          $(fieldId).blur();
-        }
       });
 
-      if(isSended) {
-        sendForm.submit();
-      } else {
-        return false;
-      }
-    });
+    sendData(fieldsForm, sendButton, form);
 
   };
   

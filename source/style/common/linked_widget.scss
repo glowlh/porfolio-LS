@@ -59,10 +59,6 @@
   cursor: pointer;
   border: none;
   outline: none;
-  background-color: $button-color;
-  &:hover{
-    background-color: $button-hover-color;
-  }
 }
 
 .bottom-form--works .buttons-panel__item:last-child {
@@ -82,3 +78,15 @@
   text-shadow: none;
 }
 
+.buttons-panel__item--send[disable=true] {
+  color: rgba(#fff, .5);
+  background-color: rgba($button-color, 0);
+}
+
+.buttons-panel__item--send[disable=false] {
+  color: #fff;
+  background-color: $button-color;
+  &:hover {
+    background-color: $button-hover-color;
+  }
+}
