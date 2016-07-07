@@ -39,3 +39,15 @@ html {
   max-width: 1200px;
   margin: 0 auto;
 }
+
+.static-position {
+  position: static;
+}
+
+.fixed-position {
+  position: fixed;
+}
+
+.flex-display {
+  display: flex;
+}

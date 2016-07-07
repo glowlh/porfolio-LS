@@ -15,7 +15,6 @@ $title-color: #373e42;
 @import '../css/fonts/fontawesome.css';
 
 @import 'common/_mixins';
-@import 'common/_modificators';
 
 @import 'pages/index';
 @import 'pages/about';
@@ -37,5 +36,6 @@ $title-color: #373e42;
 @import 'common/menu_widget';
 @import 'common/skilles_widget';
 @import 'common/socials_widget';
+@import 'common/_modificators';
 
 

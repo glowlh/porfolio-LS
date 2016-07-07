@@ -1,8 +1,6 @@
 module.exports = function(){
 
-    $(".preloader").css({
-        display: 'flex'
-    });
+    $(".preloader").addClass('flex-display');
    
     var media = [],
         percentsImage = 1;

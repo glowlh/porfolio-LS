@@ -12,15 +12,14 @@ module.exports = function(element) {
             var width = $(element).width();
            
             if ($(document).scrollTop() >= menuOffsetTop){
+                $(element).addClass('fixed-position');
                 $(element).css({
-                    "position": "fixed",
                     "top"     : "0px",
                     "width"    : width
                 });
             } else {
-                $(element).css({
-                    "position": "static"
-                });
+                $(element).removeClass('fixed-position');
+                $(element).addClass('static-position');
             }
             
             $(".content__article").each(function () {

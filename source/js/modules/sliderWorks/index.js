@@ -175,7 +175,7 @@ module.exports = function() {
           "top": 0
         }).removeClass('slider__item--active');
 
-        that.toggleClass('slider__item--inslide slider__item--active')
+        that.toggleClass('slider__item--inslide slider__item--active');
       });
 
     },
