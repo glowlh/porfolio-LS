@@ -22,7 +22,8 @@ module.exports = function() {
           message: 'Имя должно состоять из букв'
         }
       }
-    } else if(type === 'mail') {
+    } 
+    else if(type === 'mail') {
       if(data.search(pattern.mail) === -1) {
         return {
           status: false,
@@ -37,7 +38,7 @@ module.exports = function() {
 
   };
 
-  var setMailTip = function(content) {
+  var setMessage = function(content) {
 
     $('.qtip-container').text(content);
     $('.qtip-container').animate({
@@ -47,7 +48,8 @@ module.exports = function() {
         opacity: 0
       }, 5000);
     });
-  }
+  };
+  
   var setFormStatus = function(fields, sendButton) {
     
     var isSended = true;
@@ -111,18 +113,13 @@ module.exports = function() {
           data = JSON.stringify(data);
           $.ajax({
             type: "post",
-            url: "../../php/common.php",
+            url: "../../php/controllers/WorksController.php",
             data: {
               data: data
             },
             success: function (response) {
               var data = $.parseJSON(response);
-              // setMailTip(data.mailStatus);
-              // $(sendButton).attr('disable', true);
-              // fields.each(function() {
-              //   $(this).val('');
-              // });
-              
+              setMessage(data);              
             }
           });
         } else {
