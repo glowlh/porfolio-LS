@@ -116,12 +116,13 @@ module.exports = function() {
               data: data
             },
             success: function (response) {
-              var data = jQuery.parseJSON(response);
-              setMailTip(data.mailStatus);
-              $(sendButton).attr('disable', true);
-              fields.each(function() {
-                $(this).reset();
-              });
+              var data = $.parseJSON(response);
+              // setMailTip(data.mailStatus);
+              // $(sendButton).attr('disable', true);
+              // fields.each(function() {
+              //   $(this).val('');
+              // });
+              
             }
           });
         } else {

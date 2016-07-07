@@ -15,4 +15,5 @@ In this project was used [GULP](http://gulpjs.com/) task-manager,
 2. cd path/to/proj-builder
 3. npm install gulpjs/gulp-cli#4.0 -g
 4. npm install
-5. run "gulp" command to start
+5. composer install
+6. run "gulp" command to start

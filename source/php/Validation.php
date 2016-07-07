@@ -9,18 +9,20 @@ class Validation
 
     private $name;
     private $mail;
+    private $message;
 
-    public function __construct($name, $mail) {
+    public function __construct($name, $mail, $message) {
         $this->name = $name;
         $this->mail = $mail;
+        $this->message = $message;
     }
     
     public function run() {
 
-        require('./valitron/src/Valitron/Validator.php');
+        require('./vlucas/valitron/src/valitron/Validator.php');
 
-        $v = new Valitron\Validator($this->mail);
-        $v->rule('required', 'email');
+        $v = new Valitron\Validator(array('email' => $this->mail));
+        $v->rule('required', ['email', 'name', 'message']);
         $v->rule('email', 'email');
         if($v->validate()) {
             return true;
