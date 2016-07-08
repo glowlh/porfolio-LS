@@ -3,8 +3,7 @@ module.exports = function() {
   var pattern = {
     name: /^[A-zА-я\s]*$/,
     mail: /^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$/
-  },
-    _that = this;
+  };
   
   var validateField = function(data, type) {
 
@@ -132,32 +131,32 @@ module.exports = function() {
   var setTooltips = function(sendButton) {
 
     var form = $(sendButton).closest('.form'),
-        fieldsForm = form.find('.form-field')
+        fieldsForm = form.find('.form-field');
 
-    $('.form-field')
+    fieldsForm
       .on('input', function(){
         var fieldId = $(this).attr('id'),
             fieldData = $(this).val();
 
         if(!validateField(fieldData, fieldId).status) {
-        fieldsForm.filter('#' + fieldId).qtip({
-          content: validateField(fieldData, fieldId).message,
-          position: {
-            my: 'left center',
-            at: 'right center'
-          },
-          show: {
-            ready: true
-          },
-          hide: {
-            event: false
-          },
-          style: {
-            classes: 'qtip-tipsy qtip-tipsy--custom'
-          }
-        });
+          fieldsForm.filter('#' + fieldId).qtip({
+            content: validateField(fieldData, fieldId).message,
+            position: {
+              my: 'left center',
+              at: 'right center'
+            },
+            show: {
+              ready: true
+            },
+            hide: {
+              event: false
+            },
+            style: {
+              classes: 'qtip-tipsy qtip-tipsy--custom'
+            }
+          });
       } else {
-        fieldsForm.filter('#' + fieldId).qtip('destroy');
+          fieldsForm.filter('#' + fieldId).qtip('destroy');
         }
 
       setFormStatus(fieldsForm, sendButton);
@@ -170,7 +169,6 @@ module.exports = function() {
   
   return {
     init: function() {
-      setTooltips('.bottom-form--log-in .buttons-panel__item--send');
       setTooltips('.bottom-form--works .buttons-panel__item--send');
     }
   }

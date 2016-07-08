@@ -7,7 +7,8 @@ var blogNavigation = require('./modules/blogNavigation.js'),
     skillsLevel = require('./modules/skillsLevel.js'),
     smoothScroll = require('./modules/smoothScroll.js'),
     sliderWorks = require('./modules/sliderWorks'),
-    formValidation = require('./modules/formValidation.js');
+    linkedWidget = require('./modules/linkedWidget.js'),
+    logInWidget = require('./modules/logInWidget');
 
 $(function(){
   blogNavigation("#blog-navigation");
@@ -18,10 +19,13 @@ $(function(){
   preloader();
   skillsLevel(".skill-circle");
   smoothScroll(".smooth-scroll");
-  if ($('.slider').length) {
+  if($('.slider').length) {
     sliderWorks().init();   
   }
-  if ($('.form').length) {
-    formValidation().init();
+  if($('.linked-form').length) {
+    linkedWidget().init();
+  }
+  if($('.log-in-form').length) {
+      logInWidget().init();
   }
 });

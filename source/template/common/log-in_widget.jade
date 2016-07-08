@@ -13,14 +13,14 @@ form.form.log-in-form#logInForm(action="#!")
       input.log-in__input.form-field.error.log-in__input--pass#pass(type="password", placeholder="Пароль", name="pass")
     .log-in__capcha
       .capcha__robot
-        input.capcha__chekbox#human-checkbox(type="checkbox")
+        input.capcha__chekbox.human-status#human-checkbox(type="checkbox", value="human")
         label.capcha__answer.capcha__answer--chekbox(for="human-checkbox") Я человек
       .capcha__robot-repeat
         .capcha__question Вы точно не робот?
         .capcha__answers
-          input.answers__radio#human-yes-radio(type="radio", name="capcha-answers")
+          input.answers__radio.human-status#human-yes-radio(type="radio", name="capcha-answers", value="yes")
           label.capcha__answer.capcha__answer--yes.capcha__answer--radio(for="human-yes-radio") Да
-          input.answers__radio#human-no-radio(type="radio", name="capcha-answers", checked)
+          input.answers__radio.human-status#human-no-radio(type="radio", name="capcha-answers", value="no", checked)
           label.capcha__answer.capcha__answer--radio(for="human-no-radio") Не уверен
   -
     var items = {

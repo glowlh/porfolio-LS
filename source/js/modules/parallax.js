@@ -11,7 +11,7 @@ module.exports = function() {
         var mousePosX = event.pageX - $(document).width()/2,
             mousePosY = event.pageY - $(document).height()/2;
           $(".background-welcome__img").css({
-              "transform": "translate3d(" + mousePosX*0.01 + "px, " + mousePosY*0.01 + "px, 0)"
+              "transform": "translate3d(" + mousePosX*(-0.01) + "px, " + mousePosY*(-0.01) + "px, 0)"
           });
       })
     }
