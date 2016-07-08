@@ -10,7 +10,7 @@ module.exports = function (){
       isSendedFields = false,
       isSendedCapcha = false;
 
-  var validateField = function(data, type) {
+  var validateField = function(data) {
 
     if(data === "") {
       return {
@@ -19,15 +19,23 @@ module.exports = function (){
       }
     }
 
-    if(type === 'checkbox') {
-
-    }
-
     return {
       status: true
     }
 
-  }
+  };
+
+  var setMessage = function(content) {
+
+    $('.qtip-container').text(content);
+    $('.qtip-container').animate({
+      opacity: 1
+    }, 1000, function () {
+      $(this).animate({
+        opacity: 0
+      }, 5000);
+    });
+  };
 
   var setTooltips = function() {
 
@@ -37,7 +45,7 @@ module.exports = function (){
             fieldData = $(this).val();
         if(!validateField(fieldData).status) {
           fieldsForm.filter('#' + fieldId).qtip({
-            content: validateField(fieldData, fieldId).message,
+            content: validateField(fieldData).message,
             position: {
               my: 'left center',
               at: 'right center'
@@ -83,7 +91,6 @@ module.exports = function (){
       var value = $(this).val(),
           isChecked = $(this).is(':checked');
       if(isChecked && (value === 'no')) {
-        console.log('hhh');
         isSendedCapcha = false;
       } else if (!isChecked && (value === 'human')) {
         isSendedCapcha = false;
@@ -92,26 +99,82 @@ module.exports = function (){
 
   };
 
-  var setFormStatus = function() {
+  var getFormStatus = function() {
 
     setTooltips();
     setHumanStatus();
 
     if(isSendedFields && isSendedCapcha) {
       $(sendButton).attr('disable', false);
+      return true;
     } else {
       $(sendButton).attr('disable', true);
+      return false;
     }
 
-    console.log(isSendedFields, '---', isSendedCapcha);
+    // console.log(isSendedFields, '---', isSendedCapcha);
   };
 
+  var sendData = function() {
+    
+    $(sendButton).on('click', function(event) {
+      event.preventDefault();
+
+      if(!getFormStatus()) {
+        fieldsForm.each(function() {
+          var fieldId = $(this).attr('id'),
+              fieldData = $(this).val();
+          if(!validateField(fieldData).status) {
+            fieldsForm.filter('#' + fieldId).qtip({
+              content: validateField(fieldData).message,
+              position: {
+                my: 'left center',
+                at: 'right center'
+              },
+              show: {
+                ready: true
+              },
+              hide: {
+                event: false
+              },
+              style: {
+                classes: 'qtip-tipsy qtip-tipsy--custom'
+              }
+            });
+          }
+        });
+      } else {
+        var data = {};
+        fieldsForm.each(function() {
+          data[$(this).attr('name')] = $(this).val();
+        });
+        data = JSON.stringify(data);
+        $.ajax({
+          type: "post",
+          url: "../../php/controllers/LogInController.php",
+          data: {
+            data: data
+          },
+          success: function (response) {
+            var data = $.parseJSON(response);
+            if(!data) {
+              setMessage("Проверьте введённые данные!")
+            }
+          }
+        });
+      }
+    });
+  
+  };
+  
   return {
     init: function() {
 
       $('.log-in-form').on('change input', function () {
-        setFormStatus();
+        getFormStatus();
       });
+
+      sendData();
 
     }
   }

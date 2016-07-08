@@ -71,13 +71,12 @@ module.exports = function() {
   
   var sendData = function(fields, sendButton, form) {
 
-    var isSended = true;
+    var isSended;
     
     $(sendButton).on('click', function(event){
       event.preventDefault();
-      if(!form.find('.capcha__chekbox:checked').length && $('.capcha__chekbox').length) {
-        isSended = false;
-      }
+
+      isSended = true;
 
       fields.each(function(){
         var fieldId = $(this).attr('id'),
@@ -103,27 +102,25 @@ module.exports = function() {
         }
       });
 
-      if($('#linkedForm').length) {
-        if (isSended) {
-          var data = {};
-          fields.each(function() {
-            data[$(this).attr('name')] = $(this).val();
-          });
-          data = JSON.stringify(data);
-          $.ajax({
-            type: "post",
-            url: "../../php/controllers/WorksController.php",
-            data: {
-              data: data
-            },
-            success: function (response) {
-              var data = $.parseJSON(response);
-              setMessage(data);              
-            }
-          });
-        } else {
-          return false
-        }
+      if (isSended) {
+        var data = {};
+        fields.each(function() {
+          data[$(this).attr('name')] = $(this).val();
+        });
+        data = JSON.stringify(data);
+        $.ajax({
+          type: "post",
+          url: "../../php/controllers/WorksController.php",
+          data: {
+            data: data
+          },
+          success: function (response) {
+            var data = $.parseJSON(response);
+            setMessage(data);
+          }
+        });
+      } else {
+        return false
       }
     });
   };
