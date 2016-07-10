@@ -26,7 +26,6 @@ $.gulp.task('default', $.gulp.series(
   $.gulp.parallel(
     'sass',
     'jade',
-    'jade.to.php',
     'js.foundation',
     'js.process',
     'copy.image',

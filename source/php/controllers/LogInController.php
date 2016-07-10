@@ -7,6 +7,7 @@ class LogInController {
     private $login;
     private $password;
     private $userModel;
+    public  $currentUser;
 
     public function __construct($login, $password) {
         $this->login = $login;
@@ -14,16 +15,14 @@ class LogInController {
         $this->userModel = new UsersModel();
     }
 
-    public function logIn() {
-        $status = $this->userModel->getUser($this->login, $this->password);
-        if($status) {
-            header("Location: /admin/about.php");
-            exit();
-        }
-        print_r(json_encode($status, JSON_UNESCAPED_UNICODE));
-
+    public function fetchUser() {
+        $this->currentUser = $this->userModel->fetchUser($this->login, $this->password);
+        print_r(json_encode($this->currentUser, JSON_UNESCAPED_UNICODE));
     }
 
+    public function getModel() {
+        return $this->userModel;
+    }
 }
 
 if(empty($_POST)) {
@@ -32,4 +31,4 @@ if(empty($_POST)) {
 
 $data = json_decode($_POST['data'], true);
 $logInController = new LogInController($data["login"], $data["password"]);
-$logInController->logIn();
+$logInController->fetchUser();

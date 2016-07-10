@@ -159,6 +159,8 @@ module.exports = function (){
             var data = $.parseJSON(response);
             if(!data) {
               setMessage("Проверьте введённые данные!")
+            } else {
+              window.location.replace('/admin/about.php');
             }
           }
         });

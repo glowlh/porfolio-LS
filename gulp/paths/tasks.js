@@ -4,7 +4,6 @@ module.exports = [
   './gulp/tasks/sass.js',
   './gulp/tasks/serve.js',
   './gulp/tasks/jade.js',
-  './gulp/tasks/jade.to.php.js',
   './gulp/tasks/watch.js',
   './gulp/tasks/clean.js',
   './gulp/tasks/js.foundation.js',

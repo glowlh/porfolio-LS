@@ -3,6 +3,7 @@
 class UsersModel {
     
     private $db;
+    private $currentUser;
 
     public function __construct() {
 
@@ -14,11 +15,11 @@ class UsersModel {
         try {
             $this->db = new PDO("mysql:host=$host;dbname=$dbname", $user, $password);
         } catch(PDOException $event) {
-            echo "PDO".$event->getMessage();
+            echo "PDO: ".$event->getMessage();
         }
     }
 
-    public function getUser($login, $password) {
+    public function fetchUser($login, $password) {
         $password = crypt($password, $login);
         $sql = '
           SELECT * FROM users 
@@ -30,12 +31,31 @@ class UsersModel {
             'login' => $login,
             'password' => $password
         ));
-        $result = $result->fetchAll();
-        if(count($result) > 0) {
-            return true;
+        if($result->rowCount() == 1) {
+            $users = $result->fetchAll();
+            $this->currentUser = $users[0];
+            return $this->currentUser;
         } else {
             return false;
         }
+    }
+
+    public function logIn() {
+        session_start();
+        if(!empty($this->currentUser)) {
+            $_SESSION[$this->currentUser['id']] = $this->currentUser['id'];
+            $_SESSION[$this->currentUser['login']] = $this->currentUser['login'];
+            header("Location: /admin/about.php");
+            exit;
+        }
+    }
+
+    public function logOut($login) {
+
+    }
+
+    public function isAuth() {
+
     }
     
 }
