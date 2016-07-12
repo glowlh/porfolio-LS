@@ -32,7 +32,8 @@ $.gulp.task('default', $.gulp.series(
     'copy.fonts',
     'copy.fonts-styles',
     'css.foundation',
-    'copy.php'
+    'copy.php',
+    'copy.htaccess'
   ),
   $.gulp.parallel(
     'watch',
