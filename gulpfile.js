@@ -33,7 +33,7 @@ $.gulp.task('default', $.gulp.series(
     'copy.fonts-styles',
     'css.foundation',
     'copy.php',
-    'copy.htaccess'
+    'bootstrap.mvc'
   ),
   $.gulp.parallel(
     'watch',

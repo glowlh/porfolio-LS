@@ -2,7 +2,7 @@
 
 module.exports = function() {
   $.gulp.task('jade', function() {
-    return $.gulp.src(["!" + $.path.template + '/pages/admin/admin.jade', $.path.template + '/pages/**/*.jade'])
+    return $.gulp.src($.path.template + '/pages/**/*.jade')
       .pipe($.gp.jade({ pretty: '\t' }))
       .pipe($.gp.rename({
         extname: ".php"
@@ -14,6 +14,6 @@ module.exports = function() {
           message:  error.message
         }
        }))
-      .pipe($.gulp.dest($.config.root));
+      .pipe($.gulp.dest($.config.root + '/app/views/'));
   });
 };

@@ -1,0 +1,14 @@
+doctype html
+html(lang="ru-RU")
+  include ../common/_head
+  body.body--admin
+    include ../common/_mixins
+    .wrapper--admin ADMIN PAGE
+      <?= $users[0]['login']; ?>
+      <? if (!empty($users)): ?>
+      <? foreach($users as $user): ?>
+      <?= $user['name']; ?>
+      <? endforeach; ?>
+      <? endif; ?>
+      block header
+      block article

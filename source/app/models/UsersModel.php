@@ -50,12 +50,13 @@ class UsersModel {
         }
     }
 
-    public function logOut($login) {
+    public function fetchUsers() {
+        $sql = 'SELECT * FROM users';
+        $data = DB::getSelect($sql);
 
-    }
-
-    public function isAuth() {
-
+        if($data['count'] > 0) {
+            return $data['result'];
+        }
     }
     
 }

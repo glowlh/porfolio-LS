@@ -8,7 +8,7 @@ html(lang="ru-RU")
     <p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите его</a></p>
     <![endif]-->
     .wrapper-welcome
-      include ../common/preloader_box
+      //include ../common/preloader_box
       video.background-welcome__video(autoplay, loop,  poster="./assets/img/background-night.jpg")
         source.video__source(src="./assets/img/night.mp4", type="video/mp4")
       .background-welcome__img
@@ -27,9 +27,9 @@ html(lang="ru-RU")
               include ../common/socials_widget
             -
               var items = {
-                  "Мои работы": "works.php",
-                  "Обо мне"   : "about.php",
-                  "Блог"      : "blog.php"
+                  "Мои работы": "works",
+                  "Обо мне"   : "about",
+                  "Блог"      : "blog"
               }
             + setList(items, "bottom-menu")
           .welcome-box.welcome-box--back

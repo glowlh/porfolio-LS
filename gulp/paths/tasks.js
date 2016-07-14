@@ -15,6 +15,6 @@ module.exports = [
   './gulp/tasks/copy.fonts.js',
   './gulp/tasks/copy.fonts-styles.js',
   './gulp/tasks/copy.php.js',
-  './gulp/tasks/copy.htaccess.js'
+  './gulp/tasks/bootstrap.mvc.js'
 ];
 

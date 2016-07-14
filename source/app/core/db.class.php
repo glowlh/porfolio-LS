@@ -19,11 +19,11 @@ class DB {
 
     public static function getSelect($sql, $data = array()) {
         $link = self::$link;
-        $result = $link->prepare($sql);
-        $result->execute($data);
+        $res = $link->prepare($sql);
+        $res->execute($data);
 
-        $result = $result->fetchAll();
-        $count = $result->rowCount();
+        $result = $res->fetchAll();
+        $count = count($result);
 
         return array('count' => $count, 'result' => $result);
     }
