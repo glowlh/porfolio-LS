@@ -17,7 +17,7 @@ class DB {
         }
     }
 
-    public static function getSelect($sql, $data = array()) {
+    public static function get_select($sql, $data = array()) {
         $link = self::$link;
         $res = $link->prepare($sql);
         $res->execute($data);

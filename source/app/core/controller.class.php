@@ -2,11 +2,11 @@
 
 class Controller {
     
-    public static function isGuest() {
+    public static function is_guest() {
         return !isset($_SESSION['login']);
     }
     
-    public static function generateView($viewName, $data = null) {
+    public static function generate_view($viewName, $data = null) {
 
         if(is_array($data)) {
             extract($data);

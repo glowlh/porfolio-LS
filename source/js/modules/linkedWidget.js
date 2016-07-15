@@ -110,7 +110,7 @@ module.exports = function() {
         data = JSON.stringify(data);
         $.ajax({
           type: "post",
-          url: "../../php/controllers/WorksController.php",
+          url: "works/sendmail",
           data: {
             data: data
           },

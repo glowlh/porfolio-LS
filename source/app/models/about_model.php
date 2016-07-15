@@ -5,7 +5,7 @@
         public function getUsers() {
             
             $sql = 'SELECT * FROM users';
-            $data = DB::getSelect($sql);
+            $data = DB::get_select($sql);
             
             if($data['count'] > 0) {
                 return $data['result'];

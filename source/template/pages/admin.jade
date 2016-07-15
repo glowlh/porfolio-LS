@@ -1,3 +1,8 @@
+<? if (Controller::is_guest()): ?>
+<? header('Location: /welcome'); ?>
+<? exit(); ?>
+<? endif; ?>
+
 doctype html
 html(lang="ru-RU")
   include ../common/_head
@@ -10,5 +15,7 @@ html(lang="ru-RU")
       <?= $user['name']; ?>
       <? endforeach; ?>
       <? endif; ?>
+      <?= $_SESSION['login']; ?><br>
+      a.buttion-exit(href="logout") Выйти
       block header
       block article

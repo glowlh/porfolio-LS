@@ -3,8 +3,9 @@
 class About_controller extends Controller {
 
     public function __construct() {
-        
-        Controller::generateView('about');
     }
-
+    
+    public function index_action() {
+        Controller::generate_view('about');
+    }
 }

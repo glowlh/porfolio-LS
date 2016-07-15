@@ -12,6 +12,14 @@ class Route {
             $controller_name = $routes[1];
         }
 
+        if(!empty($routes[2])) {
+            $action_name = $routes[2];
+        } else {
+            $action_name = 'index';
+        }
+
+        $action_name = $action_name.'_action';
+
         $controller_name = ucfirst($controller_name).'_controller';
         $controller_file = strtolower($controller_name).'.php';
         $controller_path = 'app/controllers/'.$controller_file;
@@ -26,7 +34,15 @@ class Route {
             self::error404();
         }
 
-        new $controller_name;
+        $controller = new $controller_name;
+        $action = $action_name;
+        
+        if(method_exists($controller, $action)) {
+            $controller->$action();
+        } else {
+            self::error404();
+        }
+        
     }
 
     public static function error404() {
@@ -34,6 +50,7 @@ class Route {
         header('HTTP/1.1 404 Not Found');
         header("Status: 404 Not Found");
         header('Location:'.$host.'page404');
+        exit();
     }
 
 }

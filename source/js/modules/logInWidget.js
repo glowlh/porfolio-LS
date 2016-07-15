@@ -151,16 +151,16 @@ module.exports = function (){
         data = JSON.stringify(data);
         $.ajax({
           type: "post",
-          url: "../../php/controllers/LogInController.php",
+          url: "/welcome/login",
           data: {
             data: data
           },
           success: function (response) {
             var data = $.parseJSON(response);
-            if(!data) {
-              setMessage("Проверьте введённые данные!")
+            if(!data.status) {
+              setMessage(data.message)
             } else {
-              window.location.replace('/admin/about.php');
+              window.location.replace('/admin');
             }
           }
         });
