@@ -8,7 +8,8 @@ var blogNavigation = require('./modules/blogNavigation.js'),
     smoothScroll = require('./modules/smoothScroll.js'),
     sliderWorks = require('./modules/sliderWorks'),
     linkedWidget = require('./modules/linkedWidget.js'),
-    logInWidget = require('./modules/logInWidget');
+    logInWidget = require('./modules/logInWidget.js'),
+    adminNavigation = require('./modules/adminNavigation.js');
 
 $(function(){
   blogNavigation("#blog-navigation");
@@ -27,5 +28,8 @@ $(function(){
   }
   if($('.log-in-form').length) {
       logInWidget().init();
+  }
+  if($('.pages').length) {
+    adminNavigation().init();
   }
 });

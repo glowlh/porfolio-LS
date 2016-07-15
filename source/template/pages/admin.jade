@@ -8,14 +8,29 @@ html(lang="ru-RU")
   include ../common/_head
   body.body--admin
     include ../common/_mixins
-    .wrapper--admin ADMIN PAGE
-      <?= $users[0]['login']; ?>
-      <? if (!empty($users)): ?>
-      <? foreach($users as $user): ?>
-      <?= $user['name']; ?>
-      <? endforeach; ?>
-      <? endif; ?>
-      <?= $_SESSION['login']; ?><br>
-      a.buttion-exit(href="logout") Выйти
-      block header
-      block article
+    .wrapper--admin
+      //<?= $users[0]['login']; ?>
+      //<? if (!empty($users)): ?>
+      //<? foreach($users as $user): ?>
+      //<?= $user['name']; ?>
+      //<? endforeach; ?>
+      //<? endif; ?>
+      //<?= $_SESSION['login']; ?><br>
+      header.header-admin
+        .header-admin__title Панель администрирования
+        a.header-admin__buttion-exit(href="logout") Вернуться на сайт
+      .pages
+        -
+          var items = {
+          "Мои работы"  : "#edit-works",
+          "Обо мне"     : "#edit-about",
+          "Блог"        : "#edit-blog"
+          }
+        +setList(items, "tabs-navigation", "#edit-works")
+        .pages__edit
+          .edit.edit-works.edit--active
+            include ../common/edit-works
+          .edit.edit-about
+            include ../common/edit-about
+          .edit.edit-blog
+            include ../common/edit-blog

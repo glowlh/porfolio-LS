@@ -1,0 +1,35 @@
+.body--page404 {
+  background-image: url("../img/night_prel_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+}
+
+.message {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font: rem(50px) 'Sansus Regular';
+  color: #fff;
+}
+
+.message__link {
+  text-decoration: none;
+}
+
+.message__link:before {
+  margin-left: 20px;
+  content: '\f015';
+  font: rem(50px) 'FontAwesome';
+  text-decoration: none;
+  color: rgba(#fff, .5);
+  transition: 1s;
+}
+
+.message__link:hover {
+  &:before {
+    color: rgba(#fff, 1);
+  }
+}

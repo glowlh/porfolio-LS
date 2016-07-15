@@ -2,7 +2,7 @@ mixin setList(items, className, active)
   nav(class="#{className}")
     ul(class="#{className}__list")
       each href, name in items
-        if key == active
+        if href == active
           li(class="#{className}__item #{className}__item--active")
             a(href="#{href}" class="#{className}__link")= name
         else

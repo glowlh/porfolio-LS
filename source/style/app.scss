@@ -5,7 +5,6 @@ $big-width: 1800px;
 $normal-width: 1200px;
 $iPad-width: 786px;
 $iPhone-width: 320px;
-$border-left-color: #7195d2;
 $rounded-image-wh: 143px;
 $title-color: #373e42;
 
@@ -20,7 +19,8 @@ $title-color: #373e42;
 @import 'pages/about';
 @import 'pages/works';
 @import 'pages/blog';
-@import 'pages/about-admin';
+@import 'pages/page404';
+@import 'pages/admin';
 
 @import 'common/flipper';
 @import 'common/log-in_widget';

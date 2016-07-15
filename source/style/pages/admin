@@ -1,0 +1,81 @@
+html,
+body {
+  height: 100%;
+}
+
+.header-admin {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 80px;
+  background-color: #6782B3;
+}
+
+.header-admin__title {
+  font: rem(28px) 'Roboto Regular';
+  color: #fff;
+  margin-left: 30px;
+}
+
+.header-admin__buttion-exit {
+  font: rem(16px) 'Roboto Regular';
+  color: rgba(#fff, .5);
+  margin-right: 30px;
+  transition: 1s;
+  &:hover {
+    color: rgba(#fff, 1);
+  }
+}
+
+.wrapper--admin {
+  background-image: url("../img/night_prel_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  height: 100%;
+}
+
+.tabs-navigation {
+  background-color: #cfcfcf;
+}
+
+.tabs-navigation__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  text-transform: uppercase;
+}
+
+.tabs-navigation__item {
+  padding: 20px;
+  border-right: 2px solid rgba(#fff, .5);
+}
+
+.tabs-navigation__link {
+  font: rem(16px) 'Roboto Medium';
+  text-decoration: none;
+  color: #455a64;
+  transition: 1s;
+  &:hover {
+    color: #fff;
+  }
+}
+
+.tabs-navigation__item--active {
+  background-color: rgba(#fff, .5);
+  .tabs-navigation__link {
+    color: #6782B3;
+  }
+}
+
+.edit {
+  display: none;
+  color: #fff;
+}
+
+.edit--active {
+  display: flex;
+}
