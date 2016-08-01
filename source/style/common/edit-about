@@ -1,0 +1,80 @@
+.title-roboto-regular {
+  font: rem(16px) 'Roboto Regular';
+}
+
+.title-roboto-medium {
+  font: rem(16px) 'Roboto Medium';
+}
+
+.edit-about {
+  diaplay: flex;
+  flex-direction: column;
+}
+
+.edit__title {
+  margin-bottom: 48px;
+  font-size: rem(21px);
+}
+
+.edit__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.content__columns {
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  min-width: rem(200px);
+  margin-left: 100px;
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.content-skills {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.skilles-fields {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: rem(200px);
+  margin-bottom: 10px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  margin-left: 22px;
+}
+
+.input__field {
+  width: rem(47px);
+  height: rem(34px);
+  text-align: center;
+  outline:none;
+  border-radius: 5px;
+  border: none;
+  margin-right: 10px;
+}
+
+.saving-button {
+  margin-top: 30px;
+  padding: 15px;
+  background-color: #0447bd;
+  color: #fff;
+  border: none;
+  &:hover{
+    background-color: #083c96;
+  }
+}

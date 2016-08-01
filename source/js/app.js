@@ -9,7 +9,8 @@ var blogNavigation = require('./modules/blogNavigation.js'),
     sliderWorks = require('./modules/sliderWorks'),
     linkedWidget = require('./modules/linkedWidget.js'),
     logInWidget = require('./modules/logInWidget.js'),
-    adminNavigation = require('./modules/adminNavigation.js');
+    adminNavigation = require('./modules/adminNavigation.js'),
+    admin = require('./modules/admin');
 
 $(function(){
   blogNavigation("#blog-navigation");
@@ -31,5 +32,6 @@ $(function(){
   }
   if($('.pages').length) {
     adminNavigation().init();
+    admin().init();
   }
 });

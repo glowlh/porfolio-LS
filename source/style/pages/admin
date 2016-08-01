@@ -29,6 +29,10 @@ body {
 }
 
 .wrapper--admin {
+  height: 100%;
+}
+
+.pages {
   background-image: url("../img/night_prel_bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -50,7 +54,7 @@ body {
 }
 
 .tabs-navigation__item {
-  padding: 20px;
+  padding: 20px 70px;
   border-right: 2px solid rgba(#fff, .5);
 }
 
@@ -72,8 +76,9 @@ body {
 }
 
 .edit {
-  display: none;
   color: #fff;
+  margin: 30px;
+  margin-top: 40px ;
 }
 
 .edit--active {

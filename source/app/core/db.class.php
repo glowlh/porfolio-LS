@@ -27,5 +27,16 @@ class DB {
 
         return array('count' => $count, 'result' => $result);
     }
+
+    public static function set_values($sql, $data = array()) {
+        $link = self::$link;
+        $res = $link->prepare($sql);
+        $res->execute($data);
+
+//        $result = $res->fetchAll();
+//        $count = count($result);
+//
+//        return array('count' => $count, 'result' => $result);
+    }
     
 }

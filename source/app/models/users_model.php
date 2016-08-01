@@ -2,7 +2,7 @@
 
 class Users_model {
 
-    
+
     public function fetch_user($login, $password) {
         $password = crypt($password, $login);
         $sql = '
@@ -14,6 +14,15 @@ class Users_model {
             "login" => $login,
             "password" => $password
         ));
+
+        if($data['count'] > 0) {
+            return $data['result'];
+        }
+    }
+
+    public function get_users() {
+        $sql = 'SELECT * FROM users';
+        $data = DB::get_select($sql);
 
         if($data['count'] > 0) {
             return $data['result'];

@@ -1,0 +1,28 @@
+.edit__title.title-roboto-medium Страница "Обо мне" #{name}
+form.edit__content#edit-form
+  .content__columns
+    .column
+      each range, index in skills
+        if index%2 === 0
+          .content-skills
+            .title-roboto-medium #{range.skillRange}
+            each skill in range.skilles
+              .skilles-fields
+                .edit-skill__title.title-roboto-regular.uppercase #{skill.skill}
+                .edit-skill__input
+                  input.input__field.title-roboto-regular(value="#{skill.value}" data-skill-id="#{skill[0]}")
+                  span.input__span.title-roboto-regular %
+    .column
+      each range, index in skills
+        if index % 2 != 0
+          .content-skills
+            .title-roboto-medium #{range.skillRange}
+            each skill in range.skilles
+              .skilles-fields
+                .edit-skill__title.title-roboto-regular.uppercase #{skill.skill}
+                .edit-skill__input
+                  input.input__field.title-roboto-regular(value="#{skill.value}" data-skill-id="#{skill[0]}")
+                  span.input__span.title-roboto-regular %
+  .content__button
+    input.saving-button(type="submit", value="Сохранить")
+

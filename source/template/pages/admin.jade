@@ -1,7 +1,9 @@
 <? if (Controller::is_guest()): ?>
-<? header('Location: /welcome'); ?>
+<?$host = 'http://'.$_SERVER['HTTP_HOST'].'/';?>
+<?header('Location:'.$host.'welcome');?>
 <? exit(); ?>
 <? endif; ?>
+//todo dont forget about deleting first space in the `build`
 
 doctype html
 html(lang="ru-RU")
@@ -9,28 +11,16 @@ html(lang="ru-RU")
   body.body--admin
     include ../common/_mixins
     .wrapper--admin
-      //<?= $users[0]['login']; ?>
-      //<? if (!empty($users)): ?>
-      //<? foreach($users as $user): ?>
-      //<?= $user['name']; ?>
-      //<? endforeach; ?>
-      //<? endif; ?>
-      //<?= $_SESSION['login']; ?><br>
       header.header-admin
         .header-admin__title Панель администрирования
-        a.header-admin__buttion-exit(href="logout") Вернуться на сайт
+        a.header-admin__buttion-exit(href="admin/logout") Вернуться на сайт
       .pages
-        -
-          var items = {
-          "Мои работы"  : "#edit-works",
-          "Обо мне"     : "#edit-about",
-          "Блог"        : "#edit-blog"
-          }
-        +setList(items, "tabs-navigation", "#edit-works")
-        .pages__edit
-          .edit.edit-works.edit--active
-            include ../common/edit-works
-          .edit.edit-about
-            include ../common/edit-about
-          .edit.edit-blog
-            include ../common/edit-blog
+        nav.tabs-navigation
+          ul.tabs-navigation__list
+            li.tabs-navigation__item.tabs-navigation__item--active
+              a.tabs-navigation__link(href="admin", data-page="works") Мои работы
+            li.tabs-navigation__item
+              a.tabs-navigation__link(href="admin", data-page="about") Обо мне
+            li.tabs-navigation__item
+              a.tabs-navigation__link(href="admin", data-page="blog") Блог
+        .edit
