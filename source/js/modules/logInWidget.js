@@ -112,7 +112,6 @@ module.exports = function (){
       return false;
     }
 
-    // console.log(isSendedFields, '---', isSendedCapcha);
   };
 
   var sendData = function() {

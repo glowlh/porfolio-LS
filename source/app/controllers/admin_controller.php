@@ -3,21 +3,18 @@
 class Admin_controller extends Controller {
 
     public function __construct() {
-
         require_once ('app/models/users_model.php');
         require_once ('app/models/skilles_model.php');
-
+        require_once ('app/models/blog_model.php');
     }
 
     public function index_action() {
-
         $model = new Users_model;
         $users = $model->get_users();
 
         Controller::generate_view('admin', array(
             "users" => $users
         ));
-
     }
 
     public function about_action() {
@@ -49,6 +46,33 @@ class Admin_controller extends Controller {
 
         $model = new Skilles_model;
         $model->save_skills($data);
+        print_r (json_encode(array(
+            "message" => "Данные сохранены"
+        ), JSON_UNESCAPED_UNICODE));
+    }
+
+    public function save_blog_action() {
+        if(empty($_POST)) {
+            exit('Данные не получены');
+        }
+
+        $data = json_decode($_POST['data'], true);
+
+        require('app/vlucas/valitron/src/valitron/Validator.php');
+        $v = new Valitron\Validator($data);
+
+        foreach($data as $key => $item) {
+            $v->rule('required', $key);
+            if(!$v->validate()) {
+                print_r (json_encode(array(
+                    "message" => "Не все поля заполнены"
+                ), JSON_UNESCAPED_UNICODE));
+                return;
+            }
+        }
+
+        $model = new Blog_model;
+        $model->save_article($data);
         print_r (json_encode(array(
             "message" => "Данные сохранены"
         ), JSON_UNESCAPED_UNICODE));

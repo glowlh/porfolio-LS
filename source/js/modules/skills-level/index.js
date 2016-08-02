@@ -2,11 +2,9 @@ var template = require('jade!./template.pug');
 
 module.exports = function() {
 
-  var rootEl = $('.edit');
+  var rootEl = $('.skills__widget');
   var options = [];
   var ranges = [];
-  var modalWin = $('.modal-window');
-
 
   var init = function() {
     _loadRanges()
@@ -22,16 +20,6 @@ module.exports = function() {
             _render(template, options);
           });
       });
-
-    // modalWin.on('click', function(event) {
-    //   event.preventDefault();
-    //   var target = $(event.target);
-    //   var buttonClose = target.hasClass('button__close');
-    //   if(!buttonClose) {
-    //     return;
-    //   }
-    //   modalWin.hide();
-    // });
   };
 
   var _loadRanges = function() {
@@ -97,35 +85,7 @@ module.exports = function() {
     rootEl.html(template(options));
   };
 
-  var save = function() {
-    event.preventDefault();
-    var fields = $('.input__field');
-    var skilles = {};
-
-    if(!fields.length) {
-      throw new Error('Fields haven\'t founded');
-    }
-    fields.each(function() {
-      skilles[$(this).attr('data-skill-id')] = $(this).val();
-    });
-
-    var data = JSON.stringify(skilles);
-    $.ajax({
-      type: "post",
-      url: "/admin/save_about",
-      data: {
-        data: data
-      },
-      success: function (response) {
-        var data = $.parseJSON(response);
-        modalWin.show();
-        modalWin.find('.modal-window__message').html(data.message);
-      }
-    });
-  };
-
   return {
-    init: init,
-    save: save
+    init: init
   }
 }();

@@ -3,13 +3,16 @@
 <?header('Location:'.$host.'welcome');?>
 <? exit(); ?>
 <? endif; ?>
-//todo dont forget about deleting first space in the `build`
 
 doctype html
 html(lang="ru-RU")
   include ../common/_head
   body.body--admin
     include ../common/_mixins
+    .modal-window
+      .modal-window__message sdsasdas
+      .modal-window__button
+        a.button__close(href="#") Закрыть
     .wrapper--admin
       header.header-admin
         .header-admin__title Панель администрирования

@@ -1,4 +1,11 @@
-.div.
-  lorem WORKS #{name}
-input.saving-button(type="submit", value="Сохранить")
-
+.edit__title.title-roboto-medium Страница "Мои работы"
+form(enctype="multipart/form-data", method="post", name="works").edit__content#edit-works-form
+  .content__edit-works
+    .edit-works__title.title-roboto-medium Добавить работу
+    input.edit-works__input.title-roboto-regular.title-roboto-regular--medium-grey(name="title", placeholder="Название проекта")
+    input.edit-works__input.title-roboto-regular.title-roboto-regular--medium-grey(name="technologies", placeholder="Технологии")
+    input.edit-works__input.title-roboto-regular.title-roboto-regular--medium-grey(name="link", placeholder="Адрес сайта")
+  a.content__uploading-picture Загрузить файл
+  input(type="file", name="picture" data-url).content__selected-picture#selected-file
+  .content__button
+    input.saving-button(type="submit", value="Сохранить")

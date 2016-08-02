@@ -1,0 +1,54 @@
+mixin setUnderlinedTitle(name, className)
+  .underlined-box
+    .underlined-title(class="#{className}")
+      |#{name}
+
+.examples-works__description.examples-works__description--laptop
+  + setUnderlinedTitle(works[0].title, "work")
+  .description__technologies
+    p.technologies__text.uppercase #{works[0].technologies}
+  .description__site
+    a.site__link(href="#{works[0].link}", target="_blank") Посмотреть сайт
+.examples-works__img
+  .img-display.slider.slider--main
+    ul.slider__list
+      each work, index in works
+        if index === 0
+          li.slider__item.slider__item--active
+            img(src="#{work.picture}", alt="Пример сайта").slider__img
+        else
+          li.slider__item
+            img(src="#{work.picture}", alt="Пример сайта").slider__img
+  .examples-works__description.examples-works__description--tablets
+    + setUnderlinedTitle(works[0].title, "work")
+    .description__technologies
+      p.technologies__text #{works[0].technologies}
+    .description__site
+      a.site__link(href="#{works[0].link}", target="_blank") Посмотреть сайт
+  .img-box
+    .img-hide.slider.slider--left
+      .img-hide__mask.img-hide__mask--prev
+      .img-hide__pointer.img-hide__pointer--left
+        svg.arrow-down__svg(preserveAspectRatio="xMaxYMax meet", viewBox="0 0 25.18 16.164")
+          use.svg__icon(xlink:href="assets/img/sprite/img.svg#arrow_down")
+      ul.slider__list
+        each work, index in works
+          if index === works.length-1
+            li.slider__item.slider__item--active
+              img(src="#{work.picture}", alt="Пример сайта").slider__img
+          else
+            li.slider__item
+              img(src="#{work.picture}", alt="Пример сайта").slider__img
+    .img-hide.slider.slider--right
+      .img-hide__mask.img-hide__mask--next
+      .img-hide__pointer.img-hide__pointer--right
+        svg.arrow-down__svg(preserveAspectRatio="xMaxYMax meet", viewBox="0 0 25.18 16.164")
+          use.svg__icon(xlink:href="assets/img/sprite/img.svg#arrow_down")
+      ul.slider__list
+        each work, index in works
+          if index === 1
+            li.slider__item.slider__item--active
+              img(src="#{work.picture}", alt="Пример сайта").slider__img
+          else
+            li.slider__item
+              img(src="#{work.picture}", alt="Пример сайта").slider__img

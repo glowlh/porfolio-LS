@@ -5,10 +5,12 @@ module.exports = function() {
   var buttonNav = $('.tabs-navigation__link');
   var editingElements = $('.edit');
   var page = require('./works');
+  var modalWin = $('.modal-window');
 
   var init = function() {
 
     page.init();
+    modalWin.hide();
     
     buttonNav.on('click', function(event) {
       event.preventDefault();
@@ -23,16 +25,24 @@ module.exports = function() {
         page = require('./works');
         page.init();
       }
+      if(pageName === 'blog') {
+        page = require('./blog');
+        page.init();
+      }
     });
 
-    editingElements.on('click', function(event) {
+    $(document).on('click', '.saving-button', function() {
+      page.save();
+    });
+
+    modalWin.on('click', function(event) {
       event.preventDefault();
       var target = $(event.target);
-      var savingButton = target.hasClass('saving-button');
-      if(!savingButton) {
+      var buttonClose = target.hasClass('button__close');
+      if(!buttonClose) {
         return;
       }
-      page.save();
+      modalWin.hide();
     });
   };
 

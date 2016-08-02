@@ -1,124 +1,167 @@
-
-'use strict';
-
-// var works = require('./works');
+var template = require('jade!./template.pug');
 
 module.exports = function() {
 
-  var works = [
-    {
-      "srcImage"      : "/assets/img/work-1.png",
-      "title"         : "Первый пример",
-      "technologies"  : ["html", "css", "javascript"],
-      "link"          : "https://loftschool.com/"
-    },
-    {
-      "srcImage"      : "/assets/img/work-2.png",
-      "title"         : "Второй пример",
-      "technologies"  : ["html", "css", "javascript", "php"],
-      "link"          : "#"
-    },
-    {
-      "srcImage"      : "/assets/img/work-3.png",
-      "title"         : "Третий пример",
-      "technologies"  : ["html", "css"],
-      "link"          : "#"
-    },
-    {
-      "srcImage"      : "/assets/img/work-4.png",
-      "title"         : "Четвёртый пример",
-      "technologies"  : ["php", "css", "html"],
-      "link"          : "#"
-    }
-  ];
+  var works = [];
+  //   {
+  //     "srcImage"      : "/assets/img/work-1.png",
+  //     "title"         : "Первый пример",
+  //     "technologies"  : ["html", "css", "javascript"],
+  //     "link"          : "https://loftschool.com/"
+  //   },
+  //   {
+  //     "srcImage"      : "/assets/img/work-2.png",
+  //     "title"         : "Второй пример",
+  //     "technologies"  : ["html", "css", "javascript", "php"],
+  //     "link"          : "#"
+  //   },
+  //   {
+  //     "srcImage"      : "/assets/img/work-3.png",
+  //     "title"         : "Третий пример",
+  //     "technologies"  : ["html", "css"],
+  //     "link"          : "#"
+  //   },
+  //   {
+  //     "srcImage"      : "/assets/img/work-4.png",
+  //     "title"         : "Четвёртый пример",
+  //     "technologies"  : ["php", "css", "html"],
+  //     "link"          : "#"
+  //   }
+  // ];
+
   var isAnimate = true;
+  var rootEl = $('.examples-works');
+  var options = {};
 
   var getSlideIndex = function(slide) {
     return $('.slider--main .slider__item').index(slide);
   };
 
+  var _loadWorks = function() {
+    return new Promise(function(resolve, reject) {
+      $.ajax({
+        type: "post",
+        url: "/works/get_works",
+        error: function() {
+          reject('Cant fetch response from `blog`')
+        },
+        success: function(response) {
+          var data = $.parseJSON(response);
+          resolve(data);
+        }
+      })
+    }).catch(function(error) {
+      console.error(error);
+    });
+  };
+
+  var _readWorks = function(response) {
+    response.forEach(function(item) {
+      works.push({
+        title: item.title,
+        picture: item.picture,
+        technologies: item.technologies,
+        link: item.link
+      });
+    });
+    options = {
+      works: works
+    };
+  };
+
+  var _render = function(template, options) {
+    rootEl.html(template(options));
+  };
+
   return {
     init: function () {
       var _that = this;
-      $('.img-hide__mask').on('click', function (event) {
-        event.preventDefault();
 
-        var that = $(this),
-          slides = that.closest('.slider').find('.slider__item'),
-          activeSlide = slides.filter('.slider__item--active'),
-          nextSlide = activeSlide.next(),
-          prevSlide = activeSlide.prev(),
-          firstSlide = slides.first(),
-          lastSlide = slides.last();
+      _loadWorks()
+        .then(function(response) {
+          _readWorks(response);
+        })
+        .then(function() {
+          _render(template, options);
+        })
+        .then(function() {
+          $('.img-hide__mask').on('click', function (event) {
+            event.preventDefault();
 
-        var mainSlides = $('.slider--main').find('.slider__item'),
-          mainActiveSlide = mainSlides.filter('.slider__item--active'),
-          mainNextSlide = mainActiveSlide.next(),
-          mainPrevSlide = mainActiveSlide.prev(),
-          mainFirstSlide = mainSlides.first(),
-          mainLastSlide = mainSlides.last();
+            var that = $(this),
+              slides = that.closest('.slider').find('.slider__item'),
+              activeSlide = slides.filter('.slider__item--active'),
+              nextSlide = activeSlide.next(),
+              prevSlide = activeSlide.prev(),
+              firstSlide = slides.first(),
+              lastSlide = slides.last();
 
-        var rightSlides = $('.slider--right').find('.slider__item'),
-          rightActiveSlide = rightSlides.filter('.slider__item--active'),
-          rightPrevSlide = rightActiveSlide.prev(),
-          rightLastSlide = rightSlides.last();
+            var mainSlides = $('.slider--main').find('.slider__item'),
+              mainActiveSlide = mainSlides.filter('.slider__item--active'),
+              mainNextSlide = mainActiveSlide.next(),
+              mainPrevSlide = mainActiveSlide.prev(),
+              mainFirstSlide = mainSlides.first(),
+              mainLastSlide = mainSlides.last();
 
-        var leftSlides = $('.slider--left').find('.slider__item'),
-          leftActiveSlide = leftSlides.filter('.slider__item--active'),
-          leftNextSlide = leftActiveSlide.next(),
-          leftFirstSlide = leftSlides.first();
+            var rightSlides = $('.slider--right').find('.slider__item'),
+              rightActiveSlide = rightSlides.filter('.slider__item--active'),
+              rightPrevSlide = rightActiveSlide.prev(),
+              rightLastSlide = rightSlides.last();
 
-        if(isAnimate) {
-          isAnimate = false;
-          if (that.hasClass('img-hide__mask--prev')) {
+            var leftSlides = $('.slider--left').find('.slider__item'),
+              leftActiveSlide = leftSlides.filter('.slider__item--active'),
+              leftNextSlide = leftActiveSlide.next(),
+              leftFirstSlide = leftSlides.first();
 
-            if (prevSlide.length) {
-              _that.translateSlide(prevSlide, 'toBottom');
-            } else {
-              _that.translateSlide(lastSlide, 'toBottom');
+            if(isAnimate) {
+              isAnimate = false;
+              if (that.hasClass('img-hide__mask--prev')) {
+
+                if (prevSlide.length) {
+                  _that.translateSlide(prevSlide, 'toBottom');
+                } else {
+                  _that.translateSlide(lastSlide, 'toBottom');
+                }
+
+                if (rightPrevSlide.length) {
+                  _that.translateSlide(rightPrevSlide, 'toTop');
+                } else {
+                  _that.translateSlide(rightLastSlide, 'toTop');
+                }
+
+                if (mainPrevSlide.length) {
+                  _that.setDataSlide(getSlideIndex(mainPrevSlide));
+                  _that.fadeInSlide(mainPrevSlide);
+                } else {
+                  _that.setDataSlide(getSlideIndex(mainLastSlide));
+                  _that.fadeInSlide(mainLastSlide);
+                }
+
+              } else {
+
+                if (nextSlide.length) {
+                  _that.translateSlide(nextSlide, 'toTop');
+                } else {
+                  _that.translateSlide(firstSlide, 'toTop');
+                }
+
+                if (leftNextSlide.length) {
+                  _that.translateSlide(leftNextSlide, 'toBottom');
+                } else {
+                  _that.translateSlide(leftFirstSlide, 'toBottom');
+                }
+
+                if (mainNextSlide.length) {
+                  _that.setDataSlide(getSlideIndex(mainNextSlide));
+                  _that.fadeInSlide(mainNextSlide);
+                } else {
+                  _that.setDataSlide(getSlideIndex(mainFirstSlide));
+                  _that.fadeInSlide(mainFirstSlide)
+                }
+              }
             }
-  
-            if (rightPrevSlide.length) {
-              _that.translateSlide(rightPrevSlide, 'toTop');
-            } else {
-              _that.translateSlide(rightLastSlide, 'toTop');
-            }
-  
-            if (mainPrevSlide.length) {
-              _that.setDataSlide(getSlideIndex(mainPrevSlide));
-              _that.fadeInSlide(mainPrevSlide);
-            } else {
-              _that.setDataSlide(getSlideIndex(mainLastSlide));
-              _that.fadeInSlide(mainLastSlide);
-            }
-
-        } else {
-
-          if (nextSlide.length) {
-            _that.translateSlide(nextSlide, 'toTop');
-          } else {
-            _that.translateSlide(firstSlide, 'toTop');
-          }
-
-          if (leftNextSlide.length) {
-            _that.translateSlide(leftNextSlide, 'toBottom');
-          } else {
-            _that.translateSlide(leftFirstSlide, 'toBottom');
-          }
-
-          if (mainNextSlide.length) {
-            _that.setDataSlide(getSlideIndex(mainNextSlide));
-            _that.fadeInSlide(mainNextSlide);
-          } else {
-            _that.setDataSlide(getSlideIndex(mainFirstSlide));
-            _that.fadeInSlide(mainFirstSlide)
-          }
-
-          }
-
-        }
-
-      });
+          });
+        });
     },
     translateSlide: function (slide, direction) {
 
@@ -204,19 +247,10 @@ module.exports = function() {
         titleSlide = container.find('.work'),
         technologiesSlide = container.find('.technologies__text'),
         linkSlide = container.find('.site__link');
-     
+
       titleSlide.text(works[slide].title);
-      technologiesSlide.text(function(){
-        var tech = "", i = 0;
-        for(; i < works[slide].technologies.length; i++) {
-          if(i != works[slide].technologies.length - 1) {
-            tech += works[slide].technologies[i] + ", ";
-          } else {
-            tech += works[slide].technologies[i];
-          }
-        }
-        return tech;
-      });
+
+      technologiesSlide.text(works[slide].technologies);
 
       linkSlide.attr('href', works[slide].link);
 

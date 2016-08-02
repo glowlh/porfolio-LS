@@ -1,0 +1,41 @@
+.content__edit-works {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+}
+
+.edit-works__title {
+  margin-bottom: 20px;
+}
+
+.edit-works__input {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 20px;
+  outline:none;
+}
+
+.content__selected-picture {
+  display: none;
+}
+
+.content__uploading-picture {
+  color: rgba(#fff, .5);
+  vertical-align: middle;
+  cursor: pointer;
+  &:before{
+    vertical-align: middle;
+    margin-right: 10px;
+    content: '\f1c5';
+    font: rem(25px) 'FontAwesome';
+    color: rgba(#fff, .5);
+  }
+  &:hover{
+    color: rgba(#fff, 1);
+    &:before{
+      color: rgba(#fff, 1);
+
+    }
+  }
+}
