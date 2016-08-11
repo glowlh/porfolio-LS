@@ -2,7 +2,7 @@
 
 ### Description
 
-This is my site portfolio and I have done in the LoftSchool. 
+This is my site portfolio (http://tamnun.ru/) and I have done in the LoftSchool. 
 
 ### Technologies
 
